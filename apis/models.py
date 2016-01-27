@@ -3,13 +3,7 @@ import flask
 from flask import jsonify
 import flask.ext.sqlalchemy
 import flask.ext.restless
-
-
-app = flask.Flask(__name__)
-app.config['DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/glamrscms'
-db = flask.ext.sqlalchemy.SQLAlchemy(app)
-
+from apis.connection import db
 
 class Categories(db.Model):
     id = db.Column(db.Integer, primary_key=True)

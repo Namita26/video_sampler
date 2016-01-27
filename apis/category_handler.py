@@ -5,7 +5,7 @@ import flask.ext.sqlalchemy
 import flask.ext.restless
 import json
 from sqlalchemy.sql import text
-
+from _mysql_exceptions import IntegrityError
 
 app = flask.Flask(__name__)
 app.config['DEBUG'] = True
@@ -47,7 +47,7 @@ def get_category(id):
     for i in cat:
         cat_name = i.name
         cat_id = i.id
-    data = json.dumps([{"id": cat_id, "name": cat_name}], indent=4)
+    data = json.dumps([{"id": cat_id, "name": cat_name}])
     return data
 
 
@@ -57,10 +57,23 @@ def create_category():
     Create/register a new category in the database
     POST request
     """
-    inputs = {'id': request.json.get('id'), 'name': request.json.get(u'name')}
-    new_cat = db.session.execute(text(""" insert into categories (id, name) values (:id, :name) """), inputs)
-    db.session.commit()
-    return "added successfully"
+    try:
+        max_id = None
+        if request.json.get('id') == None:
+            highest_id = db.engine.execute("select max(id) from categories")
+            for val in highest_id:
+                max_id = val
+                max_id = int(max_id[0])
+            inputs = {'id': max_id + 1, 'name': request.json.get(u'name')}
+            new_cat = db.session.execute(text(""" insert into categories (id, name) values (:id, :name) """), inputs)
+        else:
+            inputs = {'id': request.json.get('id'), 'name': request.json.get(u'name')}
+            new_cat = db.session.execute(text(""" insert into categories (id, name) values (:id, :name) """), inputs)
+        db.session.commit()
+        return jsonify({"new_category": inputs}), 201
+    except:
+        print "In except-----"
+        return jsonify({"message": "record already present"})
 
 
 @app.route('/category/<int:id>/', methods = ['DELETE'])

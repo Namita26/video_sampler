@@ -12,3 +12,5 @@ app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/glamrscms'
 db = flask.ext.sqlalchemy.SQLAlchemy(app)
 
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')

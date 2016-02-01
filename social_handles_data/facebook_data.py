@@ -30,7 +30,7 @@ def fetch_data():
     """
     print "In fetch data facebook--------------------------------\n\n"
     print facebook
-    graph = facebook.GraphAPI(access_token='CAAGYi3qeYAIBAOZCTZAFDYaRd7ZAy6wchz3q7jPuoKJbswp8PGMbvM2VQICZAlOGjPYM3SpttPqHDaXvQ5CTQBKYaxJtAALYKEzoayNJ5Q9vhrV4UOv0C60qVe6NnxRJZBYxZCPFI2wWvwEj6jqcdeXQ9V87h3Cp7jxi4qZCbiWfRxLljPBnCJZCw6ysKZCYZBf2cZD', timeout=100)
+    graph = facebook.GraphAPI(access_token='CAAGYi3qeYAIBAFmoT0wGbny9QwV5ZBHPnxdwtLV68a58hOBqNllStsfw1CV7EkP5Nh8vvfarDqqWZC0s9HZCxuYCnXiz6sSKVPsgyZAzFsHEYw5NtDY5JAAmqIZB8BZCRcJkSz1IkLl54lGkMOz8RlMDU7nkrcbBT4dueZASeCe6gwxYm5xGdeVX9Mm34xuzyUnHBsZCVN1AdgZDZD', timeout=100)
     # access token have to be refreshed after specifies timeout parameter. Get it from https://developers.facebook.com/tools/explorer/
     y_values = graph.request("319863888091100_949859058424910/insights/post_video_retention_graph/lifetime")['data'][0]['values'][0]['value']
     '''

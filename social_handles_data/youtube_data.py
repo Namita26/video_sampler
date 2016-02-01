@@ -3,7 +3,7 @@ import json
 
 
 def fetch_data():
-    res = requests.get('https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DUCXyq6UjvT4dWjMOOiKuBncA&start-date=2016-01-01&end-date=2016-01-23&metrics=audienceWatchRatio&dimensions=elapsedVideoTimeRatio&filters=video%3D%3DUYpoq0-Lamw&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}', headers={'Authorization': 'Bearer ya29.eALPbVPMy-ujq2jwTvvtVwAEppRPCb8Whynaeo5W9MNzNqaSZxTqMsf3obq91_ciWDm3'})
+    res = requests.get('https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DUCXyq6UjvT4dWjMOOiKuBncA&start-date=2016-01-01&end-date=2016-01-23&metrics=audienceWatchRatio&dimensions=elapsedVideoTimeRatio&filters=video%3D%3DUYpoq0-Lamw&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}', headers={'Authorization': 'Bearer ya29.ewLRPcOtCfub4gcA30IwhR21pHDLoGfDxRIaCFWnLfIzM-GKPm1AAMI5ArCIdkijEQVH'})
     youtubedata = res.json()
     yt_y_values = []
     yt_x_values = []

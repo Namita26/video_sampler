@@ -3,20 +3,16 @@ import json
 
 
 def fetch_data():
-    res = requests.get('https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DUCXyq6UjvT4dWjMOOiKuBncA&start-date=2016-01-01&end-date=2016-01-23&metrics=audienceWatchRatio&dimensions=elapsedVideoTimeRatio&filters=video%3D%3DUYpoq0-Lamw&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}', headers={'Authorization': 'Bearer ya29.ewLRPcOtCfub4gcA30IwhR21pHDLoGfDxRIaCFWnLfIzM-GKPm1AAMI5ArCIdkijEQVH'})
+    """
+    Fetch youtube retention values for video that we upload!
+    :param video_id: facebook video id for glamrs video.
+    """
+    res = requests.get('https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DUCXyq6UjvT4dWjMOOiKuBncA&start-date=2016-01-01&end-date=2016-01-23&metrics=audienceWatchRatio&dimensions=elapsedVideoTimeRatio&filters=video%3D%3DUYpoq0-Lamw&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}', headers={'Authorization': 'Bearer ya29.ewLFB0uPhLSOEjb2SSZF0mSYf-8qu9pcext8sAkWT3WP9kBG92Eqa54k7S6GOAzHEiEU'})
     youtubedata = res.json()
-    yt_y_values = []
-    yt_x_values = []
+    output = []
     for arr in youtubedata['rows']:
-        yt_y_values.append(arr[1])
-        yt_x_values.append(arr[0])
-    counter = 0
-    """
-    final = []
-    for counter in xrange(0, 100, 5):
-        final.append(yt_y_values[counter])
-    """
-    return json.dumps({"yt_y_values": yt_y_values, "yt_x_values": yt_x_values})
+        output.append([arr[0] * 100, arr[1]])
+    return json.dumps(output)
 
 if __name__ == "__main__":
-    print fetch_data()
+    fetch_data()

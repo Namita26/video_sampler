@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+
+		<title>Line Chart</title>
+		<script src="/home/namita/work/graphs/Chart.js-master/Chart.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div style="width: 80%; height:30%;">
+			<canvas id="canvas" height="450" width="600"></canvas>
+		</div>
+
+
+	<script>
+		var x_data = [];
+		var y_data = [];
+		var yt_y_data = [];
+		var yt_x_data = [];
+		var lineChartData;
+
+		function fillValuesInGraph(x_data, y_data, yt_y_data, yt_x_data)
+		{
+			alert(y_data.length)
+			var fb_y_data = [];
+			for(i = 0; i < y_data.length; i++){
+				var b = [];
+				b[i] = y_data[i];
+				b[i+1] = null;
+				b[i+2] = null;
+				b[i+3] = null;
+				b[i+4] = null;
+				if (i != 40){
+					fb_y_data.push(b[i], b[i+1], b[i+2], b[i+3], b[i+4]);
+				}
+				
+			}
+			console.log(fb_y_data)
+			alert(fb_y_data.length)
+			var new_yt_y_data = [];
+			for(i = 0; i < yt_y_data.length; i++){
+				var b = [];
+				b[i] = null; 
+				b[i+1] = y_data[i];
+				new_yt_y_data.push(b[i], b[i+1])
+			}
+			console.log(new_yt_y_data)
+			alert(new_yt_y_data.length)
+
+
+			console.log("In fill values")
+			console.log(x_data)
+			console.log(y_data)
+			console.log(yt_y_data)
+			lineChartData = {
+				labels : yt_x_data,
+				datasets : [
+					{
+						label: "Facebook",
+						fillColor : "rgba(20,220,220,0.5)",
+						strokeColor : "rgba(220,220,220,0.8)",
+						highlightFill: "rgba(220,220,220,0.75)",
+						highlightStroke: "rgba(220,220,220,1)",
+						data : fb_y_data
+					},
+					{
+						label: "Youtube",
+						fillColor : "rgba(220,220,220,0.5)",
+						strokeColor : "rgba(220,220,220,0.8)",
+						highlightFill: "rgba(220,220,220,0.75)",
+						highlightStroke: "rgba(220,220,220,1)",
+						data : new_yt_y_data
+					}
+				]
+			}
+			var ctx = document.getElementById("canvas").getContext("2d");
+			window.myLine = new Chart(ctx).Line(lineChartData, {
+				responsive : true
+			});
+		}
+
+		window.onload = function(){
+			$.ajax({
+				url: "http://localhost:5000/graph_fb/",
+				type: "GET",
+				cache: false,
+				success: function(data){
+					data = JSON.parse(data);
+					x_data = data.x_values;
+					y_data = data.y_values;
+					console.log(x_data);
+					console.log(y_data);
+					$.ajax({
+						url: "http://localhost:5000/graph_yt/",
+						type: "GET",
+						cache: false,
+						success: function(data){
+							data = JSON.parse(data);
+							console.log('In yt ajax')
+							yt_y_data = data.yt_y_values;
+							yt_x_data = data.yt_x_values;
+							console.log(yt_y_data);
+							fillValuesInGraph(x_data, y_data, yt_y_data, yt_x_data);
+						}
+					});
+				}
+			});
+		}
+
+	</script>
+  </body>
+</html>

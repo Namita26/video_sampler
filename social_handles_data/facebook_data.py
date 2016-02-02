@@ -20,23 +20,45 @@ def _generate_x_values():
     return x_values
 
 
-def fetch_data():
+def create_graph_object():
+    """
+    Creates Facebook GraphAAPI object and returns it.
+    """
+    graph = facebook.GraphAPI(access_token='CAAGYi3qeYAIBAJTGZC5QdgWYaKQ71JvOICcYfKIeAXn8vKA1ZA2S2WnXoOZCC49llalYnMrwELeOTKF1UIgoDXBa2OjXz9PutEfLqN5g8wqxUBppvfkwWtluJkE2FQYYbbZBq1zW8598QmxYvJEv8Dqt6ZBviO3ZBX0jb6L8Fq9kzIIRTYHNZBvb2jCdXroBDMZD')
+    return graph
+
+
+def get_video_ids():
+    graph = create_graph_object()
+    video_ids = []
+    data_points = graph.request("319863888091100/posts/", {type:'video'})
+    for each in data_points['data']:
+        video_details = {}
+        if each['type'] == 'video':
+            video_details['video_id'] = each['id']
+            video_details['video_title'] = each['message']
+            # video_details[each['id']] = each['message']
+            video_ids.append(video_details)
+    return json.dumps(video_ids)
+    
+
+def fetch_data(id):
     """
     Fetch facebook retention values for video that we upload!
     :param video_id: facebook video id for glamrs video.
     """
-    graph = facebook.GraphAPI(access_token='CAAGYi3qeYAIBAOaska4bnaApnDoRcZBd0XxV9WkDSzfVE8z9MTQKGR4BNZCJF3vc84SpSmhaeIwTXcVnIvGnWqu72reJHSRAvJmAZCHLpIyZCKssXCP5fgFLPxolgPGAZCZCBnGoyOEquPdjgpkEPU3vKBIvR1ODPd2yi3nx3TKI31WZBfrxrjRBhmC3aBJrQmbvXMMntlwuQZDZD', timeout=100)
-    # access token have to be refreshed after specifies timeout parameter. Get it from https://developers.facebook.com/tools/explorer/
-    y_values = graph.request("319863888091100_949859058424910/insights/post_video_retention_graph/lifetime")['data'][0]['values'][0]['value']
-    output = []
-    count = 0
-    for y_value in y_values:
-        output.append([count * 2.5, y_value])
-        count = count + 1
+    graph = facebook.GraphAPI(access_token='CAAGYi3qeYAIBAJTGZC5QdgWYaKQ71JvOICcYfKIeAXn8vKA1ZA2S2WnXoOZCC49llalYnMrwELeOTKF1UIgoDXBa2OjXz9PutEfLqN5g8wqxUBppvfkwWtluJkE2FQYYbbZBq1zW8598QmxYvJEv8Dqt6ZBviO3ZBX0jb6L8Fq9kzIIRTYHNZBvb2jCdXroBDMZD')
 
-    # return json.dumps({"x_values": x_values, "y_values":y_values})
-    return json.dumps(output)
+    # permanent access token
+    sorted_values = []
+    facebook_xy_values = graph.request(id + "/insights/post_video_retention_graph/lifetime")['data'][0]['values'][0]['value']
+    if type(facebook_xy_values) == list:
+        return json.dumps(facebook_xy_values)
+    elif type(facebook_xy_values) == dict:
+        for i in xrange(0, 41, 1):
+            sorted_values.append(facebook_xy_values[str(i)])
+        return json.dumps(sorted_values)
 
 
 if __name__ == "__main__":
-   print fetch_data()
+   fetch_data()

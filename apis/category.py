@@ -16,7 +16,6 @@ def index():
     """
     Index all the categories present in database.
     """
-    print "In index-----------------\n"
     cats = []
     result = db.engine.execute("select * from categories")
     for i in result:
@@ -31,7 +30,6 @@ def get_category(id):
     Return the category info for input id
     :param id: database id of the category
     """
-    print "here---------------"
     val = id
     cat = db.session.execute('select * from categories where id = :id', {'id': val})
     for i in cat:
@@ -91,18 +89,24 @@ def update_category_by_id(id):
     db.session.commit()
     return jsonify({"result": True})
 
-@app.route('/graph_fb/', methods = ['GET'])
-def fb_data():
-    print "In category fetch--------"
-    r = facebook_data.fetch_data()
+@app.route('/graph_fb/<string:id>', methods = ['GET'])
+def fb_data(id):
+    r = facebook_data.fetch_data(id)
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r
 
-@app.route('/graph_yt/', methods = ['GET'])
-def yt_data():
-    print "In category fetch--------"
-    r = youtube_data.fetch_data()
+@app.route('/graph_yt/<string:id>', methods = ['GET'])
+def yt_data(id):
+    r = youtube_data.fetch_data(id)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/get_video_ids/', methods = ['GET'])
+def get_video_ids():
+    r = facebook_data.get_video_ids()
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r

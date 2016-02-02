@@ -37,4 +37,11 @@ class YTVideos(db.Model):
     publishedOn = db.Column(db.Date, default=_get_date)
 
 
+class YTRetention(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    ytVideoId = db.Column(db.Integer, ForeignKey("Videos.id"), nullable=False)
+    takenOn = db.Column(db.Date, default=_get_date)
+    XYJson = db.Column(JSON)
+
+
 db.create_all()

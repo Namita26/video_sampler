@@ -55,7 +55,7 @@ def fetch_data(id):
     if type(facebook_xy_values) == list:
         return json.dumps(facebook_xy_values)
     elif type(facebook_xy_values) == dict:
-        for i in xrange(0, 41, 1):
+        for i in xrange(0, len(facebook_xy_values), 1):
             sorted_values.append(facebook_xy_values[str(i)])
         return json.dumps(sorted_values)
 

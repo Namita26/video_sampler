@@ -112,5 +112,134 @@ def get_video_ids():
     return r
 
 
+@app.route('/fans_timeline/', methods = ['GET'])
+def fb_fans_timeline():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.get_fans_timeline_data(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/gain_to_loss/', methods = ['GET'])
+def gain_to_loss():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.get_gain_loss_fans_data(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/page_like_sources/', methods = ['GET'])
+def page_like_sources():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_like_by_sources(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+@app.route('/age_gender/', methods = ['GET'])
+def page_age_gender():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_gender_and_age_group_fans(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/countrywise_fans/', methods = ['GET'])
+def page_countrywise_fans():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_country_wise_fans(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/citywise_fans/', methods = ['GET'])
+def page_citywise_fans():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_city_wise_fans(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/page_reach/', methods = ['GET'])
+def page_reach():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_reach(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/page_impressions/', methods = ['GET'])
+def page_impressions():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_impressions(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/page_performance/', methods = ['GET'])
+def page_performance():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_performance(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/page_negative/', methods = ['GET'])
+def page_negative():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_negative_feedback(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
 if __name__ == "__main__":
     app.run()

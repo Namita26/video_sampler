@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			.lower-div {
+				margin-top: 20px;
+				width: 40%;
+				height: 110px;
+				border: 1px groove;
+				margin-left: 190px;
+			}
+			.lower-label{
+				margin-left: 190px;
+			}
+			#since_timestamp {
+				margin-left: 30px;
+				margin-top: 5px;
+				width: 200px;
+				height: 40px;
+			}
+			#until_timestamp {
+				margin-left: 70px;
+				margin-top: 5px;
+				width: 200px;	
+				height: 40px;
+
+			}
+			.success-div {
+				margin-top: 20px;
+				margin-left: 180px;					
+				
+				
+			}
+			.clear {
+    			clear: both;
+			}
+		</style>
+		<title>Facebook Fans Timeline</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<!--script src="http://code.highcharts.com/modules/exporting.js"></script-->
+
+	</head>
+	<body>
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div>
+			
+			<br>
+			<h3 class="lower-label">Enter the timestamps since and until.</h3>
+			<br>
+			<div id="lower" class="lower-div">
+				<input id="since_timestamp" placeholder="Since..">
+				<input id="until_timestamp" placeholder="Until..">
+				<br>
+				<div class="clear"></div>
+				<button type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Success</button>
+				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
+			</div>
+			
+		</div>
+
+
+	<script>
+		var fb_id;
+		var yt_id;
+		
+
+		function fansTimelineLineChart(timestampDates, likes, dislikes, organic_fans, paid_fans){
+			console.log(timestampDates)
+			console.log(likes)
+			console.log(dislikes)
+			console.log(organic_fans)
+			console.log(paid_fans)
+			$('#container').highcharts({
+                title:{
+		        	text: "Fans Timeline"
+		        },
+		        
+		        chart: {
+		        
+		            renderTo: 'container'
+		        },
+		        xAxis:{
+		        	categories: timestampDates,
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'Count'
+		            },
+		            plotLines: [{
+		                value: 0,
+		                width: 1,
+		                color: '#808080'
+		            }]
+		        },
+		        series: [{
+		        	data: likes,
+		        	name: 'Likes'
+		        },
+		        {
+		        	data: dislikes,
+		        	name: 'Dislikes'
+		        },
+		        {
+		        	data: organic_fans,
+		        	name: 'Organic'
+		        },
+		        {
+		        	data: paid_fans,
+		        	name: 'Paid'   
+		        }]
+            });   
+		}
+		
+		function sendtimestamps(){
+			since = $("#since_timestamp").val();
+			until = $("#until_timestamp").val();
+			$.ajax({
+				url: "http://localhost:5000/fans_timeline/",
+				type: "GET",
+				data: {"since": since , "until": until},
+				success: function(data){
+					data = JSON.parse(data);
+					alert(data)
+					timestampDates = data.x_axis_dates;
+					likes = data.likes;
+					dislikes = data.dislikes;	
+					paid_fans = data.paid_fans;
+					organic_fans = data.organic_fans;
+					fansTimelineLineChart(timestampDates, likes, dislikes, organic_fans, paid_fans)
+				}
+			});
+		}
+
+	</script>
+  </body>
+</html>

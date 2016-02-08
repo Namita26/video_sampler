@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			.lower-div {
+				margin-top: 20px;
+				width: 40%;
+				height: 110px;
+				border: 1px groove;
+				margin-left: 190px;
+			}
+			.lower-label{
+				margin-left: 190px;
+			}
+			#since_timestamp {
+				margin-left: 30px;
+				margin-top: 5px;
+				width: 200px;
+				height: 40px;
+			}
+			#until_timestamp {
+				margin-left: 70px;
+				margin-top: 5px;
+				width: 200px;	
+				height: 40px;
+
+			}
+			.success-div {
+				margin-top: 20px;
+				margin-left: 180px;					
+				
+				
+			}
+			.clear {
+    			clear: both;
+			}
+		</style>
+		<title>Page Like Sources</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+	</head>
+	<body>
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div>
+			
+			<br>
+			<h3 class="lower-label">Enter the timestamps since and until.</h3>
+			<br>
+			<div id="lower" class="lower-div">
+				<input id="since_timestamp" placeholder="Since..">
+				<input id="until_timestamp" placeholder="Until..">
+				<br>
+				<div class="clear"></div>
+				<button type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Success</button>
+				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
+			</div>
+			
+		</div>
+
+
+	<script>
+		var fb_id;
+		var yt_id;
+		
+
+		function pageLikeBySourcesPieChart(feed_story, sponsored_story, mobile_ads, feed_pyml, ads, api, mobile, page_profile){
+			$('#container').highcharts({
+                title:{
+		        	text: "Page Like Sources"
+		        },
+		        
+		        chart: {
+		        	type: 'pie',
+		        	plotBackgroundColor: null,
+            		plotBorderWidth: null,
+            		plotShadow: false,
+		            renderTo: 'container'
+		        },
+		        
+		        plotOptions: {
+		            pie: {
+		                allowPointSelect: true,
+		                cursor: 'pointer',
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '<b>{point.name}</b>: {point.y}',
+		                    style: {
+		                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+		                    }
+		                }
+		            }
+		        },
+		        series: [{
+		            name: 'Brands',
+		            colorByPoint: true,
+		            data: [{
+		                name: 'Feed Story',
+		                y: feed_story
+		            }, {
+		                name: 'Mobile Ads',
+		                y: mobile_ads,
+		                sliced: true,
+		                selected: true
+		            }, {
+		                name: 'Page Profiles',
+		                y: page_profile
+		            }, {
+		                name: 'Feed Pyml',
+		                y: feed_pyml
+		            }, {
+		                name: 'Sponsored Story',
+		                y: sponsored_story
+		            }, {
+		                name: 'Ads',
+		                y: ads
+		            }, {
+		                name: 'Api',
+		                y: api
+		            }, {
+		                name: 'Mobile',
+		                y: mobile
+		            }]
+		        }]
+            });   
+		}
+		
+		function sendtimestamps(){
+			since = $("#since_timestamp").val();
+			until = $("#until_timestamp").val();
+			$.ajax({
+				url: "http://localhost:5000/page_like_sources/",
+				type: "GET",
+				data: {"since": since , "until": until},
+				success: function(data){
+					data = JSON.parse(data);
+					alert(data)
+					feed_story = data.feed_story
+					sponsored_story = data.sponsored_story
+					mobile_ads = data.mobile_ads
+					feed_pyml = data.feed_pyml
+					ads = data.ads
+					api = data.api
+					mobile = data.mobile
+					page_profile = data.page_profile
+
+					ratios = data.gain_to_loss_ratios;
+					pageLikeBySourcesPieChart(feed_story, sponsored_story, mobile_ads, feed_pyml, ads, api, mobile, page_profile)
+				}
+			});
+		}
+
+	</script>
+  </body>
+</html>

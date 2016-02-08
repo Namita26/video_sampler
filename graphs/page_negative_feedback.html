@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			.lower-div {
+				margin-top: 20px;
+				width: 40%;
+				height: 110px;
+				border: 1px groove;
+				margin-left: 190px;
+			}
+			.lower-label{
+				margin-left: 190px;
+			}
+			#since_timestamp {
+				margin-left: 30px;
+				margin-top: 5px;
+				width: 200px;
+				height: 40px;
+			}
+			#until_timestamp {
+				margin-left: 70px;
+				margin-top: 5px;
+				width: 200px;	
+				height: 40px;
+
+			}
+			.success-div {
+				margin-top: 20px;
+				margin-left: 180px;					
+				
+				
+			}
+			.clear {
+    			clear: both;
+			}
+		</style>
+		<title>Facebook Page Negative Feedback</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<!--script src="http://code.highcharts.com/modules/exporting.js"></script-->
+
+	</head>
+	<body>
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div>
+			
+			<br>
+			<h3 class="lower-label">Enter the timestamps since and until.</h3>
+			<br>
+			<div id="lower" class="lower-div">
+				<input id="since_timestamp" placeholder="Since..">
+				<input id="until_timestamp" placeholder="Until..">
+				<br>
+				<div class="clear"></div>
+				<button type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Success</button>
+				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
+			</div>
+			
+		</div>
+
+
+	<script>
+		var fb_id;
+		var yt_id;
+		
+
+		function pageNegativeLineChart(timestampDates, page_unlikes, post_page_unlike, hide_posts, hide_all, spam){
+			$('#container').highcharts({
+                title:{
+		        	text: "Page Negative Feedback"
+		        },
+		        
+		        chart: {
+		        
+		            renderTo: 'container'
+		        },
+		        xAxis:{
+		        	categories: timestampDates,
+		        },
+		        yAxis: {
+		            title: {
+		                text: 'Count'
+		            },
+		            plotLines: [{
+		                value: 0,
+		                width: 1,
+		                color: '#808080'
+		            }]
+		        },
+		        series: [{
+		        	data: page_unlikes,
+		        	name: 'Page Unlikes'
+		        },
+		        {
+		        	data: post_page_unlike,
+		        	name: 'Post Page Unlikes'
+		        },
+		        {
+		        	data: hide_posts,
+		        	name: 'Hide Posts'
+		        },
+		        {
+		        	data: hide_all,
+		        	name: 'Hide All'
+		        },
+		        {
+		        	data: spam,
+		        	name: 'Report Spam'
+		        }]
+            });   
+		}
+		
+		function sendtimestamps(){
+			since = $("#since_timestamp").val();
+			until = $("#until_timestamp").val();
+			$.ajax({
+				url: "http://localhost:5000/page_negative/",
+				type: "GET",
+				data: {"since": since , "until": until},
+				success: function(data){
+					data = JSON.parse(data);
+					alert(data)
+					timestampDates = data.x_axis_dates;
+					page_unlikes = data.page_unlikes;
+					post_page_unlike = data.post_page_unlike;	
+					hide_posts = data.hide_posts;
+					hide_all = data.hide_all;
+					spam = data.spam;	
+					
+					pageNegativeLineChart(timestampDates, page_unlikes, post_page_unlike, hide_posts, hide_all, spam)
+				}
+			});
+		}
+
+	</script>
+  </body>
+</html>

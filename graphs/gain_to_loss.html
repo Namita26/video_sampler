@@ -1,40 +1,8 @@
 <!doctype html>
 <html>
 	<head>
-		<style type="text/css">
-			.lower-div {
-				margin-top: 20px;
-				width: 40%;
-				height: 110px;
-				border: 1px groove;
-				margin-left: 190px;
-			}
-			.lower-label{
-				margin-left: 190px;
-			}
-			#since_timestamp {
-				margin-left: 30px;
-				margin-top: 5px;
-				width: 200px;
-				height: 40px;
-			}
-			#until_timestamp {
-				margin-left: 70px;
-				margin-top: 5px;
-				width: 200px;	
-				height: 40px;
-
-			}
-			.success-div {
-				margin-top: 20px;
-				margin-left: 180px;					
-				
-				
-			}
-			.clear {
-    			clear: both;
-			}
-		</style>
+		
+		<link href="/home/namita/work/video_sampler/static/css/graphs.css" rel="stylesheet" media="all" />
 		<title>Fans Gain To Loss</title>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,42 +15,64 @@
 
 	</head>
 	<body>
-		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-		<div>
+		<div id="outer">
 			
 			<br>
 			<h3 class="lower-label">Enter the timestamps since and until.</h3>
 			<br>
 			<div id="lower" class="lower-div">
-				<input id="since_timestamp" placeholder="Since..">
-				<input id="until_timestamp" placeholder="Until..">
+				<input id="since_timestamp" placeholder="Since.." value="1452672000">
+				<input id="until_timestamp" placeholder="Until.." value="1453363200">
 				<br>
 				<div class="clear"></div>
-				<button type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Success</button>
+				<button id="showgraphs" type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Success</button>
 				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
 			</div>
 			
 		</div>
+		<div id="gain_loss" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		
+		<div id="negative_feedback" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		
+		<div id="page_performance" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		
+		<div id="page-impressions" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+		<div id="page-reach" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+		<!--div id="country-wise" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		
+		<div id="city-wise" style="min-width: 400px; height: 400px; margin: 0 auto"></div-->
+
+		<!--div id="page_like_source" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div id="container8" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		<div id="container9" style="min-width: 400px; height: 400px; margin: 0 auto"></div-->
+		
+		
 
 
 	<script>
 		var fb_id;
-		var yt_id;
-		
+		var yt_id;		
+		function MyChart(timestampDates, graph_params, div_id, title_text, chart_type){
+			console.log(timestampDates);
+			console.log(graph_params);
+			console.log(div_id);
+			console.log(title_text);
+			console.log(chart_type);
 
-		function gainLossLineChart(timestampDates, ratios){
-			$('#container').highcharts({
+			$('#' + div_id).highcharts({
                 title:{
-		        	text: "Gain to Loss Fas Ratio"
+		        	text: title_text
 		        },
 		        
 		        chart: {
-		        	type: 'column',
-		            renderTo: 'container'
+		        	type: chart_type
+		            //renderTo: 'container'
 		        },
 		        xAxis:{
 		        	categories: timestampDates,
-		        },
+		        },/*
 		        yAxis: {
 		            title: {
 		                text: 'Count'
@@ -92,29 +82,85 @@
 		                width: 1,
 		                color: '#808080'
 		            }]
-		        },
-		        series: [{
-		        	data: ratios,
-		        	name: 'Gain to Loss ratio'
-		        }]
+		        },*/
+		        series: graph_params
             });   
 		}
 		
-		function sendtimestamps(){
-			since = $("#since_timestamp").val();
-			until = $("#until_timestamp").val();
+		function ajax_handler(url, type, input_data, div_id, title_text, chart_type){
+
+			console.log('In ajax_handler')
+			
+			console.log(input_data)
+			var baseurl = 'http://127.0.0.1:5000/'
+			console.log(baseurl+url);
 			$.ajax({
-				url: "http://localhost:5000/gain_to_loss/",
-				type: "GET",
-				data: {"since": since , "until": until},
+				url: baseurl + url,
+				type: type,
+				data: input_data,
 				success: function(data){
-					data = JSON.parse(data);
-					alert(data)
-					timestampDates = data.x_axis_dates;
-					ratios = data.gain_to_loss_ratios;
-					gainLossLineChart(timestampDates, ratios)
+					ajax_success_handler(data, div_id, title_text, chart_type);
 				}
 			});
+
+		}
+
+		function ajax_success_handler(data, div_id, title_text, chart_type)
+		{	
+			graph_params = [];
+			data = JSON.parse(data);
+			timestampDates = data.x_axis_dates;
+			keys = Object.keys(data);
+
+			for(var i = 0; i < keys.length; i++)
+			{
+				if( keys[i] != 'x_axis_dates'){
+					graph_params.push({
+						'data': data[keys[i]],
+						'name': keys[i]	
+					})	
+				}
+			}
+			
+			
+			MyChart(timestampDates, graph_params, div_id, title_text, chart_type);
+		}
+
+
+		function sendtimestamps(){
+			keys = [];
+			
+
+			$('#outer').hide();
+
+			since = $("#since_timestamp").val();
+			until = $("#until_timestamp").val();
+			input_data = {
+				since: since,
+				until: until
+			}
+			
+			ajax_handler(url="gain_to_loss/", type='GET', input_data, div_id='gain_loss', title_text='Gain to Loss Ratios', chart_type='column');
+			
+			ajax_handler(url="page_negative/", type='GET', input_data, div_id='negative_feedback', title_text='Page Negative Feedback', chart_type='line');
+			
+			ajax_handler(url="page_performance/", type='GET', input_data, div_id='page_performance', title_text='Facebook Page Performance', chart_type='line');
+
+			ajax_handler(url="page_impressions/", type='GET', input_data, div_id='page-impressions', title_text='Page Impressions', chart_type='column');
+			
+			ajax_handler(url="page_reach/", type='GET', input_data, div_id='page-reach', title_text='Page Reach', chart_type='line');
+
+
+			
+
+
+			
+			/*ajax_handler(url="countrywise_fans/", type='GET', input_data, div_id='country-wise', title_text='Country-wise Page Likes', chart_type='column');
+
+			ajax_handler(url="citywise_fans/", type='GET', input_data, div_id='city-wise', title_text='City-wise Page Likes', chart_type='column');*/
+
+
+
 		}
 
 	</script>

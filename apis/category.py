@@ -241,5 +241,17 @@ def page_negative():
     return r
 
 
+@app.route('/page_insights/', methods = ['GET'])
+def fb_all_graphs_data():
+    """
+    """
+    print "In here"
+    since = request.args.get('since')
+    until = request.args.get('until')
+    r = facebook_data.page_insights(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
 if __name__ == "__main__":
     app.run()

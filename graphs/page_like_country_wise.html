@@ -129,6 +129,7 @@
 		}
 		
 		function sendtimestamps(){
+			$('#outer').hide();
 			since = $("#since_timestamp").val();
 			until = $("#until_timestamp").val();
 			$.ajax({

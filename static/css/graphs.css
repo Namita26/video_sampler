@@ -1,0 +1,29 @@
+.lower-div {
+	/*margin-top: 20px; */
+	width: 40%;
+	height: 110px;
+	border: 1px groove;
+	margin-left: 190px;
+}
+.lower-label{
+	margin-left: 190px;
+}
+#since_timestamp {
+	margin-left: 30px;
+	margin-top: 5px;
+	width: 200px;
+	height: 40px;
+}
+#until_timestamp {
+	margin-left: 70px;
+	margin-top: 5px;
+	width: 200px;	
+	height: 40px;
+}
+.success-div {
+	margin-top: 20px;
+	margin-left: 180px;								
+}
+.clear {
+    clear: both;
+}

@@ -1,0 +1,1086 @@
+<!doctype html>
+<html>
+	<head>
+		
+		<link href="/home/namita/work/video_sampler/static/css/graphs.css" rel="stylesheet" media="all" />
+		<title>Fans Gain To Loss</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<!--script src="http://code.highcharts.com/modules/exporting.js"></script-->
+
+	</head>
+	<body>
+		<div id="outer">
+			
+			<br>
+			<h3 class="lower-label">Enter the timestamps since and until.</h3>
+			<br>
+			<div id="lower" class="lower-div">
+				<input id="since_timestamp" placeholder="Since.." value="1452672000">
+				<input id="until_timestamp" placeholder="Until.." value="1453363200">
+				<br>
+				<div class="clear"></div>
+				<button id="showgraphs" type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Show Graphs</button>
+				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
+			</div>
+			
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Total</div>
+						<div id="total-fans"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Gained</div>
+						<div id="gained-fans"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Lost</div>
+						<div id="lost-fans"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Gained:Lost</div>
+						<div id="ratio-fans"></div>
+					</div>
+			</div>
+			<div id="fans-timeline" style="min-width: 400px; height: 400px; margin: 0 auto"/>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Gain:Loss</div>
+						<div id="gain-loss-ratio"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Max Gain</div>
+						<div id="max-gain"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Max Loss</div>
+						<div id="max-loss"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Average Gain</div>
+						<div id="avg-gain"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Average Loss</div>
+						<div id="avg-loss"></div>
+					</div>
+			</div><div id="gain-loss" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div>
+			<div id="page-like-source" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Total</div>
+						<div id="total-fans-gender"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Male</div>
+						<div id="male-fans"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Female</div>
+						<div id="female-fans"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Age Group Between</div>
+						<div id="age-group"></div>
+					</div>
+			</div>
+			<div id="gender" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div>
+			<div id="countries" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div>
+			<div id="city" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Total</div>
+						<div id="total-reach"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Organic</div>
+						<div id="organic-reach"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Viral</div>
+						<div id="viral-reach"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Paid</div>
+						<div id="paid-reach"></div>
+					</div>
+			</div>
+			<div id="page-reach" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Total</div>
+						<div id="total-impressions"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Organic</div>
+						<div id="organic-impressions"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Viral</div>
+						<div id="viral-impressions"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Paid</div>
+						<div id="paid-impressions"></div>
+					</div>
+			</div>
+			<div id="page-impressions" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Total</div>
+						<div id="total-impressions-performance"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Stories</div>
+						<div id="stories"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Engagements</div>
+						<div id="engagements"></div>
+					</div>
+					<div style="float:left;width: 25%; text-align:center;">
+						<div>Unique Users</div>
+						<div id="unique-users"></div>
+					</div>
+			</div>
+			<div id="page-performance" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+		<div style="margin:150px 0px;">
+			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Page Unlikes</div>
+						<div id="page-unlikes"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Post Unlikes</div>
+						<div id="post-unlikes"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Hidden Posts</div>
+						<div id="hidden-posts"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>All Hidden</div>
+						<div id="all-hidden"></div>
+					</div>
+					<div style="float:left;width: 20%; text-align:center;">
+						<div>Spam</div>
+						<div id="spam"></div>
+					</div>
+			</div>
+			<div id="negative-feedback" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+		</div>
+	<script>
+
+		function MyChart(options){
+			var chart = new Highcharts.Chart(options);
+		}
+
+		function sendtimestamps(){
+			$('#outer').hide();
+
+			since = $("#since_timestamp").val();
+			until = $("#until_timestamp").val();
+			input_data = {
+				since: since,
+				until: until
+			}
+			$.ajax({
+				url: "http://localhost:5000/page_insights/",
+				type: "GET",
+				data: {"since": since , "until": until},
+				success: function(jdata){
+					insights = JSON.parse(jdata);
+					console.log(insights);
+
+					fans_timeline(insights.insights);
+					get_gain_loss_fans_data(insights.insights);
+					page_like_by_sources(insights.insights);
+					page_gender_and_age_group_fans(insights.insights);
+					page_country_wise_fans(insights.insights);
+					page_city_wise_fans(insights.insights);
+					page_reach(insights.insights);
+					page_impressions(insights.insights);
+					page_performance(insights.insights);
+					negative_feedback(insights.insights);
+					total_fans_gained(insights.insights)
+					total_fans_lost(insights.insights);
+					gain_to_loss_ratio();
+					console.log(maximum_gain());
+					console.log(maximum_loss());
+					console.log(average_loss());
+					set_labels(insights.insights)
+				}
+			});
+		}	
+
+			function set_labels(insights){
+				$("#total-fans").text(total_fans(insights))
+				$("#gained-fans").text(total_fans_gained(insights))
+				$("#lost-fans").text(total_fans_lost(insights))
+				$("#ratio-fans").text(gain_to_loss_ratio_fans(insights))
+				
+				$("#gain-loss-ratio").text(gain_to_loss_ratio_fans(insights))
+				$("#max-gain").text(maximum_gain())
+				$("#max-loss").text(maximum_loss())
+				$("#avg-gain").text(average_gain())
+				$("#avg-loss").text(average_loss())
+
+				$("#total-fans-gender").text(total_fans(insights))
+				$("#male-fans").text(total_males_fans(insights))
+				$("#female-fans").text(total_females_fans(insights))
+				$("#age-group").text(max_age_group(insights))
+				
+				$("#total_reach").text(sum_total_reach(insights))
+				$("#organic_reach").text(sum_organic_reach(insights))
+				$("#viral_reach").text(sum_viral_reach(insights))
+				$("#paid-reach").text(sum_paid_reach(insights))
+
+				$("#total-impressions").text(sum_impressions(insights))
+				$("#organic-impressions").text(sum_organic_impressions(insights))
+				$("#viral-impressions").text(sum_viral_impressions(insights))
+				$("#paid-impressions").text(sum_paid_impressions(insights))
+
+				$("#total-impressions-performance").text(sum_impressions(insights))
+				$("#stories").text(sum_stories(insights))
+				$("#engagements").text(sum_engagements(insights))
+				$("#unique-users").text(sum_unique_users(insights))
+
+				$("#page-unlikes").text(sum_page_unlikes(insights))
+				$("#post-unlikes").text(sum_post_page_unlikes(insights))
+				$("#hidden-posts").text(sum_hide_posts(insights))
+				$("#all-hidden").text(sum_hide_all_posts(insights))
+				$("#spam").text(sum_spam(insights))
+
+				$(".graph-labels").show()
+			}
+
+			function retrieve_values(raw_values)
+			{
+				console.log(raw_values);
+				entity_values = [];
+				for(i = 0; i < raw_values.length; i++)
+				{
+					entity_values.push(raw_values[i]['value']);
+				}
+				return entity_values
+			}
+			function retrieve_kind_fans(raw_values, type)
+			{
+				entity_values = [];
+				for(i = 0; i < raw_values.length; i++)
+				{
+					entity_values.push(raw_values[i]['value'][type]);
+				}
+				return entity_values
+			}
+			function extract_dates(raw_values){
+				extracted_timestamp_dates = [];
+				for(i = 0; i < raw_values.length; i++)
+				{
+					var raw_date = raw_values[i]['end_time'].split('T')
+					extracted_timestamp_dates.push(raw_date[0]);
+				}
+				return extracted_timestamp_dates
+			}
+
+			function fans_timeline(insights)
+			{
+				var likes = retrieve_values(insights[0]['values']);
+				console.log(likes)
+
+				var dislikes = retrieve_values(insights[3]['values']);
+				console.log(dislikes)
+
+				var paid_fans = retrieve_kind_fans(insights[2]['values'], 'paid')
+				console.log(paid_fans)
+
+				var organic_fans = retrieve_kind_fans(insights[2]['values'], 'unpaid')
+				console.log(organic_fans)
+
+				extracted_dates = extract_dates(insights[2]['values'])
+				console.log(extracted_dates)
+
+
+				var options = {
+					chart: {
+						type: 'line',
+						renderTo: 'fans-timeline'
+					},
+					xAxis:{
+		        		categories: extracted_dates,
+		        	},
+					title:{
+		        		text: "Fans Timeline"
+		        	},
+					series: [
+						{
+							name: 'Likes',
+							data: likes
+						},
+						{
+							name: 'UnLikes',
+							data: dislikes
+						},
+						{
+							name: 'Paid',
+							data: paid_fans
+						},
+						{
+							name: 'Unpaid',
+							data: organic_fans
+						},
+					]
+				}
+				MyChart(options)
+
+			}
+
+			function gain_loss(gains, losses){
+				var ratios = [];
+				for(i = 0; i < gains.length; i++){
+					var divi = gains[i] / losses[i];
+					ratios.push(divi);
+				}
+				return ratios
+			}
+
+			
+			function get_gain_loss_fans_data(insights)
+			{
+				gains = retrieve_values(insights[0]['values'])
+				losses = retrieve_values(insights[3]['values'])
+				gain_to_loss = gain_loss(gains, losses)
+				var options = {
+					chart: {
+						type: 'line',
+						renderTo: 'gain-loss'
+					},
+					xAxis:{
+		        		categories: extracted_dates,
+		        	},
+					title:{
+		        		text: "Gain and Loss Ratios"
+		        	},
+					series: [
+						{
+							name: 'Ratios',
+							data: gain_to_loss
+						}
+					]
+				}
+				MyChart(options)
+			}
+			function maximum_gain(){
+				return Math.max.apply(null, gains);
+			}
+
+			function maximum_loss(){
+				return Math.max.apply(null, losses)
+			}
+
+			function average_loss(){
+				return add_all_array_values(losses) / losses.length;
+			}
+			function average_gain(){
+				return add_all_array_values(gains) / gains.length;
+			}
+
+
+			function get_sources_data(raw_values, source){
+				entity_values = [];
+				for(i = 0; i < raw_values.length; i++)
+				{
+					entity_values.push(raw_values[i]['value'][source]);
+				}
+				var total = 0;
+				$.each(entity_values,function() {
+    				total += this;
+				});
+				return total	
+			}
+
+			function page_like_by_sources(insights){
+				
+				all_sources_data = insights[148]['values']
+
+				feed_story = get_sources_data(all_sources_data, 'feed_story');
+				console.log(feed_story);
+
+				mobile_ads = get_sources_data(all_sources_data, 'mobile_ads');
+				console.log(mobile_ads);
+
+            	page_profile = get_sources_data(all_sources_data, 'page_profile');
+            	console.log(page_profile);
+				
+            	feed_pyml = get_sources_data(all_sources_data, 'feed_pyml');
+            	console.log(feed_pyml);
+				
+            	sponsored_story = get_sources_data(all_sources_data, 'sponsored_story');
+            	console.log(sponsored_story);
+				
+            	ads = get_sources_data(all_sources_data, 'ads');
+            	console.log(ads);
+				
+            	mobile = get_sources_data(all_sources_data, 'mobile');
+            	console.log(mobile);
+				
+            	api = get_sources_data(all_sources_data, 'api');
+            	console.log(api);
+
+            	var options = {
+	                title:{
+			        	text: "Page Like Sources"
+			        },
+			        
+			        chart: {
+			        	type: 'pie',
+			        	plotBackgroundColor: null,
+	            		plotBorderWidth: null,
+	            		plotShadow: false,
+			            renderTo: 'page-like-source'
+			        },
+			        
+			        plotOptions: {
+			            pie: {
+			                allowPointSelect: true,
+			                cursor: 'pointer',
+			                dataLabels: {
+			                    enabled: true,
+			                    format: '<b>{point.name}</b>: {point.y}',
+			                    style: {
+			                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+			                    }
+			                }
+			            }
+			        },
+			        series: [{
+			            name: 'Brands',
+			            colorByPoint: true,
+			            data: [{
+			                name: 'Feed Story',
+			                y: feed_story
+			            }, {
+			                name: 'Mobile Ads',
+			                y: mobile_ads,
+			                sliced: true,
+			                selected: true
+			            }, {
+			                name: 'Page Profiles',
+			                y: page_profile
+			            }, {
+			                name: 'Feed Pyml',
+			                y: feed_pyml
+			            }, {
+			                name: 'Sponsored Story',
+			                y: sponsored_story
+			            }, {
+			                name: 'Ads',
+			                y: ads
+			            }, {
+			                name: 'Api',
+			                y: api
+			            }, {
+			                name: 'Mobile',
+			                y: mobile
+			            }]
+			        }]
+	            }
+	            MyChart(options);	
+			}
+
+			function page_gender_and_age_group_fans(insights){
+				males = [];
+				females = [];
+
+				overall_data = insights[177]['values'][6]['value'];
+  				keys = Object.keys(overall_data),
+  				i, len = keys.length;
+				keys.sort();
+				for (i = 0; i < 6; i++) {
+					k = keys[i];
+				  	females.push(overall_data[k])
+				}
+				for (i = 7; i < 14; i++) {
+					k = keys[i];
+				  	males.push(overall_data[k])
+				}
+				console.log("overall_data");
+				console.log('males');
+				console.log('females');
+				console.log(males);
+				console.log(females);
+				var options = {
+					chart: {
+			            type: 'column',
+			            renderTo: 'gender'
+			        },
+			        title: {
+			            text: 'Lifetime Likes by Gender and Age'
+			        },
+			        xAxis: {
+			            categories: ['13-17', '18-24', '25-34', '35-44', '45-54', '55-64', '65+']
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: 'Gender wise counts'
+			            },
+			            stackLabels: {
+			                enabled: true,
+			                style: {
+			                    fontWeight: 'bold',
+			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+			                }
+			            }
+			        },
+			        legend: {
+			            align: 'right',
+			            x: -30,
+			            verticalAlign: 'top',
+			            y: 25,
+			            floating: true,
+			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+			            borderColor: '#CCC',
+			            borderWidth: 1,
+			            shadow: false
+			        },
+			        tooltip: {
+			            headerFormat: '<b>{point.x}</b><br/>',
+			            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+			        },
+			        plotOptions: {
+			            column: {
+			                stacking: 'normal',
+			                dataLabels: {
+			                    enabled: true,
+			                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+			                    style: {
+			                        textShadow: '0 0 3px yellow'
+			                    }
+			                }
+			            }
+			        },
+			        series: [{
+			            name: 'Male',
+			            data: males
+			        }, {
+			            name: 'Female',
+			            data: females
+			        }]
+			    }
+			    MyChart(options);
+			}
+
+			function total_males_fans(insights){
+				return add_all_array_values(males);
+			}
+
+			function total_females_fans(insights){
+				return add_all_array_values(females);
+			}
+
+			function max_age_group(insights){
+				var max_key = null;
+				var max_value = 0;
+				for (var i in overall_data){
+					if (max_value < overall_data[i]){
+						max_value = overall_data[i]
+						max_key = i;
+					}
+				}
+				return max_key;
+			}
+
+			function page_country_wise_fans(insights){
+				country_data = insights[174]['values'][6]['value'];
+				var items = Object.keys(country_data).map(function(key) {
+				    return [key, country_data[key]];
+				});
+
+				// Sort the array based on the second element
+				items.sort(function(first, second) {
+				    return second[1] - first[1];
+				});
+				console.log(items);
+				countries = [];
+				country_values = [];
+				for(i=0; i < items.length; i++){
+					for(j=0; j < 1; j++){
+						x = items[i]
+						countries.push(x[0]);
+						country_values.push(x[1]);
+					}
+				}
+				console.log(countries);
+				console.log(country_values);
+				var options = {
+					chart: {
+			            type: 'column',
+			            renderTo: 'countries'
+			        },
+			        title: {
+			            text: 'Lifetime Likes by Country'
+			        },
+			        xAxis: {
+			            categories: countries
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: 'Count'
+			            },
+			            stackLabels: {
+			                enabled: true,
+			                style: {
+			                    fontWeight: 'bold',
+			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+			                }
+			            }
+			        },
+			        legend: {
+			            align: 'right',
+			            x: -30,
+			            verticalAlign: 'top',
+			            y: 25,
+			            floating: true,
+			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+			            borderColor: '#CCC',
+			            borderWidth: 1,
+			            shadow: false
+			        },
+			        tooltip: {
+			            headerFormat: '<b>{point.x}</b><br/>',
+			            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+			        },
+			        plotOptions: {
+			            column: {
+			                stacking: 'normal',
+			                dataLabels: {
+			                    enabled: true,
+			                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+			                    style: {
+			                        textShadow: '0 0 3px yellow'
+			                    }
+			                }
+			            }
+			        },
+			        series: [{
+			            name: 'Country',
+			            data: country_values
+			        }]
+		    	}
+		    	MyChart(options);
+			}
+			function page_city_wise_fans(insights){
+				cities_data = insights[173]['values'][6]['value'];
+				cities = [];
+				city_values = [];
+				var items = Object.keys(cities_data).map(function(key) {
+				    return [key, cities_data[key]];
+				});
+
+				// Sort the array based on the second element
+				items.sort(function(first, second) {
+				    return second[1] - first[1];
+				});
+				console.log(items);
+				
+				for(i=0; i < items.length; i++){
+					for(j=0; j < 1; j++){
+						x = items[i]
+						cities.push(x[0].split(',')[0]);
+						city_values.push(x[1]);
+					}
+				}
+				var options = {
+			        chart: {
+			            type: 'column',
+			            renderTo: 'city'
+			        },
+			        title: {
+			            text: 'Lifetime Likes by City'
+			        },
+			        xAxis: {
+			            categories: cities
+			        },
+			        yAxis: {
+			            min: 0,
+			            title: {
+			                text: 'Count'
+			            },
+			            stackLabels: {
+			                enabled: true,
+			                style: {
+			                    fontWeight: 'bold',
+			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+			                }
+			            }
+			        },
+			        legend: {
+			            align: 'right',
+			            x: -30,
+			            verticalAlign: 'top',
+			            y: 25,
+			            floating: true,
+			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+			            borderColor: '#CCC',
+			            borderWidth: 1,
+			            shadow: false
+			        },
+			        series: [{
+			            name: 'Fans',
+			            data: city_values
+			        }]
+			    }
+			    MyChart(options);
+			}
+
+			function page_reach(insights){
+				total_reach = retrieve_values(insights[49]['values']);
+			    organic_reach = retrieve_values(insights[61]['values']);
+			    viral_reach = retrieve_values(insights[67]['values']);
+			    console.log("pahe reach");
+			    console.log(total_reach);
+			    console.log(organic_reach);
+			    console.log(viral_reach);
+
+			    var options = {
+	                title:{
+			        	text: "Page Reach"
+			        },
+			        
+			        chart: {
+			        	
+			            renderTo: 'page-reach'
+			        },
+			        xAxis:{
+			        	categories: extracted_dates,
+			        },
+			        yAxis: {
+			            title: {
+			                text: 'Count'
+			            },
+			            plotLines: [{
+			                value: 0,
+			                width: 1,
+			                color: '#808080'
+			            }]
+			        },
+			        series: [{
+			        	data: total_reach,
+			        	name: 'Total Reach'
+			        },
+			        {
+			        	data: viral_reach,
+			        	name: 'Viral'
+			        },
+			        {
+			        	data: organic_reach,
+			        	name: 'Organic'
+			        }]
+	            }
+	            MyChart(options);
+			}
+
+			function sum_total_reach(insights){
+				return add_all_array_values(total_reach);
+			}
+			function sum_viral_reach(insights){
+				return add_all_array_values(viral_reach);
+			}
+			function sum_organic_reach(insights){
+				return add_all_array_values(organic_reach);
+			}
+			function sum_paid_reach(insights){
+				return 0
+				//return add_all_array_values(paid_reach);
+			}
+
+			function page_impressions(insights){
+				impressions = retrieve_values(insights[52]['values']);
+			    paid_impressions = retrieve_values(insights[58]['values']);
+			    viral_impressions = retrieve_values(insights[64]['values']);
+			    organic_impressions = retrieve_values(insights[70]['values']);
+			    
+			    var options = {
+	                title:{
+			        	text: "Page Impressions"
+			        },
+			        
+			        chart: {
+			            renderTo: 'page-impressions'
+			        },
+			        xAxis:{
+			        	categories: extracted_dates,
+			        },
+			        yAxis: {
+			            title: {
+			                text: 'Count'
+			            },
+			            plotLines: [{
+			                value: 0,
+			                width: 1,
+			                color: '#808080'
+			            }]
+			        },
+			        series: [{
+			        	data: impressions,
+			        	name: 'Total Impressions'
+			        },
+			        {
+			        	data: organic_impressions,
+			        	name: 'Organic Impressions'
+			        },
+			        {
+			        	data: viral_impressions,
+			        	name: 'Viral Impressions'
+			        },
+			        {
+			        	data: paid_impressions,
+			        	name: "Paid Impressions"
+			        }]
+	            }
+	            MyChart(options);
+			}
+			function sum_impressions(insights){
+				return add_all_array_values(impressions);
+			}
+			function sum_organic_impressions(insights){
+				return add_all_array_values(organic_impressions);
+			}
+			function sum_viral_impressions(insights){
+				return add_all_array_values(viral_impressions);
+			}
+			function sum_paid_impressions(insights){
+				return add_all_array_values(paid_impressions);
+			}
+
+			function page_performance(insights){
+				impressions = retrieve_values(insights[52]['values']);
+			    stories = retrieve_values(insights[212]['values']);
+			    engagements = retrieve_values(insights[195]['values']);
+			    unique_users = retrieve_values(insights[138]['values']);
+			    
+			    var options = {
+	                title:{
+			        	text: "Page Performance"
+			        },
+			        
+			        chart: {
+			            renderTo: 'page-performance'
+			        },
+			        xAxis:{
+			        	categories: extracted_dates,
+			        },
+			        yAxis: {
+			            title: {
+			                text: 'Count'
+			            },
+			            plotLines: [{
+			                value: 0,
+			                width: 1,
+			                color: '#808080'
+			            }]
+			        },
+			        series: [{
+			        	data: impressions,
+			        	name: 'Total Impressions'
+			        },
+			        {
+			        	data: stories,
+			        	name: 'Stories'
+			        },
+			        {
+			        	data: engagements,
+			        	name: 'Engagements'
+			        },
+			        {
+			        	data: unique_users,
+			        	name: "Unique Users"
+			        }]
+	            }
+	            MyChart(options);
+			}
+			function sum_stories(){
+				return add_all_array_values(stories);
+			}
+			function sum_engagements(){
+				return add_all_array_values(engagements);
+			}
+			function sum_unique_users(){
+				return add_all_array_values(unique_users);
+			}
+
+			function retrieve_negative_values(raw_values, negative_factor){
+				post_page_unlikes = [];
+				for(i=0; i< raw_values.length; i++){
+					post_page_unlikes.push(raw_values[i]['value'][negative_factor])
+				}
+				return post_page_unlikes
+			}
+			function negative_feedback(insights){
+				page_unlikes = retrieve_negative_values(insights[3]['values']);
+			    post_page_unlike = retrieve_negative_values(insights[162]['values'], 'unlike_page_clicks');
+			    hide_posts = retrieve_negative_values(insights[162]['values'], 'hide_clicks');
+			    hide_all_posts = retrieve_negative_values(insights[162]['values'], 'hide_all_clicks');
+			    spam = retrieve_negative_values(insights[162]['values'], 'report_spam_clicks');
+			    
+			    var options = {
+	                title:{
+			        	text: "Daily Negative Feedback from Users"
+			        },
+			        
+			        chart: {
+			            renderTo: 'negative-feedback'
+			        },
+			        xAxis:{
+			        	categories: extracted_dates,
+			        },
+			        yAxis: {
+			            title: {
+			                text: 'Count'
+			            },
+			            plotLines: [{
+			                value: 0,
+			                width: 1,
+			                color: '#808080'
+			            }]
+			        },
+			        series: [{
+			        	data: page_unlikes,
+			        	name: 'Page Unlikes'
+			        },
+			        {
+			        	data: post_page_unlikes,
+			        	name: 'Post Page UnLikes'
+			        },
+			        {
+			        	data: hide_posts,
+			        	name: 'Hide Posts'
+			        },
+			        {
+			        	data: hide_all_posts,
+			        	name: "Hide All Posts"
+			        },
+			        {
+			        	data: spam,
+			        	name: "Spam Clicks"
+			        }]
+	            }
+	            MyChart(options);
+			}
+			function sum_page_unlikes(insights){
+				return add_all_array_values(page_unlikes);
+			}
+
+			function sum_post_page_unlikes(insights){
+				return add_all_array_values(page_unlikes);
+			}
+			function sum_hide_posts(insights){
+				return add_all_array_values(page_unlikes);
+			}
+			function sum_hide_all_posts(insights){
+				return add_all_array_values(page_unlikes);
+			}
+			function sum_spam(insights){
+				return add_all_array_values(spam)
+			}
+
+			function add_all_array_values(entity_values){
+				var total = 0;
+				$.each(entity_values,function() {
+    				total += this;
+				});
+				return total
+			}
+
+			function total_fans_gained(insights)
+			{
+				since = Number(since);
+				until = Number(until);
+				var likes = retrieve_values(insights[0]['values']);
+				new_since = since - (until - since);
+				new_until = since;
+				pos_gain = add_all_array_values(likes);
+				$.ajax({
+					url: "http://localhost:5000/page_insights/",
+					type: "GET",
+					data: {"since": new_since , "until": new_until},
+					success: function(jdata){
+						new_insights = JSON.parse(jdata);
+						
+						var new_likes = retrieve_values(new_insights.insights[0]['values']);	
+						pre_gain = add_all_array_values(new_likes);
+						
+						return [pos_gain, Math.abs(pos_gain - pre_gain) *100 / pre_gain]
+					}
+				});
+				return pos_gain;						
+			}
+
+			function total_fans_lost(insights)
+			{
+				since = Number(since);
+				until = Number(until);
+				var unlikes = retrieve_values(insights[3]['values']);
+				new_since = since - (until - since);
+				new_until = since;
+				pos_loss = add_all_array_values(unlikes);
+				$.ajax({
+					url: "http://localhost:5000/page_insights/",
+					type: "GET",
+					data: {"since": new_since , "until": new_until},
+					success: function(jdata){
+						new_insights = JSON.parse(jdata);
+						
+						var new_unlikes = retrieve_values(new_insights.insights[3]['values']);	
+						pre_loss = add_all_array_values(new_unlikes);
+						//$("total-per").text()
+						return [pos_loss, Math.abs(pos_loss - pre_loss) *100 / pre_gain]
+					}
+				});
+				return pos_loss;						
+			}
+
+			function total_fans(insights){
+				return insights[171]['values'][7]['value']
+			}
+
+			function gain_to_loss_ratio_fans(insights){
+				return total_fans_gained(insights) / total_fans_lost(insights)
+			}
+
+			function gain_to_loss_ratio(insights){
+				console.log(pos_gain);
+				console.log(pos_loss);
+				console.log(pos_gain / pos_loss);
+				return pos_gain / pos_loss
+			}
+
+	</script>
+  </body>
+</html>

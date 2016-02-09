@@ -63,24 +63,76 @@ def fetch_data(id):
 
 
 def get_fans_timeline_data(since, until):
-    fans_timeline = []
     graph = create_graph_object()
     timestamp = {"since": since, "until": until}
+    print timestamp
     insights = graph.request("319863888091100/insights/", timestamp)
     dates_on_x_axis = _extract_dates(insights['data'][0]['values'])
     likes = new_likes(insights['data'][0]['values'])
     dislikes = new_dislikes(insights['data'][3]['values'])
     paid_impressions = new_paid_fans(insights['data'][2]['values'])
     organic_fans = new_organic_fans(insights['data'][2]['values'])
+    
+    total_gain = total_fans_gained(since, until)
+    total_loss = total_fans_lost(since, until)
+
     return json.dumps(
         {
             "x_axis_dates": dates_on_x_axis,
             "likes": likes,
             "dislikes": dislikes,
             "paid_fans": paid_impressions,
-            "organic_fans": organic_fans
-        }
+            "organic_fans": organic_fans,
+            "fans_lost": total_loss[0],
+            "fans_lost_percentage": total_loss[1],
+            "fans_gained": total_gain[0],
+            "fans_gained_percentage": total_gain[1],
+            "fans_gain_to_loss_ratio": fans_gained / fans_lost
+        },
+        indent=4
     )
+
+
+def total_fans_gained(since, until):
+    graph = create_graph_object()
+    since = int(since)
+    until = int(until)
+    print since, until, type(since), type(until), "\n---"
+    timestamp = {"since": since, "until": until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    likes = new_likes(insights['data'][0]['values'])
+    pos_gain = sum(likes)
+
+    new_since = since - (until - since)
+    new_until = since
+    timestamp = {"since": new_since, "until": new_until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    likes = new_likes(insights['data'][0]['values'])
+    pre_gain = sum(likes)
+    
+    return [pos_gain, abs(pos_gain - pre_gain) *100 / pre_gain]
+
+def total_fans_lost(since, until):
+    graph = create_graph_object()
+    timestamp = {"since": since, "until": until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    unlikes = new_likes(insights['data'][3]['values'])
+    pos_loss = sum(unlikes)
+
+    new_since = since - (until - since)
+    new_until = since
+    timestamp = {"since": new_since, "until": new_until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    unlikes = new_likes(insights['data'][3]['values'])
+    pre_loss = sum(unlikes)
+
+    return [pos_loss, abs(pos_loss- pre_loss) *100 / pre_loss]
+
+def total_fans(since, until):
+    graph = create_graph_object()
+    timestamp = {"since": since, "until": until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    return insights['data'][171]['values'][7]['value']    
 
 
 def new_likes(raw_values):
@@ -98,7 +150,6 @@ def new_dislikes(raw_values):
 
 
 def new_paid_fans(raw_values):
-    print "\n----------------PAID FANS--------------\n"
     paid_fans = []
     for each in raw_values:
         paid_fans.append(each['value']['paid'])
@@ -106,7 +157,6 @@ def new_paid_fans(raw_values):
 
 
 def new_organic_fans(raw_values):
-    print "\n----------------UNPAID FANS--------------\n"
     organic_fans = []
     for each in raw_values:
         organic_fans.append(each['value']['unpaid'])
@@ -124,7 +174,7 @@ def get_gain_loss_fans_data(since, until):
     return json.dumps(
         {
             "x_axis_dates": dates_on_x_axis,
-            "gain_to_loss_ratios": gain_to_loss
+            "Gain To Loss Ratios": gain_to_loss
         }
     )
 
@@ -323,11 +373,11 @@ def page_negative_feedback(since, until):
     return json.dumps(
         {
             "x_axis_dates": dates_on_x_axis,
-            "page_unlikes": page_unlikes,
-            "post_page_unlike": post_page_unlike,
-            "hide_posts": hide_posts,
-            "hide_all": hide_all_posts,
-            "spam": spam
+            "Page Unlikes": page_unlikes,
+            "Post Page Unlikes": post_page_unlike,
+            "Hide Posts": hide_posts,
+            "Hide All": hide_all_posts,
+            "Spam": spam
         }
     )
 
@@ -366,22 +416,34 @@ def report_spam(raw_values):
         spams.append(raw_values[each]['value']['report_spam_clicks'])
     return spams
 
+def page_insights(since, until):
+    graph = create_graph_object()
+    timestamp = {"since": since, "until": until}
+    insights = graph.request("319863888091100/insights/", timestamp)
+    return json.dumps(
+        {
+            "insights": insights['data'] 
+        }
+    )
+
 
 if __name__ == "__main__":
    # fetch_data()
-   since = 1452758400
+   since = 1452672000
    until = 1453363200
    new_since = since - (until - since)
    new_until = since
-   print new_since, new_until
-   print get_fans_timeline_data(new_since, new_until)
+   # print new_since, new_until
+   # print get_fans_timeline_data(since, until)
    # print get_gain_loss_fans_data(1452758400, 1453363200)
    # print page_like_by_sources(1452758400, 1453363200)
    # print page_gender_and_age_group_fans(1452758400, 1453363200)
-   # print page_country_wise_fans(1452758400, 1453363200)
+   print page_country_wise_fans(1452758400, 1453363200)
    # print page_city_wise_fans(1452758400, 1453363200)
    # print page_reach(1452758400, 1453363200)
    # print page_impressions(1452758400, 1453363200)
    # print page_performance(1452758400, 1453363200)
    # print page_negative_feedback(1452758400, 1453363200)
+   # print total_fans_gained(since, until)
+   # print total_fans_lost(since, until)
 

@@ -2,8 +2,16 @@
 	/*margin-top: 20px; */
 	width: 40%;
 	height: 110px;
-	border: 1px groove;
-	margin-left: 190px;
+	/*border: 1px groove;*/
+	margin-left: 380px;
+	text-align: center;
+}
+.datetime-headline{
+	margin-left: -170px;
+	text-align: center;	
+	font-family: calibri;
+	font-size: 20px;
+	font-weight: 200px;
 }
 .lower-label{
 	margin-left: 190px;
@@ -22,8 +30,24 @@
 }
 .success-div {
 	margin-top: 20px;
-	margin-left: 180px;								
+	margin-left: 10px;
+	text-align: center;								
 }
 .clear {
     clear: both;
+}
+/*hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}*/
+.headline{
+	font-size: 30px;
+	font-family: calibri;
+	font-weight: 600px;
+	color: #0c6d51;
+	text-align: center;
 }

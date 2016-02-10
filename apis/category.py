@@ -9,6 +9,7 @@ from _mysql_exceptions import IntegrityError
 from apis.connection import db, app
 from social_handles_data import facebook_data
 from social_handles_data import youtube_data
+import datetime
 
 
 @app.route('/category/', methods = ['GET'])
@@ -61,7 +62,6 @@ def create_category():
         db.session.commit()
         return jsonify({"new_category": inputs, "errorCode": 201}), 201
     except:
-        print "In except-----"
         return jsonify({"errorMessage": "record already present"})
 
 
@@ -116,7 +116,6 @@ def get_video_ids():
 def fb_fans_timeline():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.get_fans_timeline_data(since, until)
@@ -129,7 +128,6 @@ def fb_fans_timeline():
 def gain_to_loss():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.get_gain_loss_fans_data(since, until)
@@ -142,7 +140,6 @@ def gain_to_loss():
 def page_like_sources():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_like_by_sources(since, until)
@@ -154,7 +151,6 @@ def page_like_sources():
 def page_age_gender():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_gender_and_age_group_fans(since, until)
@@ -167,7 +163,6 @@ def page_age_gender():
 def page_countrywise_fans():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_country_wise_fans(since, until)
@@ -180,7 +175,6 @@ def page_countrywise_fans():
 def page_citywise_fans():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_city_wise_fans(since, until)
@@ -193,7 +187,6 @@ def page_citywise_fans():
 def page_reach():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_reach(since, until)
@@ -206,7 +199,6 @@ def page_reach():
 def page_impressions():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_impressions(since, until)
@@ -219,7 +211,6 @@ def page_impressions():
 def page_performance():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_performance(since, until)
@@ -232,7 +223,6 @@ def page_performance():
 def page_negative():
     """
     """
-    print "In here"
     since = request.args.get('since')
     until = request.args.get('until')
     r = facebook_data.page_negative_feedback(since, until)
@@ -240,14 +230,22 @@ def page_negative():
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r
 
+def convert_to_epoch_timestamp(datestring):
+    time_format = "%Y-%m-%d %H:%M:%S"
+    start_date = datetime.datetime.strptime(datestring, time_format)
+    timestamp = (start_date - datetime.datetime(1970, 1, 1)).total_seconds()
+    return timestamp
+    
 
 @app.route('/page_insights/', methods = ['GET'])
 def fb_all_graphs_data():
     """
+    Fetch Insights object and return 
     """
-    print "In here"
-    since = request.args.get('since')
-    until = request.args.get('until')
+    since_date = request.args.get('since')
+    until_date = request.args.get('until')
+    since = convert_to_epoch_timestamp(since_date + ' 08:00:00')
+    until = convert_to_epoch_timestamp(until_date + ' 08:00:00')
     r = facebook_data.page_insights(since, until)
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"

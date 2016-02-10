@@ -373,7 +373,7 @@
 				var ratios = [];
 				for(i = 0; i < gains.length; i++){
 					var divi = gains[i] / losses[i];
-					ratios.push(divi);
+					ratios.push(Math.round(divi * 100) /100);
 				}
 				return ratios
 			}
@@ -1081,7 +1081,7 @@
 			}
 
 			function gain_to_loss_ratio_fans(insights){
-				return total_fans_gained(insights) / total_fans_lost(insights)
+				return Math.round((total_fans_gained(insights) / total_fans_lost(insights) *100)/ 100)
 			}
 
 			function gain_to_loss_ratio(insights){

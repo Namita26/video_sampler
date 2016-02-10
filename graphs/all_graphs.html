@@ -15,10 +15,10 @@
 
 	</head>
 	<body>
-		<div id="outer">
-			
+		<div class="headline"><label  style="margin:0px 0px;">Graphs for Facebook Glamrs Page</label></div>
+		<div id="outer" lower-div>	
 			<br>
-			<h3 class="lower-label">Enter the timestamps since and until.</h3>
+			<div class="datetime-headline"><label class="lower-label">Enter the Daterange Since and Until.</label></div>
 			<br>
 			<div id="lower" class="lower-div">
 				<input id="since_timestamp" placeholder="YY-MM-DD">
@@ -28,166 +28,176 @@
 				<button id="showgraphs" type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Show Graphs</button>
 				<!--button type="submit" onclick="xxxx();">Show Graphs</button-->
 			</div>
-			
 		</div>
-		<div style="margin:150px 0px;">
+
+		<!-- Graph Divs starts from here-->
+
+		<div style="margin:50px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Total</div>
+						<div><b>Total Fans</b></div>
 						<div id="total-fans"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Gained</div>
+						<div><b>Gained</b></div>
 						<div id="gained-fans"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Lost</div>
+						<div><b>Lost</b></div>
 						<div id="lost-fans"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Gained:Lost</div>
+						<div><b>Gained:Lost</b></div>
 						<div id="ratio-fans"></div>
 					</div>
 			</div>
 			<div id="fans-timeline" style="min-width: 400px; height: 400px; margin: 0 auto"/>
 		</div>
+		<hr>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Gain:Loss</div>
+						<div><b>Gain:Loss</b></div>
 						<div id="gain-loss-ratio"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Max Gain</div>
+						<div><b>Max Gain</b></div>
 						<div id="max-gain"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Max Loss</div>
+						<div><b>Max Loss</b></div>
 						<div id="max-loss"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Average Gain</div>
+						<div><b>Average Gain</b></div>
 						<div id="avg-gain"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Average Loss</div>
+						<div><b>Average Loss</b></div>
 						<div id="avg-loss"></div>
 					</div>
 			</div><div id="gain-loss" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div>
 			<div id="page-like-source" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Total</div>
+						<div><b>Total</b></div>
 						<div id="total-fans-gender"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Male</div>
+						<div><b>Male</b></div>
 						<div id="male-fans"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Female</div>
+						<div><b>Female</b></div>
 						<div id="female-fans"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Age Group Between</div>
+						<div><b>Age Group Between</b></div>
 						<div id="age-group"></div>
 					</div>
 			</div>
 			<div id="gender" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div>
 			<div id="countries" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div>
 			<div id="city" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Total</div>
+						<div><b>Total</b></div>
 						<div id="total-reach"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Organic</div>
+						<div><b>Organic</b></div>
 						<div id="organic-reach"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Viral</div>
+						<div><b>Viral</b></div>
 						<div id="viral-reach"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Paid</div>
+						<div><b>Paid</b></div>
 						<div id="paid-reach"></div>
 					</div>
 			</div>
 			<div id="page-reach" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Total</div>
+						<div><b>Total</b></div>
 						<div id="total-impressions"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Organic</div>
+						<div><b>Organic</b></div>
 						<div id="organic-impressions"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Viral</div>
+						<div><b>Viral</b></div>
 						<div id="viral-impressions"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Paid</div>
+						<div><b>Paid</b></div>
 						<div id="paid-impressions"></div>
 					</div>
 			</div>
 			<div id="page-impressions" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Total</div>
+						<div><b>Total</b></div>
 						<div id="total-impressions-performance"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Stories</div>
+						<div><b>Stories</b></div>
 						<div id="stories"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Engagements</div>
+						<div><b>Engagements</b></div>
 						<div id="engagements"></div>
 					</div>
 					<div style="float:left;width: 25%; text-align:center;">
-						<div>Unique Users</div>
+						<div><b>Unique Users</b></div>
 						<div id="unique-users"></div>
 					</div>
 			</div>
 			<div id="page-performance" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 		</div>
+		<hr>
 		<div style="margin:150px 0px;">
 			<div class="graph-labels" style="display:none; min-width: 400px; width: 100%;"> 
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Page Unlikes</div>
+						<div><b>Page Unlikes</b></div>
 						<div id="page-unlikes"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Post Unlikes</div>
+						<div><b>Post Unlikes</b></div>
 						<div id="post-unlikes"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Hidden Posts</div>
+						<div><b>Hidden Posts</b></div>
 						<div id="hidden-posts"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>All Hidden</div>
+						<div><b>All Hidden</b></div>
 						<div id="all-hidden"></div>
 					</div>
 					<div style="float:left;width: 20%; text-align:center;">
-						<div>Spam</div>
+						<div><b>Spam</b></div>
 						<div id="spam"></div>
 					</div>
 			</div>
@@ -241,9 +251,9 @@
 				$("#total-fans").text(total_fans(insights))
 				$("#gained-fans").text(total_fans_gained(insights))
 				$("#lost-fans").text(total_fans_lost(insights))
-				$("#ratio-fans").text(gain_to_loss_ratio_fans(insights))
+				$("#ratio-fans").text(gain_to_loss_ratio_fans(insights) + ":1")
 				
-				$("#gain-loss-ratio").text(gain_to_loss_ratio_fans(insights))
+				$("#gain-loss-ratio").text(gain_to_loss_ratio_fans(insights) + ":1")
 				$("#max-gain").text(maximum_gain())
 				$("#max-loss").text(maximum_loss())
 				$("#avg-gain").text(average_gain())

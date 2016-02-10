@@ -21,8 +21,8 @@
 			<h3 class="lower-label">Enter the timestamps since and until.</h3>
 			<br>
 			<div id="lower" class="lower-div">
-				<input id="since_timestamp" placeholder="Since.." value="1452672000">
-				<input id="until_timestamp" placeholder="Until.." value="1453363200">
+				<input id="since_timestamp" placeholder="YY-MM-DD">
+				<input id="until_timestamp" placeholder="YY-MM-DD">
 				<br>
 				<div class="clear"></div>
 				<button id="showgraphs" type="button" class="btn btn-primary success-div" onclick="sendtimestamps();">Show Graphs</button>
@@ -254,9 +254,9 @@
 				$("#female-fans").text(total_females_fans(insights))
 				$("#age-group").text(max_age_group(insights))
 				
-				$("#total_reach").text(sum_total_reach(insights))
-				$("#organic_reach").text(sum_organic_reach(insights))
-				$("#viral_reach").text(sum_viral_reach(insights))
+				$("#total-reach").text(sum_total_reach(insights))
+				$("#organic-reach").text(sum_organic_reach(insights))
+				$("#viral-reach").text(sum_viral_reach(insights))
 				$("#paid-reach").text(sum_paid_reach(insights))
 
 				$("#total-impressions").text(sum_impressions(insights))
@@ -943,7 +943,7 @@
 				return post_page_unlikes
 			}
 			function negative_feedback(insights){
-				page_unlikes = retrieve_negative_values(insights[3]['values']);
+				page_unlikes = retrieve_values(insights[3]['values']);
 			    post_page_unlike = retrieve_negative_values(insights[162]['values'], 'unlike_page_clicks');
 			    hide_posts = retrieve_negative_values(insights[162]['values'], 'hide_clicks');
 			    hide_all_posts = retrieve_negative_values(insights[162]['values'], 'hide_all_clicks');
@@ -998,13 +998,13 @@
 			}
 
 			function sum_post_page_unlikes(insights){
-				return add_all_array_values(page_unlikes);
+				return add_all_array_values(post_page_unlikes);
 			}
 			function sum_hide_posts(insights){
-				return add_all_array_values(page_unlikes);
+				return add_all_array_values(hide_posts);
 			}
 			function sum_hide_all_posts(insights){
-				return add_all_array_values(page_unlikes);
+				return add_all_array_values(hide_all_posts);
 			}
 			function sum_spam(insights){
 				return add_all_array_values(spam)
@@ -1020,13 +1020,13 @@
 
 			function total_fans_gained(insights)
 			{
-				since = Number(since);
-				until = Number(until);
+				/*since = Number(since);
+				until = Number(until);*/
 				var likes = retrieve_values(insights[0]['values']);
-				new_since = since - (until - since);
-				new_until = since;
+				/*new_since = since - (until - since);
+				new_until = since;*/
 				pos_gain = add_all_array_values(likes);
-				$.ajax({
+				/*$.ajax({
 					url: "http://localhost:5000/page_insights/",
 					type: "GET",
 					data: {"since": new_since , "until": new_until},
@@ -1038,19 +1038,19 @@
 						
 						return [pos_gain, Math.abs(pos_gain - pre_gain) *100 / pre_gain]
 					}
-				});
+				});*/
 				return pos_gain;						
 			}
 
 			function total_fans_lost(insights)
 			{
-				since = Number(since);
-				until = Number(until);
+				/*since = Number(since);
+				until = Number(until);*/
 				var unlikes = retrieve_values(insights[3]['values']);
-				new_since = since - (until - since);
-				new_until = since;
+				/*new_since = since - (until - since);
+				new_until = since;*/
 				pos_loss = add_all_array_values(unlikes);
-				$.ajax({
+				/*$.ajax({
 					url: "http://localhost:5000/page_insights/",
 					type: "GET",
 					data: {"since": new_since , "until": new_until},
@@ -1062,7 +1062,7 @@
 						//$("total-per").text()
 						return [pos_loss, Math.abs(pos_loss - pre_loss) *100 / pre_gain]
 					}
-				});
+				});*/
 				return pos_loss;						
 			}
 

@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			.table .google-visualization-table-tr-odd, .table .google-visualization-table-tr-even {
+			    background-color: transparent;
+			}
+			#ChartOverview .TotalRow td {
+			    font-weight : 700;
+			    
+			}
+
+			.TotalCell{
+
+				text-align: right;
+				font-weight: bold;
+			}
+
+		</style>
+		<title>FB YT stories</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<!--script src="http://code.highcharts.com/modules/exporting.js"></script-->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       
+	</head>
+	<body>
+	
+		    <div id="ChartOverview">
+		        <div id="table_div"></div>
+		    </div>
+	
+		
+	<script>
+		var story_data;
+		google.charts.load('current', {'packages':['table']});
+		function resetStyling(id) {
+		    $('#' + id + ' table')
+		        .removeClass('google-visualization-table-table')
+		        .addClass('table table-bordered table-condensed table-striped table-hover');
+		    var parentRow = $('#' + id + ' td.TotalCell').parent();
+		    parentRow.addClass('TotalRow');
+		}
+		
+
+     	function drawTable(x) 
+     	{	
+			var data = new google.visualization.DataTable();
+		  	data.addColumn('string', 'FB Name');
+		  	data.addColumn('string', 'YT Name');
+		  	data.addColumn('number', 'FB Views');
+		  	data.addColumn('number', 'YT Views');
+		  	data.addColumn('number', 'Total Views');
+		  	data.addColumn('number', 'FB Likes');
+		  	data.addColumn('number', 'YT Likes');
+		  	data.addColumn('number', 'Total Likes');
+		  	data.addColumn('number', 'FB Comments');
+		  	data.addColumn('number', 'YT Comments');
+		  	data.addColumn('number', 'Total Comments');
+		  	data.addColumn('number', 'FB Shares');
+
+		  	
+
+		  	data.addRows(13);
+		  	for(i = 0; i < 13; i++)
+		  	{
+
+		      	if(i == 12)
+		      	{
+		      		data.setCell(i, 0, 'Total','<b>Total</b>', {className: 'TotalCell'});
+		      		data.setCell(i, 2, x[12] , Number(x[12]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 3, x[13] ,Number(x[13]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 4, x[14] ,Number(x[14]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 5, x[15] ,Number(x[15]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 6, x[16] ,Number(x[16]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 7, x[17] ,Number(x[17]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 8, x[18] ,Number(x[18]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 9, x[19] ,Number(x[19]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 10, x[20], Number(x[20]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 11, x[21],Number(x[21]).toLocaleString('latin'), {className: 'TotalCell'});
+		      	}
+		      	if(i < 12)
+		      	{
+		      		console.log(x[i].facebook.video_id)
+		      		data.setCell(i, 0, "<a target='_blank' href="+'http://www.facebook.com/'+x[i].facebook.video_id + ">" + x[i].facebook.video_title + "</a>");
+			    	data.setCell(i, 1, "<a target='_blank' href="+'https://www.youtube.com/watch?v='+x[i].youtube.video_id + ">" + x[i].youtube.video_title + "</a>");
+			      	data.setCell(i, 2, x[i].facebook.views);
+			      	data.setCell(i, 3, x[i].youtube.views);
+
+			      	data.setCell(i, 4, x[i].fb_yt.total_views, Number(x[i].fb_yt.total_views).toLocaleString('latin'), {className: 'TotalCell'}	);
+
+			      	data.setCell(i, 5, x[i].facebook.likes);
+			      	data.setCell(i, 6, x[i].youtube.likes);
+
+			      	data.setCell(i, 7, x[i].fb_yt.total_likes);
+
+			      	data.setCell(i, 8, x[i].facebook.comments);
+			      	data.setCell(i, 9, x[i].youtube.comments);
+
+			      	data.setCell(i, 10, x[i].fb_yt.total_comments);
+
+			      	data.setCell(i, 11, x[i].facebook.shares);	
+		      	}
+		    	
+		      	
+		  	}
+		  	
+		  	var table = new google.visualization.Table(document.getElementById('table_div'));
+		  	table.draw(data, {showRowNumber: false, width: '100%', height: '100%', allowHtml: true});
+		  	google.visualization.events.addListener(table, 'ready', function () {
+	        	resetStyling('table_div');
+	    	});
+
+	    	google.visualization.events.addListener(table, 'sort', function (ev) {        
+		        //find the last row
+		        var parentRow = $('#table_div td.TotalCell').parent();
+		        //set the TotalRow row to the last row again.
+		        if (!parentRow.is(':last-child')) {
+		            parentRow.siblings().last().after(parentRow);
+		        }
+
+		        //reset the styling of the table
+		        resetStyling('StatusOverview');
+		    });
+			
+		  	/*google.visualization.events.addListener(table, 'select', function() {
+		    	var row = table.getSelection()[0].row;
+		    	alert('You selected ' + data.getValue(row, 0));
+		  	});*/
+		}
+		
+		$(document).ready(
+			function sendtimestamps()
+			{
+				$.ajax({
+					url: "http://localhost:5000/ft_yt/",
+					type: "GET",
+					success: function(data){
+						story_data = JSON.parse(data);
+				    	google.charts.setOnLoadCallback(drawTable(story_data));
+					}
+				});
+			}
+		);
+		
+		
+	</script>
+  </body>
+</html>

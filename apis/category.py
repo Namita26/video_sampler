@@ -9,6 +9,7 @@ from _mysql_exceptions import IntegrityError
 from apis.connection import db, app
 from social_handles_data import facebook_data
 from social_handles_data import youtube_data
+from social_handles_data import fb_yt_studio_videos
 import datetime
 
 
@@ -247,6 +248,18 @@ def fb_all_graphs_data():
     since = convert_to_epoch_timestamp(since_date + ' 08:00:00')
     until = convert_to_epoch_timestamp(until_date + ' 08:00:00')
     r = facebook_data.page_insights(since, until)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/ft_yt/', methods = ['GET'])
+def fb_yt():
+    """
+    Fetch Facebook and YouTube views, likes, comments, shares
+    : Output: return all desired values for a array of video ids.
+    """
+    r = fb_yt_studio_videos.fetch_data()
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r

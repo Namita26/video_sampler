@@ -4,7 +4,7 @@ import csv
 import facebook
 import datetime
 
-google_token = "Bearer ya29.jQLMqo2HmhlsnnnuKZxFh-DJaQLL5Josi_fq_MQDdE94X_pulfeDMO2LJRkaXfGiWOCs"
+google_token = "Bearer ya29.jQLtsYOGyFDwdL3x0ZrzVvVALnWgAhPKFtCiko5o8S8S5LoITJhNzXPPhrhfasqWNOyd"
 
 video_ids = [
     {

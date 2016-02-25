@@ -86,7 +86,6 @@
 		      	}
 		      	if(i < 12)
 		      	{
-		      		
 		      		data.setCell(i, 0, "<a target='_blank' href="+'http://www.facebook.com/'+x[i].facebook.video_id + ">" + x[i].facebook.video_title + "</a>");
 			    	data.setCell(i, 1, "<a target='_blank' href="+'https://www.youtube.com/watch?v='+x[i].youtube.video_id + ">" + x[i].youtube.video_title + "</a>");
 			      	data.setCell(i, 2, x[i].facebook.views);
@@ -136,14 +135,13 @@
 		
 		google.charts.setOnLoadCallback(function(){
 			$(document).ready(
-				function sendtimestamps()
+				function get_chart_details()
 				{
 					$.ajax({
 						url: "http://localhost:5000/fb_yt/",
 						type: "GET",
 						success: function(data){
 							story_data = JSON.parse(data);
-					    	//google.charts.setOnLoadCallback(drawTable(story_data));
 					    	drawTable(story_data);
 						}
 					});

@@ -73,10 +73,6 @@ def fetch_data(video_ids):
         },
     ]
     """
-    print "\n-----------------\n"
-    print "In fetch_data"
-    print video_ids
-    print "\n-----------------\n"
     final = []
 
     is_fetched = check_already_fetched()
@@ -95,7 +91,7 @@ def fetch_data(video_ids):
     sum_total_comments = []
     i = 0
 
-    while i < len(video_ids):
+    for i in xrange(0, 12):
         each_video = {}
         each_video['facebook'] = {'video_id': all_fb[i][0], 'views':all_fb[i][1], 'likes':all_fb[i][2], 'comments': all_fb[i][3], 'shares': all_fb[i][4], 'video_title': all_fb[i][5]}
 
@@ -117,7 +113,7 @@ def fetch_data(video_ids):
         sum_total_likes.append(all_fb[i][2] + all_yb[i][2])
         sum_total_comments.append(all_fb[i][3] + all_yb[i][3])
 
-        i = i + 1
+        # i = i + 1
     facebook_grand = get_grand_facebook_stories(all_fb)
     youtube_grand = get_grand_youtube_stories(all_yb)
 
@@ -138,6 +134,12 @@ def fetch_data(video_ids):
     return json.dumps(final)
 
 
+def chart_details():
+    with open("social_handles_data/"+ end_date  +"_fb_yt_final.json", "r") as f:
+        final = json.load(f)
+    return json.dumps(final)
+
+
 def check_already_fetched():
     if os.path.isfile('social_handles_data/'+ end_date +'_fb_yt_final.json'):
         return True
@@ -146,4 +148,4 @@ def check_already_fetched():
 
 
 if __name__ == "__main__":
-    print fetch_data()
+    print fetch_data(video_ids)

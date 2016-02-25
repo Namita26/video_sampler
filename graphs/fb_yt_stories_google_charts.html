@@ -86,7 +86,7 @@
 		      	}
 		      	if(i < 12)
 		      	{
-		      		console.log(x[i].facebook.video_id)
+		      		
 		      		data.setCell(i, 0, "<a target='_blank' href="+'http://www.facebook.com/'+x[i].facebook.video_id + ">" + x[i].facebook.video_title + "</a>");
 			    	data.setCell(i, 1, "<a target='_blank' href="+'https://www.youtube.com/watch?v='+x[i].youtube.video_id + ">" + x[i].youtube.video_title + "</a>");
 			      	data.setCell(i, 2, x[i].facebook.views);
@@ -134,20 +134,25 @@
 		  	});*/
 		}
 		
-		$(document).ready(
-			function sendtimestamps()
-			{
-				$.ajax({
-					url: "http://localhost:5000/ft_yt/",
-					type: "GET",
-					success: function(data){
-						story_data = JSON.parse(data);
-				    	google.charts.setOnLoadCallback(drawTable(story_data));
-					}
-				});
-			}
-		);
-		
+		google.charts.setOnLoadCallback(function(){
+			$(document).ready(
+				function sendtimestamps()
+				{
+					$.ajax({
+						url: "http://localhost:5000/fb_yt/",
+						type: "GET",
+						success: function(data){
+							story_data = JSON.parse(data);
+					    	//google.charts.setOnLoadCallback(drawTable(story_data));
+					    	drawTable(story_data);
+						}
+					});
+				}
+			);
+
+		});
+
+			
 		
 	</script>
   </body>

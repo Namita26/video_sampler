@@ -261,9 +261,12 @@ def fb_yt():
     Fetch Facebook and YouTube views, likes, comments, shares
     : Output: return all desired values for a array of video ids.
     """
-    video_ids = request.args.get('ids')
-    data = json.loads(str(video_ids.split("=")[1]))
-    r = fb_yt_stats.fetch_data(data)
+    if request.args.get('ids'):
+        video_ids = request.args.get('ids')
+        data = json.loads(str(video_ids.split("=")[1]))
+        r = fb_yt_stats.fetch_data(data)
+    else:
+        r = fb_yt_stats.chart_details()
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r

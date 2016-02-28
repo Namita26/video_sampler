@@ -39,3 +39,5 @@ rsa==3.3
 simplejson==3.8.2
 uritemplate==0.6
 google-api-python-client
+facebook-sdk==0.4.0
+facebookinsights==0.3.4

@@ -7,56 +7,6 @@ import os
 from social_handles_data.fbstories import get_facebook_stories, get_grand_facebook_stories
 from social_handles_data.ytstories import get_youtube_stories, get_grand_youtube_stories, get_youtube_title
 
-video_ids = [
-    {
-        'fb': 863863537024463,
-        'yt': 'kxB-fIFTcG0'
-    },
-    {
-        'fb': 864289866981830,
-        'yt': 'kl_KhEJslN4'
-    },
-    {
-        'fb': 863813073696176,
-        'yt': 'dv-LHg9X4-0'
-    },
-    {
-        'fb': 843279482416202,
-        'yt': '77VY8q2m0gk'
-    },
-    {
-        'fb': 829381850472632,
-        'yt': 'sTlPQLXbX0g'
-    },
-    {
-        'fb': 786952974715520,
-        'yt': 'yOcJUJgEsIg'
-    },
-    {
-        'fb': 755004151243736,
-        'yt': 'ZMkDQGGPjDo'
-    },
-    {
-        'fb': 899305756813574,
-        'yt': 'mn8yeT6Y-tQ'
-    },
-    {
-        'fb': 896394667104683,
-        'yt': '5qwgEoy4GoQ'
-    },
-    {
-        'fb': 896632997080850,
-        'yt': 'LS-KIUdobXc'
-    },
-    {
-        'fb': 772150292862455,
-        'yt': 'lxrVZInm0vI'
-    },
-    {
-        'fb': 932669140143902,
-        'yt': 'pFrUnz-NO7A'
-    }
-]
 
 start_date = '2011-01-01'
 end_date = datetime.datetime.today().strftime('%Y-%m-%d')

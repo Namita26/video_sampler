@@ -71,7 +71,6 @@ def yt_insights():
     Fetch YouTube insights for input video ids and store in json.
     """
     video_ids = request.args.get('ids')
-    print type(video_ids), "\n=-------------------------\n"
     r = youtube_get_insights(video_ids)
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"

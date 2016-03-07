@@ -68,7 +68,7 @@ def make_data_api_request(youtube_video_ids):
     response = requests.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_video_ids+'&key=AIzaSyCwMECGvrwK-WNC3zaHWEpOwPtCtRgT11I')
     return response
 
-def post_insights_object_combined(video_ids):
+def post_insights_object_combined(video_ids, brand_name):
     youtube_video_ids = video_ids
     google_token = "Bearer ya29.kQIk-bNU4v5AaMwv-cNLLvhtZpSKMs-U_Xr75EwI_oauqqzd20monrJxCVYH9jBicRvX"
 
@@ -95,13 +95,13 @@ def post_insights_object_combined(video_ids):
         for yt_data in youtubedata['rows']:
             if video_id == yt_data[0]:
                 all_yb.append(yt_data)
-    with open("social_handles_data/"+ end_date  +"yt_stats.json", "w") as f:
+    with open("social_handles_data/"+ brand_name + '/' + end_date  +"yt_stats.json", "w") as f:
         json.dump({"youtube": all_yb, 'title_info': title_info}, f, indent=4)
     return [all_yb, title_info]
 
 
-def get_insights(ids):
-    post_insights_object_combined(ids)
+def get_insights(ids, brand_name):
+    post_insights_object_combined(ids, brand_name)
 
 
 if __name__ == "__main__":

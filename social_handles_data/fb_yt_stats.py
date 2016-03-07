@@ -12,7 +12,7 @@ start_date = '2011-01-01'
 end_date = datetime.datetime.today().strftime('%Y-%m-%d')
 
 
-def fetch_data(video_ids):
+def fetch_data(video_ids, brand_name):
     """
     Fetch views, likes, comments and shares for YouTube and Facebook videos
     :Input video ids should be given in following format.
@@ -25,14 +25,14 @@ def fetch_data(video_ids):
     """
     final = []
 
-    is_fetched = check_already_fetched()
+    is_fetched = check_already_fetched(brand_name)
     if is_fetched:
-        with open("social_handles_data/"+ end_date  +"_fb_yt_final.json", "r") as f:
+        with open("social_handles_data/" + brand_name + '/' + end_date  +"_fb_yt_final.json", "r") as f:
             final = json.load(f)
         return json.dumps(final)
     else:
-        all_fb = get_facebook_stories(video_ids, start_date, end_date)
-        yb = get_youtube_stories(video_ids, start_date, end_date)
+        all_fb = get_facebook_stories(video_ids, start_date, end_date, brand_name)
+        yb = get_youtube_stories(video_ids, start_date, end_date, brand_name)
         all_yb = yb[0]
         title_info = yb[1]
 
@@ -41,7 +41,7 @@ def fetch_data(video_ids):
     sum_total_comments = []
     i = 0
 
-    for i in xrange(0, 12):
+    for i in xrange(0, len(all_fb)):
         each_video = {}
         each_video['facebook'] = {'video_id': all_fb[i][0], 'views':all_fb[i][1], 'likes':all_fb[i][2], 'comments': all_fb[i][3], 'shares': all_fb[i][4], 'video_title': all_fb[i][5]}
 
@@ -78,20 +78,20 @@ def fetch_data(video_ids):
     final.append(sum(sum_total_comments))
     final.append(facebook_grand['facebook_grand_shares'])
 
-    with open("social_handles_data/"+ end_date + "_fb_yt_final.json", "w") as f:
+    with open("social_handles_data/" + brand_name +'/' + end_date + "_fb_yt_final.json", "w") as f:
         json.dump(final, f, indent=4)
 
     return json.dumps(final)
 
 
-def chart_details():
-    with open("social_handles_data/"+ end_date  +"_fb_yt_final.json", "r") as f:
+def chart_details(brand_name):
+    with open("social_handles_data/" + brand_name + '/' + end_date  +"_fb_yt_final.json", "r") as f:
         final = json.load(f)
     return json.dumps(final)
 
 
-def check_already_fetched():
-    if os.path.isfile('social_handles_data/'+ end_date +'_fb_yt_final.json'):
+def check_already_fetched(brand_name):
+    if os.path.isfile('social_handles_data/' + brand_name + '/'+ end_date +'_fb_yt_final.json'):
         return True
     else:
         return False

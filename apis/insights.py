@@ -20,12 +20,12 @@ def convert_to_epoch_timestamp(datestring):
     start_date = datetime.datetime.strptime(datestring, time_format)
     timestamp = (start_date - datetime.datetime(1970, 1, 1)).total_seconds()
     return timestamp
-    
+
 
 @app.route('/page_insights/', methods = ['GET'])
 def fb_all_graphs_data():
     """
-    Fetch Insights object and return 
+    Fetch Insights object and return
     """
     since_date = request.args.get('since')
     until_date = request.args.get('until')
@@ -46,9 +46,10 @@ def fb_yt():
     if request.args.get('ids'):
         video_ids = request.args.get('ids')
         data = json.loads(str(video_ids.split("=")[1]))
-        r = fb_yt_stats.fetch_data(data)
+        r = fb_yt_stats.fetch_data(data[:-1], data[-1]['brand'])
     else:
-        r = fb_yt_stats.chart_details()
+        brand_name = request.args.get('brandname')
+        r = fb_yt_stats.chart_details(brand_name)
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r
@@ -60,7 +61,8 @@ def fb_insights():
     Fetch Facebook insights for input video ids and store in json.
     """
     video_ids = request.args.get('ids')
-    r = facebook_get_insights(video_ids)
+    video_ids = json.loads(str(video_ids.split("=")[1]))
+    r = facebook_get_insights(video_ids[0]['video_ids'], video_ids[1]['brandname'])
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r
@@ -71,7 +73,9 @@ def yt_insights():
     Fetch YouTube insights for input video ids and store in json.
     """
     video_ids = request.args.get('ids')
-    r = youtube_get_insights(video_ids)
+    video_ids = json.loads(str(video_ids.split("=")[1]))
+    ytvideoids = ",".join(video_ids[0]['video_ids'])
+    r = youtube_get_insights(ytvideoids, video_ids[1]['brandname'])
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r

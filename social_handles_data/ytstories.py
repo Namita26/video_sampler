@@ -11,7 +11,7 @@ def get_youtube_title(title_info, video_id):
     return title
 
 
-def get_youtube_stories(video_ids, start_date, end_date):
+def get_youtube_stories(video_ids, start_date, end_date, brand_name):
     youtube_video_ids = get_youtube_video_ids(video_ids)
     insights_file = FileUtil.readJson('social_handles_data/'+ end_date +'yt_stats.json')
 
@@ -23,7 +23,7 @@ def get_youtube_stories(video_ids, start_date, end_date):
     if flag:
         return [insights_file['all_yb'], insights_file['title_info']]
     else:
-        return post_insights_object_combined(",".join(youtube_video_ids))
+        return post_insights_object_combined(",".join(youtube_video_ids), brand_name)
 
 
 def get_grand_youtube_stories(all_yb):

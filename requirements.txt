@@ -41,3 +41,4 @@ uritemplate==0.6
 google-api-python-client
 facebook-sdk==0.4.0
 facebookinsights==0.3.4
+PyYAML==3.11

@@ -1,0 +1,56 @@
+[
+    {
+        "youtube": {
+            "video_title": "Natural Makeup Look | No Brushes Required", 
+            "video_id": "kxB-fIFTcG0", 
+            "likes": 1153.0, 
+            "comments": 36.0, 
+            "views": 133412.0
+        }, 
+        "facebook": {
+            "views": 240569, 
+            "video_id": 863863537024463, 
+            "shares": 1033, 
+            "likes": 4880, 
+            "video_title": "Natural Makeup Look | No Brushes Required", 
+            "comments": 97
+        }, 
+        "fb_yt": {
+            "total_views": 373981.0, 
+            "total_likes": 6033.0, 
+            "total_comments": 133.0
+        }
+    }, 
+    {
+        "youtube": {
+            "video_title": "How To Apply Foundation For Full Coverage | Foundation Routine And Makeup Tips", 
+            "video_id": "ubePCsGXcUE", 
+            "likes": 5104.0, 
+            "comments": 115.0, 
+            "views": 568831.0
+        }, 
+        "facebook": {
+            "views": 60564, 
+            "video_id": 851685721575578, 
+            "shares": 324, 
+            "likes": 3131, 
+            "video_title": "How To Pick The Right Type Of Foundation", 
+            "comments": 50
+        }, 
+        "fb_yt": {
+            "total_views": 629395.0, 
+            "total_likes": 8235.0, 
+            "total_comments": 165.0
+        }
+    }, 
+    301133, 
+    702243.0, 
+    1003376.0, 
+    8011, 
+    6257.0, 
+    14268.0, 
+    147, 
+    151.0, 
+    298.0, 
+    1357
+]

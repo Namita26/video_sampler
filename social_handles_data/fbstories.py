@@ -11,9 +11,9 @@ def get_facebook_video_ids(video_ids):
     return facebook_video_ids
 
 
-def get_facebook_stories(video_ids, start_date, end_date):
+def get_facebook_stories(video_ids, start_date, end_date, brand_name):
     facebook_video_ids = get_facebook_video_ids(video_ids)
-    with open("social_handles_data/"+ end_date +"_fb_insights.json", "r") as f:
+    with open("social_handles_data/" + brand_name + '/' + end_date +"_fb_insights.json", "r") as f:
         insights_file = json.load(f)
     all_fb = []
     flag = 'False'

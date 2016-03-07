@@ -960,7 +960,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 4632334
+                            "value": 4632336
                         }
                     ]
                 }, 
@@ -1008,7 +1008,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 3369188
+                            "value": 3369189
                         }
                     ]
                 }, 
@@ -1032,7 +1032,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 974273
+                            "value": 974274
                         }
                     ]
                 }, 
@@ -1059,7 +1059,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 974273
+                                "other": 974274
                             }
                         }
                     ]
@@ -1084,7 +1084,7 @@
                     "title": "Lifetime Post Impressions by people who have liked your Page", 
                     "values": [
                         {
-                            "value": 2785290
+                            "value": 2785291
                         }
                     ]
                 }, 
@@ -1138,8 +1138,8 @@
                         {
                             "value": {
                                 "paid": 288873, 
-                                "total": 4632334, 
-                                "unpaid": 4343461
+                                "total": 4632336, 
+                                "unpaid": 4343463
                             }
                         }
                     ]
@@ -1255,9 +1255,9 @@
                                 "39": 0.1336, 
                                 "4": 0.4775, 
                                 "40": 0.0911, 
-                                "5": 0.4227, 
+                                "5": 0.4226, 
                                 "6": 0.3915, 
-                                "7": 0.3766, 
+                                "7": 0.3765, 
                                 "8": 0.3713, 
                                 "9": 0.3577
                             }
@@ -1297,7 +1297,7 @@
                                 "28": 0.5814, 
                                 "29": 0.5643, 
                                 "3": 0.8638, 
-                                "30": 0.5394, 
+                                "30": 0.5393, 
                                 "31": 0.5325, 
                                 "32": 0.5235, 
                                 "33": 0.5183, 
@@ -1338,7 +1338,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 610032
+                            "value": 610036
                         }
                     ]
                 }, 
@@ -1362,7 +1362,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 475936
+                            "value": 475939
                         }
                     ]
                 }, 
@@ -1374,7 +1374,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 134096
+                            "value": 134097
                         }
                     ]
                 }, 
@@ -1386,7 +1386,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 570031
+                            "value": 570035
                         }
                     ]
                 }, 
@@ -1482,7 +1482,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 302108
+                            "value": 302109
                         }
                     ]
                 }, 
@@ -1518,7 +1518,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 107716
+                            "value": 107717
                         }
                     ]
                 }, 
@@ -1530,7 +1530,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 271363
+                            "value": 271364
                         }
                     ]
                 }, 
@@ -1566,7 +1566,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 391438
+                            "value": 391440
                         }
                     ]
                 }, 
@@ -1581,7 +1581,7 @@
                             "value": {
                                 "link clicks": 390, 
                                 "other clicks": 190500, 
-                                "photo view": 1059, 
+                                "photo view": 1061, 
                                 "video play": 132361
                             }
                         }
@@ -1598,8 +1598,8 @@
                             "value": {
                                 "link clicks": 435, 
                                 "other clicks": 248967, 
-                                "photo view": 1245, 
-                                "video play": 140649
+                                "photo view": 1246, 
+                                "video play": 140650
                             }
                         }
                     ]

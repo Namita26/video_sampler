@@ -9,7 +9,9 @@ from social_handles_data.ytstories import get_youtube_stories, get_grand_youtube
 
 
 start_date = '2011-01-01'
-end_date = datetime.datetime.today().strftime('%Y-%m-%d')
+
+def get_end_date():
+    return datetime.datetime.today().strftime('%Y-%m-%d')
 
 
 def fetch_data(video_ids, brand_name):
@@ -26,6 +28,7 @@ def fetch_data(video_ids, brand_name):
     final = []
 
     is_fetched = check_already_fetched(brand_name)
+    end_date = get_end_date()
     if is_fetched:
         with open("social_handles_data/" + brand_name + '/' + end_date  +"_fb_yt_final.json", "r") as f:
             final = json.load(f)
@@ -85,13 +88,13 @@ def fetch_data(video_ids, brand_name):
 
 
 def chart_details(brand_name):
-    with open("social_handles_data/" + brand_name + '/' + end_date  +"_fb_yt_final.json", "r") as f:
+    with open("social_handles_data/" + brand_name + '/' + get_end_date()  +"_fb_yt_final.json", "r") as f:
         final = json.load(f)
     return json.dumps(final)
 
 
 def check_already_fetched(brand_name):
-    if os.path.isfile('social_handles_data/' + brand_name + '/'+ end_date +'_fb_yt_final.json'):
+    if os.path.isfile('social_handles_data/' + brand_name + '/'+ get_end_date() +'_fb_yt_final.json'):
         return True
     else:
         return False

@@ -13,7 +13,7 @@ def get_youtube_title(title_info, video_id):
 
 def get_youtube_stories(video_ids, start_date, end_date, brand_name):
     youtube_video_ids = get_youtube_video_ids(video_ids)
-    insights_file = FileUtil.readJson('social_handles_data/'+ end_date +'yt_stats.json')
+    insights_file = FileUtil.readJson('social_handles_data/' +brand_name+ '/'+ end_date +'yt_stats.json')
 
     flag = False
     insight_ids = insights_file.keys()

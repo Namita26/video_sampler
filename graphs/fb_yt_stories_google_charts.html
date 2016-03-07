@@ -50,6 +50,7 @@
 
      	function drawTable(x) 
      	{	
+     		no_of_videos = x.length - 10;
 			var data = new google.visualization.DataTable();
 		  	data.addColumn('string', 'FB Name');
 		  	data.addColumn('string', 'YT Name');
@@ -66,25 +67,26 @@
 
 		  	
 
-		  	data.addRows(13);
-		  	for(i = 0; i < 13; i++)
+		  	data.addRows(no_of_videos + 1);
+		  	for(i = 0; i < x.length; i++)
 		  	{
 
-		      	if(i == 12)
+		      	if(i == no_of_videos)
 		      	{
+		      		/* change i== to no of videos and 3rd arg in setCell would start from index = no_pf_videos*/
 		      		data.setCell(i, 0, 'Total','<b>Total</b>', {className: 'TotalCell'});
-		      		data.setCell(i, 2, x[12] , Number(x[12]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 3, x[13] ,Number(x[13]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 4, x[14] ,Number(x[14]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 5, x[15] ,Number(x[15]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 6, x[16] ,Number(x[16]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 7, x[17] ,Number(x[17]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 8, x[18] ,Number(x[18]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 9, x[19] ,Number(x[19]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 10, x[20], Number(x[20]).toLocaleString('latin'), {className: 'TotalCell'});
-		      		data.setCell(i, 11, x[21],Number(x[21]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 2, x[no_of_videos] , Number(x[no_of_videos]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 3, x[no_of_videos+1] ,Number(x[no_of_videos+1]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 4, x[no_of_videos+2] ,Number(x[no_of_videos+2]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 5, x[no_of_videos+3] ,Number(x[no_of_videos+3]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 6, x[no_of_videos+4] ,Number(x[no_of_videos+4]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 7, x[no_of_videos+5] ,Number(x[no_of_videos+5]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 8, x[no_of_videos+6] ,Number(x[no_of_videos+6]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 9, x[no_of_videos+7] ,Number(x[no_of_videos+7]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 10, x[no_of_videos+8], Number(x[no_of_videos+8]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 11, x[no_of_videos+9],Number(x[no_of_videos+9]).toLocaleString('latin'), {className: 'TotalCell'});
 		      	}
-		      	if(i < 12)
+		      	if(i < no_of_videos)
 		      	{
 		      		data.setCell(i, 0, "<a target='_blank' href="+'http://www.facebook.com/'+x[i].facebook.video_id + ">" + x[i].facebook.video_title + "</a>");
 			    	data.setCell(i, 1, "<a target='_blank' href="+'https://www.youtube.com/watch?v='+x[i].youtube.video_id + ">" + x[i].youtube.video_title + "</a>");
@@ -138,7 +140,7 @@
 				function get_chart_details()
 				{
 					$.ajax({
-						url: "http://localhost:5000/fb_yt/",
+						url: "http://localhost:5000/fb_yt/?brandname=studiowest",
 						type: "GET",
 						success: function(data){
 							story_data = JSON.parse(data);

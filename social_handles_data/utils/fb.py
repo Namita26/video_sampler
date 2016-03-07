@@ -10,10 +10,10 @@ def facebook_graph_object():
 
 end_date = datetime.datetime.today().strftime('%Y-%m-%d')
 
-def post_insights_object(video_id):
+def post_insights_object(video_id, brand_name):
     graph = facebook_graph_object()
     insights = graph.request("319863888091100_" + str(video_id) + "/insights/")
-    filepath = 'social_handles_data/'+ end_date +'_fb_insights.json'
+    filepath = 'social_handles_data/' + brand_name + '/' + end_date +'_fb_insights.json'
     if not os.path.isfile(filepath):
         FileUtil.writeJson(filepath, {video_id: {"insights": insights, "meta_info": post_meta_info(video_id)}})
     else:
@@ -32,7 +32,7 @@ def post_meta_info(video_id):
     meta['created_date'] = meta_info['created_time']
     return meta
 
-def get_insights(video_ids):
-    video_ids = video_ids.split(',')
+def get_insights(video_ids, brand_name):
+    # video_ids = video_ids.split(',')
     for video_id in video_ids:
-        post_insights_object(video_id)
+        post_insights_object(video_id, brand_name)

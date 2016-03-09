@@ -24,3 +24,4 @@ curl http://localhost:5000/youtube_insights/\?ids\='video_ids=%5B%7B%22video_ids
 curl http://localhost:5000/facebook_insights/\?ids\='video_ids=%5B%7B%22video_ids%22%3A+%5B925173684226781%5D%7D%2C+%7B%22brandname%22%3A+%22craftsvilla%22%7D%5D'
 
 curl http://localhost:5000/fb_yt/\?ids\='video_ids=%5B%7B%22fb%22%3A+925173684226781%2C+%22yt%22%3A+%22DRoNTDRJNuU%22%7D%2C+%7B%22brand%22%3A+%22craftsvilla%22%7D%5D'
+

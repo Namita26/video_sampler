@@ -50,7 +50,7 @@
 
      	function drawTable(x) 
      	{	
-     		no_of_videos = x.length - 10;
+     		no_of_videos = x.length - 12;
 			var data = new google.visualization.DataTable();
 		  	data.addColumn('string', 'FB Name');
 		  	data.addColumn('string', 'YT Name');
@@ -64,6 +64,8 @@
 		  	data.addColumn('number', 'YT Comments');
 		  	data.addColumn('number', 'Total Comments');
 		  	data.addColumn('number', 'FB Shares');
+		  	data.addColumn('number', 'FB Unique Impressions');
+		  	data.addColumn('number', 'FB Engaged Users');
 
 		  	
 
@@ -85,6 +87,8 @@
 		      		data.setCell(i, 9, x[no_of_videos+7] ,Number(x[no_of_videos+7]).toLocaleString('latin'), {className: 'TotalCell'});
 		      		data.setCell(i, 10, x[no_of_videos+8], Number(x[no_of_videos+8]).toLocaleString('latin'), {className: 'TotalCell'});
 		      		data.setCell(i, 11, x[no_of_videos+9],Number(x[no_of_videos+9]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 12, x[no_of_videos+10],Number(x[no_of_videos+10]).toLocaleString('latin'), {className: 'TotalCell'});
+		      		data.setCell(i, 13, x[no_of_videos+11],Number(x[no_of_videos+11]).toLocaleString('latin'), {className: 'TotalCell'});
 		      	}
 		      	if(i < no_of_videos)
 		      	{
@@ -106,6 +110,8 @@
 			      	data.setCell(i, 10, x[i].fb_yt.total_comments);
 
 			      	data.setCell(i, 11, x[i].facebook.shares);	
+			      	data.setCell(i, 12, x[i].facebook.video_impressions_unique);	
+			      	data.setCell(i, 13, x[i].facebook.video_engaged_users);
 		      	}
 		    	
 		      	
@@ -140,7 +146,7 @@
 				function get_chart_details()
 				{
 					$.ajax({
-						url: "http://104.131.108.86:5000/fb_yt/?brandname=maybylline",
+						url: "http://localhost:5000/fb_yt/?brandname=maybelline",
 						type: "GET",
 						success: function(data){
 							story_data = JSON.parse(data);

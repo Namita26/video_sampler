@@ -46,7 +46,7 @@ def fetch_data(video_ids, brand_name):
 
     for i in xrange(0, len(all_fb)):
         each_video = {}
-        each_video['facebook'] = {'video_id': all_fb[i][0], 'views':all_fb[i][1], 'likes':all_fb[i][2], 'comments': all_fb[i][3], 'shares': all_fb[i][4], 'video_title': all_fb[i][5]}
+        each_video['facebook'] = {'video_id': all_fb[i][0], 'views':all_fb[i][1], 'likes':all_fb[i][2], 'comments': all_fb[i][3], 'shares': all_fb[i][4], 'video_title': all_fb[i][5], 'video_impressions_unique': all_fb[i][6], "video_engaged_users": all_fb[i][7]}
 
         each_video['youtube'] = {
                 'video_id': all_yb[i][0],
@@ -80,6 +80,8 @@ def fetch_data(video_ids, brand_name):
     final.append(youtube_grand['youtube_grand_comments'])
     final.append(sum(sum_total_comments))
     final.append(facebook_grand['facebook_grand_shares'])
+    final.append(facebook_grand['facebook_grand_unique_impressions'])
+    final.append(facebook_grand['facebook_grand_engaged_users'])
 
     with open("social_handles_data/" + brand_name +'/' + end_date + "_fb_yt_final.json", "w") as f:
         json.dump(final, f, indent=4)

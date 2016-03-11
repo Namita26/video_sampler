@@ -5,30 +5,34 @@
             "video_id": "DRoNTDRJNuU", 
             "likes": 673.0, 
             "comments": 25.0, 
-            "views": 36438.0
+            "views": 36462.0
         }, 
         "facebook": {
-            "views": 345649, 
+            "video_impressions_unique": 1187755, 
+            "likes": 7116, 
+            "views": 346536, 
+            "video_engaged_users": 49353, 
             "video_id": 925173684226781, 
-            "shares": 1007, 
-            "likes": 7088, 
             "video_title": "8 Tips & Tricks To Organize An Amazing Party At Home", 
-            "comments": 173
+            "comments": 173, 
+            "shares": 1012
         }, 
         "fb_yt": {
-            "total_views": 382087.0, 
-            "total_likes": 7761.0, 
+            "total_views": 382998.0, 
+            "total_likes": 7789.0, 
             "total_comments": 198.0
         }
     }, 
-    345649, 
-    36438.0, 
-    382087.0, 
-    7088, 
+    346536, 
+    36462.0, 
+    382998.0, 
+    7116, 
     673.0, 
-    7761.0, 
+    7789.0, 
     173, 
     25.0, 
     198.0, 
-    1007
+    1012, 
+    1187755, 
+    49353
 ]

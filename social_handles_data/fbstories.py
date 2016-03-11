@@ -28,7 +28,9 @@ def get_facebook_stories(video_ids, start_date, end_date, brand_name):
             fb_title = insights_file[str(video_id)]['meta_info']['video_title']
             post_video_views = insights['data'][25]['values'][0]['value']
             post_video_stories = insights['data'][57]['values'][0]['value']
-            all_fb.append([video_id, post_video_views, post_video_stories['like'], post_video_stories['comment'], post_video_stories['share'], fb_title])
+            post_engaged_users = insights['data'][55]['values'][0]['value']
+            post_impressions_unique = insights['data'][4]['values'][0]['value']
+            all_fb.append([video_id, post_video_views, post_video_stories['like'], post_video_stories['comment'], post_video_stories['share'], fb_title, post_impressions_unique, post_engaged_users])
     else:
         get_insights(",".join(facebook_video_ids))
         graph = facebook_graph_object()
@@ -37,6 +39,8 @@ def get_facebook_stories(video_ids, start_date, end_date, brand_name):
             fb_title = post_meta_info(video_id)['video_title']
             post_video_views = insights['data'][25]['values'][0]['value']
             post_video_stories = insights['data'][57]['values'][0]['value']
+            post_engaged_users = insights['data'][55]['values'][0]['value']
+            post_impressions_unique = insights['data'][4]['values'][0]['value']
             all_fb.append([video_id, post_video_views, post_video_stories['like'], post_video_stories['comment'], post_video_stories['share'], fb_title])
 
     return all_fb
@@ -48,11 +52,15 @@ def get_grand_facebook_stories(all_fb):
         "facebook_grand_likes": 0,
         "facebook_grand_views": 0,
         "facebook_grand_comments": 0,
-        "facebook_grand_shares": 0
+        "facebook_grand_shares": 0,
+        "facebook_grand_unique_impressions": 0,
+        "facebook_grand_engaged_users": 0
     }
     for f_video in all_fb:
         grand['facebook_grand_likes'] += f_video[2]
         grand['facebook_grand_views'] += f_video[1]
         grand['facebook_grand_comments'] += f_video[3]
         grand['facebook_grand_shares'] += f_video[4]
+        grand['facebook_grand_unique_impressions'] += f_video[6]
+        grand['facebook_grand_engaged_users'] += f_video[7]
     return grand

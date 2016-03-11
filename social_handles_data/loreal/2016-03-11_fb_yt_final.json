@@ -1,0 +1,34 @@
+[
+    {
+        "youtube": {
+            "video_title": "7 Genius Ways To Use A Compact Powder | Makeup Hacks", 
+            "video_id": "pEn0H-R-YnU", 
+            "likes": 2030.0, 
+            "comments": 73.0, 
+            "views": 152965.0
+        }, 
+        "facebook": {
+            "views": 610170, 
+            "video_id": 898908596853290, 
+            "shares": 4649, 
+            "likes": 22701, 
+            "video_title": "7 Genius Ways To Use A Compact Powder", 
+            "comments": 534
+        }, 
+        "fb_yt": {
+            "total_views": 763135.0, 
+            "total_likes": 24731.0, 
+            "total_comments": 607.0
+        }
+    }, 
+    610170, 
+    152965.0, 
+    763135.0, 
+    22701, 
+    2030.0, 
+    24731.0, 
+    534, 
+    73.0, 
+    607.0, 
+    4649
+]

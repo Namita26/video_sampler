@@ -30,7 +30,7 @@ def fetch_data(video_ids, brand_name):
     is_fetched = check_already_fetched(brand_name)
     end_date = get_end_date()
     if is_fetched:
-        with open("social_handles_data/" + brand_name + '/' + end_date  +"_fb_yt_final.json", "r") as f:
+        with open("social_handles_data/" + brand_name + "/latest.json", "r") as f:
             final = json.load(f)
         return json.dumps(final)
     else:
@@ -86,6 +86,9 @@ def fetch_data(video_ids, brand_name):
     with open("social_handles_data/" + brand_name +'/' + end_date + "_fb_yt_final.json", "w") as f:
         json.dump(final, f, indent=4)
 
+    with open("social_handles_data/" + brand_name +"/latest.json", "w") as f:
+        json.dump(final, f, indent=4)
+
     return json.dumps(final)
 
 
@@ -96,7 +99,7 @@ def chart_details(brand_name):
 
 
 def check_already_fetched(brand_name):
-    if os.path.isfile('social_handles_data/' + brand_name + '/'+ get_end_date() +'_fb_yt_final.json'):
+    if os.path.isfile("social_handles_data/" + brand_name + "/latest.json"):
         return True
     else:
         return False

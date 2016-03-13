@@ -4840,7 +4840,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 30871
+                            "value": 30868
                         }
                     ]
                 }, 
@@ -4852,7 +4852,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 144754
+                            "value": 144766
                         }
                     ]
                 }, 
@@ -5298,7 +5298,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 10209
+                            "value": 10211
                         }
                     ]
                 }, 
@@ -5313,7 +5313,7 @@
                             "value": {
                                 "comment": 242, 
                                 "like": 8201, 
-                                "share": 1301
+                                "share": 1303
                             }
                         }
                     ]
@@ -5328,8 +5328,8 @@
                         {
                             "value": {
                                 "comment": 302, 
-                                "like": 8511, 
-                                "share": 1396
+                                "like": 8512, 
+                                "share": 1397
                             }
                         }
                     ]
@@ -5354,7 +5354,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 1470624
+                            "value": 1470643
                         }
                     ]
                 }, 
@@ -5402,7 +5402,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 1007070
+                            "value": 1007075
                         }
                     ]
                 }, 
@@ -5426,7 +5426,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 187506
+                            "value": 187520
                         }
                     ]
                 }, 
@@ -5453,7 +5453,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 187506
+                                "other": 187520
                             }
                         }
                     ]
@@ -5478,7 +5478,7 @@
                     "title": "Lifetime Post Impressions by people who have liked your Page", 
                     "values": [
                         {
-                            "value": 830281
+                            "value": 830291
                         }
                     ]
                 }, 
@@ -5532,8 +5532,8 @@
                         {
                             "value": {
                                 "paid": 276048, 
-                                "total": 1470624, 
-                                "unpaid": 1194576
+                                "total": 1470643, 
+                                "unpaid": 1194595
                             }
                         }
                     ]
@@ -5561,31 +5561,31 @@
                             "value": {
                                 "0": 1, 
                                 "1": 0.7542, 
-                                "10": 0.3652, 
+                                "10": 0.3653, 
                                 "11": 0.3558, 
                                 "12": 0.3552, 
                                 "13": 0.3532, 
                                 "14": 0.3503, 
                                 "15": 0.3506, 
                                 "16": 0.3421, 
-                                "17": 0.3401, 
-                                "18": 0.3363, 
+                                "17": 0.3402, 
+                                "18": 0.3364, 
                                 "19": 0.3346, 
                                 "2": 0.5332, 
-                                "20": 0.3289, 
+                                "20": 0.329, 
                                 "21": 0.3212, 
                                 "22": 0.3168, 
                                 "23": 0.3118, 
-                                "24": 0.3021, 
-                                "25": 0.2965, 
-                                "26": 0.2932, 
+                                "24": 0.3022, 
+                                "25": 0.2966, 
+                                "26": 0.2933, 
                                 "27": 0.281, 
                                 "28": 0.2781, 
                                 "29": 0.2711, 
                                 "3": 0.4615, 
                                 "30": 0.2667, 
                                 "31": 0.2616, 
-                                "32": 0.258, 
+                                "32": 0.2581, 
                                 "33": 0.2546, 
                                 "34": 0.2467, 
                                 "35": 0.2443, 
@@ -5598,7 +5598,7 @@
                                 "5": 0.41, 
                                 "6": 0.4007, 
                                 "7": 0.3906, 
-                                "8": 0.3793, 
+                                "8": 0.3794, 
                                 "9": 0.3718
                             }
                         }
@@ -5625,7 +5625,7 @@
                                 0.2523, 
                                 0.2463, 
                                 0.238, 
-                                0.2365, 
+                                0.2364, 
                                 0.2342, 
                                 0.2314, 
                                 0.2312, 
@@ -5669,17 +5669,17 @@
                             "value": {
                                 "0": 1, 
                                 "1": 0.9696, 
-                                "10": 0.7443, 
+                                "10": 0.7442, 
                                 "11": 0.7309, 
                                 "12": 0.7333, 
                                 "13": 0.7321, 
-                                "14": 0.7291, 
-                                "15": 0.7309, 
+                                "14": 0.729, 
+                                "15": 0.7308, 
                                 "16": 0.7183, 
                                 "17": 0.7165, 
-                                "18": 0.7105, 
+                                "18": 0.7104, 
                                 "19": 0.708, 
-                                "2": 0.862, 
+                                "2": 0.8619, 
                                 "20": 0.6976, 
                                 "21": 0.6825, 
                                 "22": 0.6748, 
@@ -5689,25 +5689,25 @@
                                 "26": 0.6276, 
                                 "27": 0.6046, 
                                 "28": 0.5991, 
-                                "29": 0.5856, 
+                                "29": 0.5855, 
                                 "3": 0.816, 
                                 "30": 0.5766, 
                                 "31": 0.5654, 
                                 "32": 0.5586, 
-                                "33": 0.5507, 
+                                "33": 0.5506, 
                                 "34": 0.5366, 
                                 "35": 0.5319, 
                                 "36": 0.5257, 
                                 "37": 0.5191, 
-                                "38": 0.5133, 
+                                "38": 0.5132, 
                                 "39": 0.4701, 
-                                "4": 0.7908, 
+                                "4": 0.7907, 
                                 "40": 0.3107, 
-                                "5": 0.7851, 
+                                "5": 0.785, 
                                 "6": 0.7794, 
                                 "7": 0.7708, 
-                                "8": 0.7597, 
-                                "9": 0.7525
+                                "8": 0.7596, 
+                                "9": 0.7524
                             }
                         }
                     ]
@@ -5720,7 +5720,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 87101
+                            "value": 87107
                         }
                     ]
                 }, 
@@ -5732,7 +5732,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 259334
+                            "value": 259381
                         }
                     ]
                 }, 
@@ -5756,7 +5756,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 196964
+                            "value": 196979
                         }
                     ]
                 }, 
@@ -5768,7 +5768,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 62370
+                            "value": 62402
                         }
                     ]
                 }, 
@@ -5780,7 +5780,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 224856
+                            "value": 224900
                         }
                     ]
                 }, 
@@ -5804,7 +5804,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 44114
+                            "value": 44129
                         }
                     ]
                 }, 
@@ -5828,7 +5828,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 34478
+                            "value": 34481
                         }
                     ]
                 }, 
@@ -5852,7 +5852,7 @@
                     "title": "Lifetime Paid views to 95%", 
                     "values": [
                         {
-                            "value": 14240
+                            "value": 14242
                         }
                     ]
                 }, 
@@ -5876,7 +5876,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 109539
+                            "value": 109564
                         }
                     ]
                 }, 
@@ -5900,7 +5900,7 @@
                     "title": "Lifetime Auto-Played 30-Second Views", 
                     "values": [
                         {
-                            "value": 59709
+                            "value": 59711
                         }
                     ]
                 }, 
@@ -5912,7 +5912,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 49830
+                            "value": 49853
                         }
                     ]
                 }, 
@@ -5924,7 +5924,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 87049
+                            "value": 87072
                         }
                     ]
                 }, 
@@ -5936,7 +5936,7 @@
                     "title": "Lifetime Paid 30-Second Views", 
                     "values": [
                         {
-                            "value": 22490
+                            "value": 22492
                         }
                     ]
                 }, 
@@ -5960,7 +5960,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 122837
+                            "value": 122874
                         }
                     ]
                 }, 
@@ -5976,7 +5976,7 @@
                                 "link clicks": 205, 
                                 "other clicks": 45197, 
                                 "photo view": 398, 
-                                "video play": 62463
+                                "video play": 62543
                             }
                         }
                     ]
@@ -5991,9 +5991,9 @@
                         {
                             "value": {
                                 "link clicks": 223, 
-                                "other clicks": 55311, 
+                                "other clicks": 55314, 
                                 "photo view": 419, 
-                                "video play": 66884
+                                "video play": 66918
                             }
                         }
                     ]
@@ -6099,7 +6099,7 @@
                             "value": {
                                 "comment": 242, 
                                 "like": 8201, 
-                                "share": 1301
+                                "share": 1303
                             }
                         }
                     ]
@@ -6124,7 +6124,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 10209
+                            "value": 10211
                         }
                     ]
                 }, 
@@ -6138,8 +6138,8 @@
                         {
                             "value": {
                                 "comment": 302, 
-                                "like": 8511, 
-                                "share": 1396
+                                "like": 8512, 
+                                "share": 1397
                             }
                         }
                     ]
@@ -6166,7 +6166,7 @@
                     "title": "Lifetime Talking About This (Post)", 
                     "values": [
                         {
-                            "value": 5487
+                            "value": 5492
                         }
                     ]
                 }, 
@@ -6178,7 +6178,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 6018
+                            "value": 6020
                         }
                     ]
                 }, 
@@ -6193,7 +6193,7 @@
                             "value": {
                                 "comment": 88, 
                                 "like": 4655, 
-                                "share": 942
+                                "share": 943
                             }
                         }
                     ]
@@ -6208,8 +6208,8 @@
                         {
                             "value": {
                                 "comment": 97, 
-                                "like": 4884, 
-                                "share": 1037
+                                "like": 4885, 
+                                "share": 1038
                             }
                         }
                     ]
@@ -6234,7 +6234,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 1677941
+                            "value": 1678019
                         }
                     ]
                 }, 
@@ -6282,7 +6282,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 1595852
+                            "value": 1595855
                         }
                     ]
                 }, 
@@ -6294,7 +6294,7 @@
                     "title": "Lifetime Post viral reach", 
                     "values": [
                         {
-                            "value": 45384
+                            "value": 45390
                         }
                     ]
                 }, 
@@ -6306,7 +6306,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 82089
+                            "value": 82164
                         }
                     ]
                 }, 
@@ -6319,7 +6319,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 45384
+                                "other": 45390
                             }
                         }
                     ]
@@ -6333,7 +6333,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 82089
+                                "other": 82164
                             }
                         }
                     ]
@@ -6412,8 +6412,8 @@
                         {
                             "value": {
                                 "paid": 0, 
-                                "total": 1677941, 
-                                "unpaid": 1677941
+                                "total": 1678019, 
+                                "unpaid": 1678019
                             }
                         }
                     ]
@@ -6446,7 +6446,7 @@
                                 "12": 0.256, 
                                 "13": 0.2493, 
                                 "14": 0.2443, 
-                                "15": 0.2402, 
+                                "15": 0.2403, 
                                 "16": 0.2292, 
                                 "17": 0.2074, 
                                 "18": 0.2014, 
@@ -6458,7 +6458,7 @@
                                 "23": 0.1875, 
                                 "24": 0.1849, 
                                 "25": 0.1842, 
-                                "26": 0.1811, 
+                                "26": 0.1812, 
                                 "27": 0.1813, 
                                 "28": 0.1806, 
                                 "29": 0.1781, 
@@ -6469,7 +6469,7 @@
                                 "33": 0.1721, 
                                 "34": 0.1688, 
                                 "35": 0.164, 
-                                "36": 0.1605, 
+                                "36": 0.1606, 
                                 "37": 0.1541, 
                                 "38": 0.14, 
                                 "39": 0.1311, 
@@ -6507,29 +6507,29 @@
                                 "19": 0.1255, 
                                 "2": 0.3229, 
                                 "20": 0.1256, 
-                                "21": 0.1222, 
+                                "21": 0.1223, 
                                 "22": 0.1206, 
-                                "23": 0.1175, 
+                                "23": 0.1176, 
                                 "24": 0.1157, 
                                 "25": 0.1157, 
                                 "26": 0.1138, 
                                 "27": 0.1142, 
                                 "28": 0.1133, 
                                 "29": 0.1115, 
-                                "3": 0.2732, 
+                                "3": 0.2733, 
                                 "30": 0.1079, 
                                 "31": 0.107, 
                                 "32": 0.1068, 
                                 "33": 0.1071, 
                                 "34": 0.1051, 
-                                "35": 0.1018, 
+                                "35": 0.1019, 
                                 "36": 0.0998, 
-                                "37": 0.096, 
-                                "38": 0.0879, 
+                                "37": 0.0961, 
+                                "38": 0.088, 
                                 "39": 0.0824, 
                                 "4": 0.2434, 
-                                "40": 0.0415, 
-                                "5": 0.231, 
+                                "40": 0.0416, 
+                                "5": 0.2311, 
                                 "6": 0.2169, 
                                 "7": 0.204, 
                                 "8": 0.1965, 
@@ -6553,12 +6553,12 @@
                                 "11": 0.5441, 
                                 "12": 0.5307, 
                                 "13": 0.5186, 
-                                "14": 0.509, 
+                                "14": 0.5091, 
                                 "15": 0.501, 
                                 "16": 0.4774, 
                                 "17": 0.4339, 
                                 "18": 0.4237, 
-                                "19": 0.419, 
+                                "19": 0.4191, 
                                 "2": 0.7723, 
                                 "20": 0.4175, 
                                 "21": 0.4101, 
@@ -6569,7 +6569,7 @@
                                 "26": 0.3831, 
                                 "27": 0.3825, 
                                 "28": 0.3824, 
-                                "29": 0.3779, 
+                                "29": 0.378, 
                                 "3": 0.734, 
                                 "30": 0.3692, 
                                 "31": 0.3671, 
@@ -6600,7 +6600,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 97210
+                            "value": 97219
                         }
                     ]
                 }, 
@@ -6612,7 +6612,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 240738
+                            "value": 240768
                         }
                     ]
                 }, 
@@ -6636,7 +6636,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 180473
+                            "value": 180492
                         }
                     ]
                 }, 
@@ -6648,7 +6648,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 60265
+                            "value": 60276
                         }
                     ]
                 }, 
@@ -6660,7 +6660,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 240133
+                            "value": 240163
                         }
                     ]
                 }, 
@@ -6684,7 +6684,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 31995
+                            "value": 32005
                         }
                     ]
                 }, 
@@ -6756,7 +6756,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 95053
+                            "value": 95070
                         }
                     ]
                 }, 
@@ -6780,7 +6780,7 @@
                     "title": "Lifetime Auto-Played 30-Second Views", 
                     "values": [
                         {
-                            "value": 49978
+                            "value": 49988
                         }
                     ]
                 }, 
@@ -6792,7 +6792,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 45075
+                            "value": 45082
                         }
                     ]
                 }, 
@@ -6804,7 +6804,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 94604
+                            "value": 94621
                         }
                     ]
                 }, 
@@ -6840,7 +6840,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 154523
+                            "value": 154540
                         }
                     ]
                 }, 
@@ -6871,9 +6871,9 @@
                         {
                             "value": {
                                 "link clicks": 244, 
-                                "other clicks": 87594, 
+                                "other clicks": 87598, 
                                 "photo view": 387, 
-                                "video play": 66256
+                                "video play": 66269
                             }
                         }
                     ]
@@ -6964,7 +6964,7 @@
                     "title": "Lifetime Talking About This (Post)", 
                     "values": [
                         {
-                            "value": 5487
+                            "value": 5492
                         }
                     ]
                 }, 
@@ -6979,7 +6979,7 @@
                             "value": {
                                 "comment": 88, 
                                 "like": 4655, 
-                                "share": 942
+                                "share": 943
                             }
                         }
                     ]
@@ -7004,7 +7004,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 6018
+                            "value": 6020
                         }
                     ]
                 }, 
@@ -7018,8 +7018,8 @@
                         {
                             "value": {
                                 "comment": 97, 
-                                "like": 4884, 
-                                "share": 1037
+                                "like": 4885, 
+                                "share": 1038
                             }
                         }
                     ]
@@ -7114,7 +7114,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 520293
+                            "value": 520300
                         }
                     ]
                 }, 
@@ -7162,7 +7162,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 500226
+                            "value": 500232
                         }
                     ]
                 }, 
@@ -7186,7 +7186,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 20067
+                            "value": 20068
                         }
                     ]
                 }, 
@@ -7213,7 +7213,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 20067
+                                "other": 20068
                             }
                         }
                     ]
@@ -7238,7 +7238,7 @@
                     "title": "Lifetime Post Impressions by people who have liked your Page", 
                     "values": [
                         {
-                            "value": 328164
+                            "value": 328170
                         }
                     ]
                 }, 
@@ -7292,8 +7292,8 @@
                         {
                             "value": {
                                 "paid": 0, 
-                                "total": 520293, 
-                                "unpaid": 520293
+                                "total": 520300, 
+                                "unpaid": 520300
                             }
                         }
                     ]
@@ -7320,43 +7320,43 @@
                         {
                             "value": [
                                 1, 
-                                0.3489, 
+                                0.349, 
                                 0.2554, 
                                 0.2235, 
-                                0.2089, 
+                                0.209, 
                                 0.1977, 
-                                0.1903, 
+                                0.1904, 
                                 0.1817, 
-                                0.1706, 
-                                0.1673, 
+                                0.1707, 
+                                0.1674, 
                                 0.1632, 
                                 0.1593, 
                                 0.1572, 
                                 0.1297, 
                                 0.1182, 
-                                0.1111, 
+                                0.1112, 
                                 0.1062, 
                                 0.101, 
                                 0.0981, 
                                 0.0941, 
                                 0.0928, 
                                 0.0881, 
-                                0.0855, 
+                                0.0856, 
                                 0.0819, 
                                 0.0785, 
-                                0.0763, 
-                                0.0759, 
-                                0.0726, 
+                                0.0764, 
+                                0.076, 
+                                0.0727, 
                                 0.0711, 
-                                0.0655, 
-                                0.0617, 
-                                0.0583, 
+                                0.0656, 
+                                0.0618, 
+                                0.0584, 
                                 0.0549, 
-                                0.0512, 
+                                0.0513, 
                                 0.0478, 
-                                0.0466, 
+                                0.0467, 
                                 0.0454, 
-                                0.045, 
+                                0.0451, 
                                 0.0444, 
                                 0.0435, 
                                 0.0182
@@ -7431,43 +7431,43 @@
                                 0.675, 
                                 0.5554, 
                                 0.5064, 
-                                0.4807, 
+                                0.4808, 
                                 0.46, 
                                 0.4477, 
-                                0.4304, 
+                                0.4303, 
                                 0.4051, 
-                                0.3986, 
+                                0.3987, 
                                 0.3906, 
-                                0.3827, 
+                                0.3828, 
                                 0.3787, 
                                 0.3128, 
                                 0.2865, 
-                                0.2704, 
+                                0.2705, 
                                 0.2595, 
                                 0.2474, 
-                                0.2405, 
+                                0.2406, 
                                 0.2311, 
                                 0.2284, 
-                                0.2174, 
-                                0.2123, 
-                                0.2032, 
-                                0.1933, 
-                                0.1884, 
-                                0.187, 
-                                0.1782, 
-                                0.1751, 
-                                0.1615, 
-                                0.1522, 
-                                0.1437, 
-                                0.1353, 
-                                0.1267, 
-                                0.1178, 
-                                0.1148, 
+                                0.2175, 
+                                0.2124, 
+                                0.2033, 
+                                0.1934, 
+                                0.1885, 
+                                0.1871, 
+                                0.1783, 
+                                0.1752, 
+                                0.1616, 
+                                0.1523, 
+                                0.1439, 
+                                0.1354, 
+                                0.1269, 
+                                0.1179, 
+                                0.1149, 
                                 0.1112, 
-                                0.11, 
+                                0.1101, 
                                 0.1071, 
-                                0.1047, 
-                                0.0372
+                                0.1048, 
+                                0.0373
                             ]
                         }
                     ]
@@ -7480,7 +7480,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 105145
+                            "value": 105184
                         }
                     ]
                 }, 
@@ -7492,7 +7492,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 53731
+                            "value": 53740
                         }
                     ]
                 }, 
@@ -7528,7 +7528,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 12719
+                            "value": 12728
                         }
                     ]
                 }, 
@@ -7540,7 +7540,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 53402
+                            "value": 53410
                         }
                     ]
                 }, 
@@ -7564,7 +7564,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 2258
+                            "value": 2260
                         }
                     ]
                 }, 
@@ -7588,7 +7588,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 329
+                            "value": 330
                         }
                     ]
                 }, 
@@ -7600,7 +7600,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 307
+                            "value": 308
                         }
                     ]
                 }, 
@@ -7636,7 +7636,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 16807
+                            "value": 16814
                         }
                     ]
                 }, 
@@ -7672,7 +7672,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 8345
+                            "value": 8352
                         }
                     ]
                 }, 
@@ -7684,7 +7684,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 16579
+                            "value": 16585
                         }
                     ]
                 }, 
@@ -7696,7 +7696,7 @@
                     "title": "Lifetime Paid 30-Second Views", 
                     "values": [
                         {
-                            "value": 228
+                            "value": 229
                         }
                     ]
                 }, 
@@ -7708,7 +7708,7 @@
                     "title": "Lifetime Post Consumers", 
                     "values": [
                         {
-                            "value": 22149
+                            "value": 22164
                         }
                     ]
                 }, 
@@ -7720,7 +7720,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 34712
+                            "value": 34724
                         }
                     ]
                 }, 
@@ -7736,7 +7736,7 @@
                                 "link clicks": 93, 
                                 "other clicks": 16363, 
                                 "photo view": 128, 
-                                "video play": 14770
+                                "video play": 14781
                             }
                         }
                     ]
@@ -7751,9 +7751,9 @@
                         {
                             "value": {
                                 "link clicks": 98, 
-                                "other clicks": 19466, 
+                                "other clicks": 19467, 
                                 "photo view": 152, 
-                                "video play": 14996
+                                "video play": 15007
                             }
                         }
                     ]
@@ -7820,7 +7820,7 @@
                     "title": "Lifetime People who have liked your Page and engaged with your post", 
                     "values": [
                         {
-                            "value": 17185
+                            "value": 17194
                         }
                     ]
                 }, 
@@ -7872,7 +7872,7 @@
                     "title": "Lifetime Engaged Users", 
                     "values": [
                         {
-                            "value": 23016
+                            "value": 23032
                         }
                     ]
                 }, 
@@ -7994,7 +7994,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 1610199
+                            "value": 1610212
                         }
                     ]
                 }, 
@@ -8042,7 +8042,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 1521389
+                            "value": 1521399
                         }
                     ]
                 }, 
@@ -8066,7 +8066,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 88810
+                            "value": 88813
                         }
                     ]
                 }, 
@@ -8093,7 +8093,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 88810
+                                "other": 88813
                             }
                         }
                     ]
@@ -8118,7 +8118,7 @@
                     "title": "Lifetime Post Impressions by people who have liked your Page", 
                     "values": [
                         {
-                            "value": 1267275
+                            "value": 1267278
                         }
                     ]
                 }, 
@@ -8172,8 +8172,8 @@
                         {
                             "value": {
                                 "paid": 0, 
-                                "total": 1610199, 
-                                "unpaid": 1610199
+                                "total": 1610212, 
+                                "unpaid": 1610212
                             }
                         }
                     ]
@@ -8201,18 +8201,18 @@
                             "value": [
                                 1, 
                                 0.6037, 
-                                0.4687, 
+                                0.4688, 
                                 0.4237, 
                                 0.3935, 
                                 0.3815, 
                                 0.357, 
-                                0.3326, 
+                                0.3327, 
                                 0.3107, 
                                 0.2897, 
-                                0.2764, 
+                                0.2765, 
                                 0.2639, 
                                 0.2563, 
-                                0.2499, 
+                                0.25, 
                                 0.237, 
                                 0.2245, 
                                 0.2122, 
@@ -8234,7 +8234,7 @@
                                 0.1225, 
                                 0.1225, 
                                 0.1218, 
-                                0.1203, 
+                                0.1204, 
                                 0.1173, 
                                 0.1147, 
                                 0.1121, 
@@ -8310,44 +8310,44 @@
                                 "0": 1, 
                                 "1": 0.907, 
                                 "10": 0.5718, 
-                                "11": 0.5521, 
-                                "12": 0.5415, 
-                                "13": 0.5317, 
+                                "11": 0.552, 
+                                "12": 0.5414, 
+                                "13": 0.5316, 
                                 "14": 0.5063, 
-                                "15": 0.4821, 
-                                "16": 0.4585, 
-                                "17": 0.4404, 
-                                "18": 0.4297, 
-                                "19": 0.4141, 
+                                "15": 0.482, 
+                                "16": 0.4584, 
+                                "17": 0.4403, 
+                                "18": 0.4296, 
+                                "19": 0.414, 
                                 "2": 0.8099, 
-                                "20": 0.402, 
+                                "20": 0.4019, 
                                 "21": 0.3909, 
-                                "22": 0.3753, 
-                                "23": 0.3621, 
-                                "24": 0.3534, 
-                                "25": 0.3401, 
-                                "26": 0.3334, 
-                                "27": 0.317, 
-                                "28": 0.3101, 
-                                "29": 0.2987, 
+                                "22": 0.3751, 
+                                "23": 0.362, 
+                                "24": 0.3533, 
+                                "25": 0.34, 
+                                "26": 0.3333, 
+                                "27": 0.3169, 
+                                "28": 0.31, 
+                                "29": 0.2986, 
                                 "3": 0.7738, 
-                                "30": 0.2849, 
-                                "31": 0.2781, 
-                                "32": 0.2759, 
+                                "30": 0.2848, 
+                                "31": 0.278, 
+                                "32": 0.2758, 
                                 "33": 0.277, 
-                                "34": 0.2756, 
-                                "35": 0.2733, 
+                                "34": 0.2755, 
+                                "35": 0.2732, 
                                 "36": 0.267, 
-                                "37": 0.2601, 
+                                "37": 0.26, 
                                 "38": 0.2524, 
                                 "39": 0.1889, 
                                 "4": 0.7387, 
                                 "40": 0.1048, 
                                 "5": 0.7258, 
                                 "6": 0.6905, 
-                                "7": 0.6582, 
+                                "7": 0.6583, 
                                 "8": 0.6252, 
-                                "9": 0.59
+                                "9": 0.5899
                             }
                         }
                     ]
@@ -8360,7 +8360,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 107167
+                            "value": 107172
                         }
                     ]
                 }, 
@@ -8372,7 +8372,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 233978
+                            "value": 234005
                         }
                     ]
                 }, 
@@ -8384,7 +8384,7 @@
                     "title": "Lifetime Unique Video Views", 
                     "values": [
                         {
-                            "value": 179145
+                            "value": 179270
                         }
                     ]
                 }, 
@@ -8396,7 +8396,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 188659
+                            "value": 188662
                         }
                     ]
                 }, 
@@ -8408,7 +8408,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 45319
+                            "value": 45343
                         }
                     ]
                 }, 
@@ -8420,7 +8420,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 233262
+                            "value": 233288
                         }
                     ]
                 }, 
@@ -8432,7 +8432,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 178892
+                            "value": 179016
                         }
                     ]
                 }, 
@@ -8444,7 +8444,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 24816
+                            "value": 24818
                         }
                     ]
                 }, 
@@ -8456,7 +8456,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 24816
+                            "value": 24818
                         }
                     ]
                 }, 
@@ -8468,7 +8468,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 716
+                            "value": 717
                         }
                     ]
                 }, 
@@ -8492,7 +8492,7 @@
                     "title": "Lifetime Paid views to 95%", 
                     "values": [
                         {
-                            "value": 151
+                            "value": 152
                         }
                     ]
                 }, 
@@ -8504,7 +8504,7 @@
                     "title": "Lifetime Paid views to 95%", 
                     "values": [
                         {
-                            "value": 151
+                            "value": 152
                         }
                     ]
                 }, 
@@ -8516,7 +8516,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 105471
+                            "value": 105494
                         }
                     ]
                 }, 
@@ -8540,7 +8540,7 @@
                     "title": "Lifetime Auto-Played 30-Second Views", 
                     "values": [
                         {
-                            "value": 69674
+                            "value": 69676
                         }
                     ]
                 }, 
@@ -8552,7 +8552,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 35797
+                            "value": 35818
                         }
                     ]
                 }, 
@@ -8564,7 +8564,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 104991
+                            "value": 105013
                         }
                     ]
                 }, 
@@ -8576,7 +8576,7 @@
                     "title": "Lifetime Paid 30-Second Views", 
                     "values": [
                         {
-                            "value": 480
+                            "value": 481
                         }
                     ]
                 }, 
@@ -8600,7 +8600,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 129891
+                            "value": 129918
                         }
                     ]
                 }, 
@@ -8616,7 +8616,7 @@
                                 "link clicks": 309, 
                                 "other clicks": 62488, 
                                 "photo view": 392, 
-                                "video play": 46355
+                                "video play": 46377
                             }
                         }
                     ]
@@ -8633,7 +8633,7 @@
                                 "link clicks": 322, 
                                 "other clicks": 80192, 
                                 "photo view": 442, 
-                                "video play": 48902
+                                "video play": 48929
                             }
                         }
                     ]
@@ -8876,7 +8876,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 1160776
+                            "value": 1160779
                         }
                     ]
                 }, 
@@ -8948,7 +8948,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 131801
+                            "value": 131804
                         }
                     ]
                 }, 
@@ -8975,7 +8975,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 131801
+                                "other": 131804
                             }
                         }
                     ]
@@ -9054,8 +9054,8 @@
                         {
                             "value": {
                                 "paid": 155982, 
-                                "total": 1160776, 
-                                "unpaid": 1004794
+                                "total": 1160779, 
+                                "unpaid": 1004797
                             }
                         }
                     ]
@@ -9083,44 +9083,44 @@
                             "value": [
                                 1, 
                                 0.5734, 
-                                0.4115, 
+                                0.4116, 
                                 0.3551, 
                                 0.3291, 
-                                0.3198, 
-                                0.3137, 
-                                0.3082, 
-                                0.2962, 
-                                0.2962, 
+                                0.3199, 
+                                0.3138, 
+                                0.3083, 
+                                0.2963, 
+                                0.2963, 
                                 0.2958, 
                                 0.2935, 
                                 0.2872, 
                                 0.2808, 
                                 0.2688, 
                                 0.2618, 
-                                0.2527, 
+                                0.2528, 
                                 0.2494, 
-                                0.2473, 
+                                0.2474, 
                                 0.241, 
                                 0.2358, 
                                 0.2315, 
-                                0.2305, 
+                                0.2306, 
                                 0.2292, 
                                 0.2267, 
                                 0.223, 
-                                0.2202, 
+                                0.2203, 
                                 0.2177, 
                                 0.2123, 
-                                0.2017, 
+                                0.2018, 
                                 0.1974, 
-                                0.1921, 
+                                0.1922, 
                                 0.1906, 
                                 0.1886, 
                                 0.1765, 
-                                0.1666, 
-                                0.1634, 
+                                0.1667, 
+                                0.1635, 
                                 0.1623, 
                                 0.1599, 
-                                0.1509, 
+                                0.151, 
                                 0.0983
                             ]
                         }
@@ -9138,18 +9138,18 @@
                                 1, 
                                 0.4753, 
                                 0.3009, 
-                                0.2457, 
+                                0.2458, 
                                 0.2209, 
                                 0.2114, 
                                 0.2054, 
-                                0.2008, 
+                                0.2009, 
                                 0.1913, 
                                 0.1904, 
                                 0.1894, 
                                 0.1874, 
                                 0.1825, 
                                 0.1778, 
-                                0.1694, 
+                                0.1695, 
                                 0.1643, 
                                 0.1581, 
                                 0.1554, 
@@ -9165,13 +9165,13 @@
                                 0.1339, 
                                 0.1306, 
                                 0.1239, 
-                                0.1212, 
+                                0.1213, 
                                 0.1182, 
                                 0.117, 
                                 0.1155, 
                                 0.1083, 
                                 0.1023, 
-                                0.0999, 
+                                0.1, 
                                 0.099, 
                                 0.0974, 
                                 0.0921, 
@@ -9190,15 +9190,15 @@
                         {
                             "value": {
                                 "0": 1, 
-                                "1": 0.8614, 
+                                "1": 0.8613, 
                                 "10": 0.6085, 
                                 "11": 0.6053, 
                                 "12": 0.5949, 
                                 "13": 0.5832, 
-                                "14": 0.5606, 
+                                "14": 0.5605, 
                                 "15": 0.5481, 
                                 "16": 0.5307, 
-                                "17": 0.5256, 
+                                "17": 0.5255, 
                                 "18": 0.5223, 
                                 "19": 0.5084, 
                                 "2": 0.7365, 
@@ -9209,24 +9209,24 @@
                                 "24": 0.4804, 
                                 "25": 0.4735, 
                                 "26": 0.468, 
-                                "27": 0.4639, 
+                                "27": 0.464, 
                                 "28": 0.4524, 
                                 "29": 0.4305, 
                                 "3": 0.6762, 
                                 "30": 0.4212, 
-                                "31": 0.4095, 
-                                "32": 0.4071, 
-                                "33": 0.4034, 
+                                "31": 0.4094, 
+                                "32": 0.407, 
+                                "33": 0.4033, 
                                 "34": 0.3768, 
                                 "35": 0.3557, 
                                 "36": 0.35, 
                                 "37": 0.3482, 
                                 "38": 0.3435, 
-                                "39": 0.3239, 
-                                "4": 0.6468, 
+                                "39": 0.3238, 
+                                "4": 0.6469, 
                                 "40": 0.2039, 
-                                "5": 0.6384, 
-                                "6": 0.632, 
+                                "5": 0.6385, 
+                                "6": 0.6321, 
                                 "7": 0.6238, 
                                 "8": 0.6045, 
                                 "9": 0.6073
@@ -9242,7 +9242,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 116910
+                            "value": 116922
                         }
                     ]
                 }, 
@@ -9254,7 +9254,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 170242
+                            "value": 170261
                         }
                     ]
                 }, 
@@ -9278,7 +9278,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 126128
+                            "value": 126132
                         }
                     ]
                 }, 
@@ -9290,7 +9290,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 44114
+                            "value": 44129
                         }
                     ]
                 }, 
@@ -9302,7 +9302,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 149672
+                            "value": 149691
                         }
                     ]
                 }, 
@@ -9326,7 +9326,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 19534
+                            "value": 19540
                         }
                     ]
                 }, 
@@ -9398,7 +9398,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 65885
+                            "value": 65898
                         }
                     ]
                 }, 
@@ -9422,7 +9422,7 @@
                     "title": "Lifetime Auto-Played 30-Second Views", 
                     "values": [
                         {
-                            "value": 34192
+                            "value": 34194
                         }
                     ]
                 }, 
@@ -9434,7 +9434,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 31693
+                            "value": 31704
                         }
                     ]
                 }, 
@@ -9446,7 +9446,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 51894
+                            "value": 51907
                         }
                     ]
                 }, 
@@ -9482,7 +9482,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 85099
+                            "value": 85115
                         }
                     ]
                 }, 
@@ -9515,7 +9515,7 @@
                                 "link clicks": 24, 
                                 "other clicks": 37733, 
                                 "photo view": 226, 
-                                "video play": 47116
+                                "video play": 47132
                             }
                         }
                     ]
@@ -9690,7 +9690,7 @@
                     "title": "Lifetime Talking About This (Post)", 
                     "values": [
                         {
-                            "value": 1993
+                            "value": 2001
                         }
                     ]
                 }, 
@@ -9702,7 +9702,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 2211
+                            "value": 2220
                         }
                     ]
                 }, 
@@ -9716,8 +9716,8 @@
                         {
                             "value": {
                                 "comment": 30, 
-                                "like": 1664, 
-                                "share": 375
+                                "like": 1670, 
+                                "share": 377
                             }
                         }
                     ]
@@ -9732,8 +9732,8 @@
                         {
                             "value": {
                                 "comment": 33, 
-                                "like": 1777, 
-                                "share": 401
+                                "like": 1785, 
+                                "share": 402
                             }
                         }
                     ]
@@ -9746,7 +9746,7 @@
                     "title": "Lifetime Post Total Reach", 
                     "values": [
                         {
-                            "value": 661521
+                            "value": 665377
                         }
                     ]
                 }, 
@@ -9758,7 +9758,7 @@
                     "title": "Lifetime Post Total Impressions", 
                     "values": [
                         {
-                            "value": 1238591
+                            "value": 1242599
                         }
                     ]
                 }, 
@@ -9794,7 +9794,7 @@
                     "title": "Lifetime Post organic reach", 
                     "values": [
                         {
-                            "value": 645675
+                            "value": 649229
                         }
                     ]
                 }, 
@@ -9806,7 +9806,7 @@
                     "title": "Lifetime Post Organic Impressions", 
                     "values": [
                         {
-                            "value": 1213678
+                            "value": 1217431
                         }
                     ]
                 }, 
@@ -9818,7 +9818,7 @@
                     "title": "Lifetime Post viral reach", 
                     "values": [
                         {
-                            "value": 14310
+                            "value": 14385
                         }
                     ]
                 }, 
@@ -9830,7 +9830,7 @@
                     "title": "Lifetime Post Viral Impressions", 
                     "values": [
                         {
-                            "value": 24913
+                            "value": 25168
                         }
                     ]
                 }, 
@@ -9843,7 +9843,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 14310
+                                "other": 14385
                             }
                         }
                     ]
@@ -9857,7 +9857,7 @@
                     "values": [
                         {
                             "value": {
-                                "other": 24913
+                                "other": 25168
                             }
                         }
                     ]
@@ -9870,7 +9870,7 @@
                     "title": "Lifetime Post reach by people who like your Page", 
                     "values": [
                         {
-                            "value": 364737
+                            "value": 366220
                         }
                     ]
                 }, 
@@ -9882,7 +9882,7 @@
                     "title": "Lifetime Post Impressions by people who have liked your Page", 
                     "values": [
                         {
-                            "value": 887806
+                            "value": 890997
                         }
                     ]
                 }, 
@@ -9920,8 +9920,8 @@
                         {
                             "value": {
                                 "paid": 0, 
-                                "total": 661521, 
-                                "unpaid": 661521
+                                "total": 665377, 
+                                "unpaid": 665377
                             }
                         }
                     ]
@@ -9936,8 +9936,8 @@
                         {
                             "value": {
                                 "paid": 0, 
-                                "total": 1238591, 
-                                "unpaid": 1238591
+                                "total": 1242599, 
+                                "unpaid": 1242599
                             }
                         }
                     ]
@@ -9965,45 +9965,45 @@
                             "value": [
                                 1, 
                                 0.5679, 
-                                0.313, 
-                                0.2576, 
-                                0.2424, 
-                                0.2366, 
-                                0.2316, 
-                                0.225, 
-                                0.2175, 
+                                0.3131, 
+                                0.2577, 
+                                0.2425, 
+                                0.2367, 
+                                0.2317, 
+                                0.2251, 
+                                0.2176, 
                                 0.2125, 
-                                0.2077, 
-                                0.1954, 
-                                0.1852, 
-                                0.1766, 
-                                0.1686, 
-                                0.1629, 
-                                0.1576, 
-                                0.1541, 
-                                0.1456, 
-                                0.1419, 
+                                0.2078, 
+                                0.1955, 
+                                0.1853, 
+                                0.1767, 
+                                0.1687, 
+                                0.163, 
+                                0.1577, 
+                                0.1542, 
+                                0.1457, 
+                                0.142, 
                                 0.1335, 
-                                0.1294, 
-                                0.125, 
+                                0.1295, 
+                                0.1251, 
                                 0.125, 
                                 0.1238, 
                                 0.1223, 
                                 0.1193, 
-                                0.1176, 
+                                0.1175, 
                                 0.1145, 
                                 0.1096, 
                                 0.1076, 
                                 0.1051, 
                                 0.1009, 
-                                0.0988, 
+                                0.0989, 
                                 0.0979, 
                                 0.0977, 
                                 0.096, 
                                 0.093, 
                                 0.0817, 
                                 0.0692, 
-                                0.0463
+                                0.0462
                             ]
                         }
                     ]
@@ -10019,29 +10019,29 @@
                             "value": [
                                 1, 
                                 0.5147, 
-                                0.2508, 
-                                0.1968, 
-                                0.1808, 
-                                0.1747, 
-                                0.1696, 
+                                0.251, 
+                                0.1969, 
+                                0.1809, 
+                                0.1748, 
+                                0.1697, 
                                 0.1635, 
                                 0.1573, 
                                 0.1527, 
                                 0.1484, 
-                                0.1388, 
-                                0.1309, 
-                                0.1242, 
-                                0.1178, 
+                                0.1389, 
+                                0.131, 
+                                0.1243, 
+                                0.1179, 
                                 0.1134, 
-                                0.1093, 
-                                0.1066, 
-                                0.1007, 
+                                0.1094, 
+                                0.1067, 
+                                0.1008, 
                                 0.0977, 
-                                0.0913, 
-                                0.0884, 
-                                0.0852, 
+                                0.0914, 
+                                0.0885, 
+                                0.0853, 
                                 0.0849, 
-                                0.0841, 
+                                0.0842, 
                                 0.083, 
                                 0.0806, 
                                 0.0795, 
@@ -10072,46 +10072,46 @@
                         {
                             "value": {
                                 "0": 1, 
-                                "1": 0.8587, 
+                                "1": 0.8588, 
                                 "10": 0.5321, 
                                 "11": 0.505, 
-                                "12": 0.4821, 
-                                "13": 0.4629, 
+                                "12": 0.4822, 
+                                "13": 0.463, 
                                 "14": 0.4461, 
-                                "15": 0.4335, 
-                                "16": 0.4213, 
+                                "15": 0.4337, 
+                                "16": 0.4214, 
                                 "17": 0.4138, 
-                                "18": 0.391, 
-                                "19": 0.3838, 
-                                "2": 0.6528, 
+                                "18": 0.3911, 
+                                "19": 0.384, 
+                                "2": 0.6527, 
                                 "20": 0.3639, 
-                                "21": 0.3536, 
+                                "21": 0.3535, 
                                 "22": 0.3426, 
-                                "23": 0.3443, 
+                                "23": 0.3441, 
                                 "24": 0.3408, 
-                                "25": 0.3369, 
-                                "26": 0.3307, 
-                                "27": 0.3256, 
-                                "28": 0.3185, 
-                                "29": 0.3051, 
+                                "25": 0.3368, 
+                                "26": 0.3305, 
+                                "27": 0.3254, 
+                                "28": 0.3184, 
+                                "29": 0.305, 
                                 "3": 0.5902, 
-                                "30": 0.3005, 
-                                "31": 0.2946, 
-                                "32": 0.2834, 
-                                "33": 0.2789, 
+                                "30": 0.3004, 
+                                "31": 0.2945, 
+                                "32": 0.2833, 
+                                "33": 0.2788, 
                                 "34": 0.2752, 
-                                "35": 0.2747, 
-                                "36": 0.2697, 
-                                "37": 0.2612, 
-                                "38": 0.2289, 
-                                "39": 0.1909, 
-                                "4": 0.5793, 
-                                "40": 0.1176, 
-                                "5": 0.5747, 
-                                "6": 0.5706, 
+                                "35": 0.2746, 
+                                "36": 0.2696, 
+                                "37": 0.2611, 
+                                "38": 0.2288, 
+                                "39": 0.1908, 
+                                "4": 0.5792, 
+                                "40": 0.1175, 
+                                "5": 0.5748, 
+                                "6": 0.5705, 
                                 "7": 0.5616, 
-                                "8": 0.5468, 
-                                "9": 0.5397
+                                "8": 0.5469, 
+                                "9": 0.5396
                             }
                         }
                     ]
@@ -10124,7 +10124,7 @@
                     "title": "Lifetime Average time video viewed", 
                     "values": [
                         {
-                            "value": 70025
+                            "value": 70032
                         }
                     ]
                 }, 
@@ -10136,7 +10136,7 @@
                     "title": "Lifetime Total Video Views", 
                     "values": [
                         {
-                            "value": 115643
+                            "value": 116143
                         }
                     ]
                 }, 
@@ -10148,7 +10148,7 @@
                     "title": "Lifetime Unique Video Views", 
                     "values": [
                         {
-                            "value": 99607
+                            "value": 100236
                         }
                     ]
                 }, 
@@ -10160,7 +10160,7 @@
                     "title": "Lifetime Auto-Played Video Views", 
                     "values": [
                         {
-                            "value": 97595
+                            "value": 98004
                         }
                     ]
                 }, 
@@ -10172,7 +10172,7 @@
                     "title": "Lifetime Clicked-to-Play Video Views", 
                     "values": [
                         {
-                            "value": 18048
+                            "value": 18139
                         }
                     ]
                 }, 
@@ -10184,7 +10184,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 115133
+                            "value": 115623
                         }
                     ]
                 }, 
@@ -10196,7 +10196,7 @@
                     "title": "Lifetime Organic Video Views", 
                     "values": [
                         {
-                            "value": 99234
+                            "value": 99858
                         }
                     ]
                 }, 
@@ -10208,7 +10208,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 8964
+                            "value": 8999
                         }
                     ]
                 }, 
@@ -10220,7 +10220,7 @@
                     "title": "Lifetime Organic views to 95%", 
                     "values": [
                         {
-                            "value": 8762
+                            "value": 8816
                         }
                     ]
                 }, 
@@ -10232,7 +10232,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 510
+                            "value": 520
                         }
                     ]
                 }, 
@@ -10244,7 +10244,7 @@
                     "title": "Lifetime Paid Video Views", 
                     "values": [
                         {
-                            "value": 476
+                            "value": 483
                         }
                     ]
                 }, 
@@ -10256,7 +10256,7 @@
                     "title": "Lifetime Paid views to 95%", 
                     "values": [
                         {
-                            "value": 91
+                            "value": 93
                         }
                     ]
                 }, 
@@ -10268,7 +10268,7 @@
                     "title": "Lifetime Paid views to 95%", 
                     "values": [
                         {
-                            "value": 91
+                            "value": 93
                         }
                     ]
                 }, 
@@ -10280,7 +10280,7 @@
                     "title": "Lifetime Total 30-Second Views", 
                     "values": [
                         {
-                            "value": 31871
+                            "value": 32016
                         }
                     ]
                 }, 
@@ -10292,7 +10292,7 @@
                     "title": "Lifetime Unique 30-Second Views", 
                     "values": [
                         {
-                            "value": 30982
+                            "value": 31199
                         }
                     ]
                 }, 
@@ -10304,7 +10304,7 @@
                     "title": "Lifetime Auto-Played 30-Second Views", 
                     "values": [
                         {
-                            "value": 20430
+                            "value": 20520
                         }
                     ]
                 }, 
@@ -10316,7 +10316,7 @@
                     "title": "Lifetime Clicked-to-Play 30-Second Views", 
                     "values": [
                         {
-                            "value": 11441
+                            "value": 11496
                         }
                     ]
                 }, 
@@ -10328,7 +10328,7 @@
                     "title": "Lifetime Organic 30-Second Views", 
                     "values": [
                         {
-                            "value": 31632
+                            "value": 31773
                         }
                     ]
                 }, 
@@ -10340,7 +10340,7 @@
                     "title": "Lifetime Paid 30-Second Views", 
                     "values": [
                         {
-                            "value": 239
+                            "value": 243
                         }
                     ]
                 }, 
@@ -10352,7 +10352,7 @@
                     "title": "Lifetime Post Consumers", 
                     "values": [
                         {
-                            "value": 33652
+                            "value": 33781
                         }
                     ]
                 }, 
@@ -10364,7 +10364,7 @@
                     "title": "Lifetime Post Consumptions", 
                     "values": [
                         {
-                            "value": 56777
+                            "value": 56951
                         }
                     ]
                 }, 
@@ -10378,9 +10378,9 @@
                         {
                             "value": {
                                 "link clicks": 183, 
-                                "other clicks": 30082, 
+                                "other clicks": 30098, 
                                 "photo view": 157, 
-                                "video play": 19022
+                                "video play": 19181
                             }
                         }
                     ]
@@ -10395,9 +10395,9 @@
                         {
                             "value": {
                                 "link clicks": 196, 
-                                "other clicks": 36148, 
+                                "other clicks": 36228, 
                                 "photo view": 183, 
-                                "video play": 20233
+                                "video play": 20327
                             }
                         }
                     ]
@@ -10410,7 +10410,7 @@
                     "title": "Lifetime Negative feedback", 
                     "values": [
                         {
-                            "value": 13
+                            "value": 14
                         }
                     ]
                 }, 
@@ -10422,7 +10422,7 @@
                     "title": "Lifetime Negative Feedback from Users", 
                     "values": [
                         {
-                            "value": 13
+                            "value": 14
                         }
                     ]
                 }, 
@@ -10436,7 +10436,8 @@
                         {
                             "value": {
                                 "hide_all_clicks": 4, 
-                                "hide_clicks": 9
+                                "hide_clicks": 9, 
+                                "report_spam_clicks": 1
                             }
                         }
                     ]
@@ -10451,7 +10452,8 @@
                         {
                             "value": {
                                 "hide_all_clicks": 4, 
-                                "hide_clicks": 9
+                                "hide_clicks": 9, 
+                                "report_spam_clicks": 1
                             }
                         }
                     ]
@@ -10464,7 +10466,7 @@
                     "title": "Lifetime People who have liked your Page and engaged with your post", 
                     "values": [
                         {
-                            "value": 26966
+                            "value": 27018
                         }
                     ]
                 }, 
@@ -10476,7 +10478,7 @@
                     "title": "Lifetime Post reach by people who like your Page", 
                     "values": [
                         {
-                            "value": 364737
+                            "value": 366220
                         }
                     ]
                 }, 
@@ -10488,7 +10490,7 @@
                     "title": "Lifetime Talking About This (Post)", 
                     "values": [
                         {
-                            "value": 1993
+                            "value": 2001
                         }
                     ]
                 }, 
@@ -10502,8 +10504,8 @@
                         {
                             "value": {
                                 "comment": 30, 
-                                "like": 1664, 
-                                "share": 375
+                                "like": 1670, 
+                                "share": 377
                             }
                         }
                     ]
@@ -10516,7 +10518,7 @@
                     "title": "Lifetime Engaged Users", 
                     "values": [
                         {
-                            "value": 34706
+                            "value": 34843
                         }
                     ]
                 }, 
@@ -10528,7 +10530,7 @@
                     "title": "Lifetime Post Stories", 
                     "values": [
                         {
-                            "value": 2211
+                            "value": 2220
                         }
                     ]
                 }, 
@@ -10542,8 +10544,8 @@
                         {
                             "value": {
                                 "comment": 33, 
-                                "like": 1777, 
-                                "share": 401
+                                "like": 1785, 
+                                "share": 402
                             }
                         }
                     ]
@@ -10557,886 +10559,6 @@
         "meta_info": {
             "created_date": "2015-10-08T12:30:01+0000", 
             "video_title": "A Quick And Easy Daytime Smokey Eye Look"
-        }
-    }, 
-    "932669140143902": {
-        "insights": {
-            "data": [
-                {
-                    "description": "Lifetime: The number of unique people who created a story by interacting with your Page post. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_story_adds_unique/lifetime", 
-                    "name": "post_story_adds_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Talking About This (Post)", 
-                    "values": [
-                        {
-                            "value": 4754
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of stories generated about your Page post. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_story_adds/lifetime", 
-                    "name": "post_story_adds", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Stories", 
-                    "values": [
-                        {
-                            "value": 5234
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of unique people who created a story about your Page post by interacting with it. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_story_adds_by_action_type_unique/lifetime", 
-                    "name": "post_story_adds_by_action_type_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Talking About This (Post) by action type", 
-                    "values": [
-                        {
-                            "value": {
-                                "comment": 75, 
-                                "like": 4324, 
-                                "share": 719
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of stories created about your Page post, by action type. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_story_adds_by_action_type/lifetime", 
-                    "name": "post_story_adds_by_action_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Stories by action type", 
-                    "values": [
-                        {
-                            "value": {
-                                "comment": 77, 
-                                "like": 4409, 
-                                "share": 748
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The total number of people your Page post was served to. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_unique/lifetime", 
-                    "name": "post_impressions_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Total Reach", 
-                    "values": [
-                        {
-                            "value": 1034732
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions/lifetime", 
-                    "name": "post_impressions", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Total Impressions", 
-                    "values": [
-                        {
-                            "value": 1743003
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people your advertised Page post was served to. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_paid_unique/lifetime", 
-                    "name": "post_impressions_paid_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Paid Reach", 
-                    "values": [
-                        {
-                            "value": 544659
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post in an Ad or Sponsored Story. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_paid/lifetime", 
-                    "name": "post_impressions_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Paid Impressions", 
-                    "values": [
-                        {
-                            "value": 718584
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who saw your Page post in news feed or ticker, or on your Page's timeline. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_organic_unique/lifetime", 
-                    "name": "post_impressions_organic_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post organic reach", 
-                    "values": [
-                        {
-                            "value": 534191
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your post in News Feed or ticker or on your Page's Timeline. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_organic/lifetime", 
-                    "name": "post_impressions_organic", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Organic Impressions", 
-                    "values": [
-                        {
-                            "value": 942091
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who saw your Page post in a story from a friend. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_viral_unique/lifetime", 
-                    "name": "post_impressions_viral_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post viral reach", 
-                    "values": [
-                        {
-                            "value": 44430
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post in a story generated by a friend. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_viral/lifetime", 
-                    "name": "post_impressions_viral", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Viral Impressions", 
-                    "values": [
-                        {
-                            "value": 82328
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who saw your Page post in a story from a friend, by story type. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_by_story_type_unique/lifetime", 
-                    "name": "post_impressions_by_story_type_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post viral reach by story type", 
-                    "values": [
-                        {
-                            "value": {
-                                "other": 44430
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of times people saw this post via stories published by their friends. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_by_story_type/lifetime", 
-                    "name": "post_impressions_by_story_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Viral Impressions by story type", 
-                    "values": [
-                        {
-                            "value": {
-                                "other": 82328
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who saw your Page post because they've liked your Page (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_fan_unique/lifetime", 
-                    "name": "post_impressions_fan_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post reach by people who like your Page", 
-                    "values": [
-                        {
-                            "value": 387029
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post to people who have liked your Page. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_fan/lifetime", 
-                    "name": "post_impressions_fan", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Impressions by people who have liked your Page", 
-                    "values": [
-                        {
-                            "value": 962994
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who like your Page and who saw your Page post in an ad or sponsored story. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_fan_paid_unique/lifetime", 
-                    "name": "post_impressions_fan_paid_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid reach of a post by people who like your Page", 
-                    "values": [
-                        {
-                            "value": 180070
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of paid impressions of your Page post to people who have liked your Page. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_fan_paid/lifetime", 
-                    "name": "post_impressions_fan_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Paid Impressions by people who have liked your Page", 
-                    "values": [
-                        {
-                            "value": 274343
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post broken down by paid and non-paid. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_by_paid_non_paid_unique/lifetime", 
-                    "name": "post_impressions_by_paid_non_paid_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post impressions by paid and non-paid", 
-                    "values": [
-                        {
-                            "value": {
-                                "paid": 544659, 
-                                "total": 1034732, 
-                                "unpaid": 490073
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of impressions of your Page post broken down by paid and non-paid. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_impressions_by_paid_non_paid/lifetime", 
-                    "name": "post_impressions_by_paid_non_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post impressions by paid and non-paid", 
-                    "values": [
-                        {
-                            "value": {
-                                "paid": 718584, 
-                                "total": 1743003, 
-                                "unpaid": 1024419
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Length of a video post (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_length/lifetime", 
-                    "name": "post_video_length", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Video length", 
-                    "values": [
-                        {
-                            "value": 424417
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Views of your video at each moment as a percentage of all views, including views shorter than 3 seconds. (video post) (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_retention_graph/lifetime", 
-                    "name": "post_video_retention_graph", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Percentage of viewers at each interval (video post)", 
-                    "values": [
-                        {
-                            "value": {
-                                "0": 1, 
-                                "1": 0.5482, 
-                                "10": 0.1708, 
-                                "11": 0.1674, 
-                                "12": 0.1635, 
-                                "13": 0.1586, 
-                                "14": 0.1551, 
-                                "15": 0.1531, 
-                                "16": 0.1495, 
-                                "17": 0.1462, 
-                                "18": 0.1429, 
-                                "19": 0.1411, 
-                                "2": 0.32, 
-                                "20": 0.1397, 
-                                "21": 0.1359, 
-                                "22": 0.1355, 
-                                "23": 0.1342, 
-                                "24": 0.1327, 
-                                "25": 0.1311, 
-                                "26": 0.1293, 
-                                "27": 0.1265, 
-                                "28": 0.1248, 
-                                "29": 0.124, 
-                                "3": 0.248, 
-                                "30": 0.1232, 
-                                "31": 0.1226, 
-                                "32": 0.1207, 
-                                "33": 0.1198, 
-                                "34": 0.1202, 
-                                "35": 0.12, 
-                                "36": 0.1192, 
-                                "37": 0.119, 
-                                "38": 0.1166, 
-                                "39": 0.0951, 
-                                "4": 0.2266, 
-                                "40": 0.0516, 
-                                "5": 0.2121, 
-                                "6": 0.2026, 
-                                "7": 0.1924, 
-                                "8": 0.1823, 
-                                "9": 0.1755
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Auto-played views of your video at each moment as a percentage of all views, including views shorter than 3 seconds. (video post) (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_retention_graph_autoplayed/lifetime", 
-                    "name": "post_video_retention_graph_autoplayed", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Percentage of auto-played viewers at each interval (video post)", 
-                    "values": [
-                        {
-                            "value": {
-                                "0": 1, 
-                                "1": 0.4984, 
-                                "10": 0.1249, 
-                                "11": 0.122, 
-                                "12": 0.119, 
-                                "13": 0.1152, 
-                                "14": 0.1126, 
-                                "15": 0.1113, 
-                                "16": 0.1086, 
-                                "17": 0.1061, 
-                                "18": 0.1037, 
-                                "19": 0.1023, 
-                                "2": 0.2628, 
-                                "20": 0.1012, 
-                                "21": 0.0986, 
-                                "22": 0.098, 
-                                "23": 0.097, 
-                                "24": 0.096, 
-                                "25": 0.0949, 
-                                "26": 0.0936, 
-                                "27": 0.0917, 
-                                "28": 0.0903, 
-                                "29": 0.0896, 
-                                "3": 0.1932, 
-                                "30": 0.089, 
-                                "31": 0.0885, 
-                                "32": 0.0872, 
-                                "33": 0.0865, 
-                                "34": 0.0867, 
-                                "35": 0.0865, 
-                                "36": 0.0859, 
-                                "37": 0.0858, 
-                                "38": 0.0844, 
-                                "39": 0.0695, 
-                                "4": 0.1724, 
-                                "40": 0.0372, 
-                                "5": 0.1591, 
-                                "6": 0.1505, 
-                                "7": 0.1423, 
-                                "8": 0.1341, 
-                                "9": 0.1286
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Clicked-to-play views of your video at each moment as a percentage of all views, including views shorter than 3 seconds. (video post) (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_retention_graph_clicked_to_play/lifetime", 
-                    "name": "post_video_retention_graph_clicked_to_play", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Percentage of viewers clicked-to-play at each interval (video post)", 
-                    "values": [
-                        {
-                            "value": {
-                                "0": 1, 
-                                "1": 0.864, 
-                                "10": 0.4617, 
-                                "11": 0.4549, 
-                                "12": 0.445, 
-                                "13": 0.4333, 
-                                "14": 0.4245, 
-                                "15": 0.418, 
-                                "16": 0.4086, 
-                                "17": 0.3996, 
-                                "18": 0.3914, 
-                                "19": 0.3869, 
-                                "2": 0.6827, 
-                                "20": 0.3831, 
-                                "21": 0.3725, 
-                                "22": 0.3726, 
-                                "23": 0.3695, 
-                                "24": 0.3648, 
-                                "25": 0.3604, 
-                                "26": 0.3559, 
-                                "27": 0.3473, 
-                                "28": 0.3433, 
-                                "29": 0.3418, 
-                                "3": 0.5951, 
-                                "30": 0.3398, 
-                                "31": 0.3385, 
-                                "32": 0.3329, 
-                                "33": 0.3307, 
-                                "34": 0.3321, 
-                                "35": 0.3319, 
-                                "36": 0.3303, 
-                                "37": 0.3293, 
-                                "38": 0.3202, 
-                                "39": 0.2571, 
-                                "4": 0.5702, 
-                                "40": 0.1427, 
-                                "5": 0.5476, 
-                                "6": 0.5322, 
-                                "7": 0.5098, 
-                                "8": 0.4877, 
-                                "9": 0.4727
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Average time video viewed (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_avg_time_watched/lifetime", 
-                    "name": "post_video_avg_time_watched", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Average time video viewed", 
-                    "values": [
-                        {
-                            "value": 73439
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Total number of times your video was viewed for more than 3 seconds. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views/lifetime", 
-                    "name": "post_video_views", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Total Video Views", 
-                    "values": [
-                        {
-                            "value": 272278
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of unique people who viewed your video for more than 3 seconds. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_unique/lifetime", 
-                    "name": "post_video_views_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Unique Video Views", 
-                    "values": [
-                        {
-                            "value": 227822
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video started automatically playing and people viewed it for more than 3 seconds. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_autoplayed/lifetime", 
-                    "name": "post_video_views_autoplayed", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Auto-Played Video Views", 
-                    "values": [
-                        {
-                            "value": 234723
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times people clicked to play your video and viewed it more than 3 seconds. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_clicked_to_play/lifetime", 
-                    "name": "post_video_views_clicked_to_play", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Clicked-to-Play Video Views", 
-                    "values": [
-                        {
-                            "value": 37555
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed for more than 3 seconds without any paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_organic/lifetime", 
-                    "name": "post_video_views_organic", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Organic Video Views", 
-                    "values": [
-                        {
-                            "value": 94045
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed for more than 3 seconds without any paid promotion. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_organic_unique/lifetime", 
-                    "name": "post_video_views_organic_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Organic Video Views", 
-                    "values": [
-                        {
-                            "value": 87702
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed to 95% of its length without any paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_organic/lifetime", 
-                    "name": "post_video_complete_views_organic", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Organic views to 95%", 
-                    "values": [
-                        {
-                            "value": 10536
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed to 95% of its length without any paid promotion. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_organic_unique/lifetime", 
-                    "name": "post_video_complete_views_organic_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Organic views to 95%", 
-                    "values": [
-                        {
-                            "value": 10511
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed more than 3 seconds after paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_paid/lifetime", 
-                    "name": "post_video_views_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid Video Views", 
-                    "values": [
-                        {
-                            "value": 178233
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed more than 3 seconds after paid promotion. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_views_paid_unique/lifetime", 
-                    "name": "post_video_views_paid_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid Video Views", 
-                    "values": [
-                        {
-                            "value": 154416
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed to 95% of its length after paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_paid/lifetime", 
-                    "name": "post_video_complete_views_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid views to 95%", 
-                    "values": [
-                        {
-                            "value": 20217
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed to 95% of its length after paid promotion. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_paid_unique/lifetime", 
-                    "name": "post_video_complete_views_paid_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid views to 95%", 
-                    "values": [
-                        {
-                            "value": 19767
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Total number of times your video was viewed for 30 seconds or viewed to the end, whichever came first. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s/lifetime", 
-                    "name": "post_video_complete_views_30s", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Total 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 73119
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of unique people who viewed your video for 30 seconds or to the end, whichever came first. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s_unique/lifetime", 
-                    "name": "post_video_complete_views_30s_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Unique 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 67960
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video started automatically playing and people viewed it for 30 seconds or to the end, whichever came first. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s_autoplayed/lifetime", 
-                    "name": "post_video_complete_views_30s_autoplayed", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Auto-Played 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 48989
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times people clicked to play your video and viewed it for 30 seconds or to the end, whichever came first. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s_clicked_to_play/lifetime", 
-                    "name": "post_video_complete_views_30s_clicked_to_play", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Clicked-to-Play 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 24130
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed for 30 seconds or viewed to the end, whichever came first, without a paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s_organic/lifetime", 
-                    "name": "post_video_complete_views_30s_organic", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Organic 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 26455
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: Number of times your video was viewed for 30 seconds or viewed to the end, whichever came first, after a paid promotion. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_video_complete_views_30s_paid/lifetime", 
-                    "name": "post_video_complete_views_30s_paid", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Paid 30-Second Views", 
-                    "values": [
-                        {
-                            "value": 46664
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who clicked anywhere in your post. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_consumptions_unique/lifetime", 
-                    "name": "post_consumptions_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Consumers", 
-                    "values": [
-                        {
-                            "value": 48724
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of clicks anywhere in your post. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_consumptions/lifetime", 
-                    "name": "post_consumptions", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Consumptions", 
-                    "values": [
-                        {
-                            "value": 64827
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who clicked anywhere in your post, by type. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_consumptions_by_type_unique/lifetime", 
-                    "name": "post_consumptions_by_type_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post consumers by type", 
-                    "values": [
-                        {
-                            "value": {
-                                "link clicks": 143, 
-                                "other clicks": 17983, 
-                                "photo view": 425, 
-                                "video play": 38855
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of clicks anywhere in your post, by type. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_consumptions_by_type/lifetime", 
-                    "name": "post_consumptions_by_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Consumptions by type", 
-                    "values": [
-                        {
-                            "value": {
-                                "link clicks": 151, 
-                                "other clicks": 22983, 
-                                "photo view": 490, 
-                                "video play": 40832
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who have given negative feedback to your post. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_negative_feedback_unique/lifetime", 
-                    "name": "post_negative_feedback_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Negative feedback", 
-                    "values": [
-                        {
-                            "value": 20
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of times people have given negative feedback to your post. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_negative_feedback/lifetime", 
-                    "name": "post_negative_feedback", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Negative Feedback from Users", 
-                    "values": [
-                        {
-                            "value": 22
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who have given negative feedback to your post, by type. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_negative_feedback_by_type_unique/lifetime", 
-                    "name": "post_negative_feedback_by_type_unique", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Negative feedback", 
-                    "values": [
-                        {
-                            "value": {
-                                "hide_all_clicks": 5, 
-                                "hide_clicks": 16
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of times people have given negative feedback to your post, by type. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_negative_feedback_by_type/lifetime", 
-                    "name": "post_negative_feedback_by_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Negative Feedback from Users by Type", 
-                    "values": [
-                        {
-                            "value": {
-                                "hide_all_clicks": 5, 
-                                "hide_clicks": 17
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who have liked your Page and clicked anywhere in your posts. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_engaged_fan/lifetime", 
-                    "name": "post_engaged_fan", 
-                    "period": "lifetime", 
-                    "title": "Lifetime People who have liked your Page and engaged with your post", 
-                    "values": [
-                        {
-                            "value": 26676
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who saw your Page post because they've liked your Page (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_fan_reach/lifetime", 
-                    "name": "post_fan_reach", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post reach by people who like your Page", 
-                    "values": [
-                        {
-                            "value": 387029
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of unique people who created a story by interacting with your Page post. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_storytellers/lifetime", 
-                    "name": "post_storytellers", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Talking About This (Post)", 
-                    "values": [
-                        {
-                            "value": 4754
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of unique people who created a story about your Page post by interacting with it. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_storytellers_by_action_type/lifetime", 
-                    "name": "post_storytellers_by_action_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Talking About This (Post) by action type", 
-                    "values": [
-                        {
-                            "value": {
-                                "comment": 75, 
-                                "like": 4324, 
-                                "share": 719
-                            }
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of people who clicked anywhere in your posts. (Unique Users)", 
-                    "id": "319863888091100_932669140143902/insights/post_engaged_users/lifetime", 
-                    "name": "post_engaged_users", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Engaged Users", 
-                    "values": [
-                        {
-                            "value": 51028
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of stories generated about your Page post. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_stories/lifetime", 
-                    "name": "post_stories", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Stories", 
-                    "values": [
-                        {
-                            "value": 5234
-                        }
-                    ]
-                }, 
-                {
-                    "description": "Lifetime: The number of stories created about your Page post, by action type. (Total Count)", 
-                    "id": "319863888091100_932669140143902/insights/post_stories_by_action_type/lifetime", 
-                    "name": "post_stories_by_action_type", 
-                    "period": "lifetime", 
-                    "title": "Lifetime Post Stories by action type", 
-                    "values": [
-                        {
-                            "value": {
-                                "comment": 77, 
-                                "like": 4409, 
-                                "share": 748
-                            }
-                        }
-                    ]
-                }
-            ], 
-            "paging": {
-                "next": "https://graph.facebook.com/319863888091100_932669140143902/insights/?access_token=CAAGYi3qeYAIBAOsFnZCg7SZACH9cdXYxz3fOA3wt3y3RFKeRl8bZBZCRL5ZBs7lLBYPbknrtQdm13RmmchoaYl7sYHV0PyPlxUaVl0FTWhNIOpd5uiJbTJ0pCuXSR6GDIPbWEVuEacFNk0MexAAaDH58b4mcCbEaIE4XNIf221HVlRGYvhuds&since=0&until=86400", 
-                "previous": "https://graph.facebook.com/319863888091100_932669140143902/insights/?access_token=CAAGYi3qeYAIBAOsFnZCg7SZACH9cdXYxz3fOA3wt3y3RFKeRl8bZBZCRL5ZBs7lLBYPbknrtQdm13RmmchoaYl7sYHV0PyPlxUaVl0FTWhNIOpd5uiJbTJ0pCuXSR6GDIPbWEVuEacFNk0MexAAaDH58b4mcCbEaIE4XNIf221HVlRGYvhuds&since=-86400&until=0"
-            }
-        }, 
-        "meta_info": {
-            "created_date": "2015-12-30T08:30:01+0000", 
-            "video_title": "Quick And Easy Indian Bridal Makeup Tutorial | Wedding Makeup ..."
         }
     }
 }

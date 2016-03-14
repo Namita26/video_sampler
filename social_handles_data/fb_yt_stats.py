@@ -93,7 +93,7 @@ def fetch_data(video_ids, brand_name):
 
 
 def chart_details(brand_name):
-    with open("social_handles_data/" + brand_name + '/' + get_end_date()  +"_fb_yt_final.json", "r") as f:
+    with open("social_handles_data/" + brand_name + "/latest.json", "r") as f:
         final = json.load(f)
     return json.dumps(final)
 

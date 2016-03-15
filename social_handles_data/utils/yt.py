@@ -7,7 +7,6 @@ from social_handles_data.utils.file_util import FileUtil
 
 
 start_date = '2011-01-01'
-end_date = datetime.datetime.today().strftime('%Y-%m-%d')
 
 
 def get_youtube_video_ids(video_ids):
@@ -28,6 +27,7 @@ def refresh_access_token():
     return refreshed_access_token
 
 def post_insights_object(video_id):
+    end_date = datetime.datetime.today().strftime('%Y-%m-%d')
     """
     Youtube insights
     """
@@ -57,6 +57,7 @@ def post_meta_info(video_id):
 
 
 def make_analytics_api_request(youtube_video_ids, google_token):
+    end_date = datetime.datetime.today().strftime('%Y-%m-%d')
     response = requests.get(
         'https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DUCXyq6UjvT4dWjMOOiKuBncA&start-date=' + start_date +'&end-date=' + end_date + '&metrics=views%2Clikes%2Ccomments&filters=video%3D%3D' + youtube_video_ids + '&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}&dimensions=video', headers={'Authorization': "Bearer " + google_token}
     )
@@ -69,6 +70,7 @@ def make_data_api_request(youtube_video_ids):
     return response
 
 def post_insights_object_combined(video_ids, brand_name):
+    end_date = datetime.datetime.today().strftime('%Y-%m-%d')
     youtube_video_ids = video_ids
     google_token = "Bearer ya29.kQIk-bNU4v5AaMwv-cNLLvhtZpSKMs-U_Xr75EwI_oauqqzd20monrJxCVYH9jBicRvX"
 

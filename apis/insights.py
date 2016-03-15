@@ -7,7 +7,7 @@ import json
 from sqlalchemy.sql import text
 from _mysql_exceptions import IntegrityError
 from apis.connection import db, app
-from social_handles_data import facebook_data
+#from social_handles_data import facebook_data
 from social_handles_data.utils.fb import get_insights as facebook_get_insights
 from social_handles_data.utils.yt import get_insights as youtube_get_insights
 from social_handles_data import youtube_data

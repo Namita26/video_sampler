@@ -38,3 +38,5 @@ def get_insights(video_ids, brand_name):
     # video_ids = video_ids.split(',')
     for video_id in video_ids:
         post_insights_object(video_id, brand_name)
+
+get_insights([u'887008244709992', u'877527895658027', u'934381439972672', u'874689175941899', u'914150505329099', u'878133152264168', u'914829691927847', u'945959322148217', u'940565752687574', u'924936864250463', '851685721575578', '871392976271519'], 'maybelline')

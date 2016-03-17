@@ -13,6 +13,7 @@ from social_handles_data.utils.yt import get_insights as youtube_get_insights
 from social_handles_data import youtube_data
 from social_handles_data import fb_yt_studio_videos, fb_yt_stats
 import datetime
+import requests
 
 
 @app.route('/category/', methods = ['GET'])
@@ -102,6 +103,60 @@ def fb_data(id):
 @app.route('/graph_yt/<string:id>', methods = ['GET'])
 def yt_data(id):
     r = youtube_data.fetch_data(id)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/fb_yt_titles/', methods = ['GET'])
+def get_fb_titles():
+    fb_video_ids = ["319863888091100_871392976271519", "319863888091100_935940949816721", "319863888091100_925173684226781", "319863888091100_929871233757026", "319863888091100_947482865329196", "319863888091100_898908596853290", "319863888091100_851685721575578"]
+    yt_video_ids = ["-7MV-cspVXM", "4pNKgsvyEdw", "DRoNTDRJNuU", "J5xNIJlfBAw", "NlDWRmDCa_o", "pEn0H-R-YnU", "ubePCsGXcUE"]
+
+    all_fb_titles = []
+    all_yt_titles = []
+
+    for video_id in fb_video_ids:
+        id_title_map = {}
+        title = facebook_data.get_video_title(video_id)
+        id_title_map["video_id"] = video_id
+        id_title_map["video_title"] = title
+        all_fb_titles.append(id_title_map)
+
+
+    for video_id in yt_video_ids:
+        id_title_map = {}
+        title = youtube_data.get_video_title(video_id)
+        id_title_map["video_id"] = video_id
+        id_title_map["video_title"] = title
+        all_yt_titles.append(id_title_map)
+
+    r = json.dumps({"facebook": all_fb_titles, "youtube": all_yt_titles})
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/yt_embed/', methods = ['GET'])
+def get_yt_embed_link():
+    link = request.args.get("link")
+    result = requests.get("https://www.youtube.com/oembed?url="+link)
+    embeded_link = "<link>" + result.json()['html'] + "</link>"
+    dict1 = {"embeded_link": embeded_link}
+    r = json.dumps(dict1)
+    r = flask.Response(r)
+    r.headers["Access-Control-Allow-Origin"] = "*"
+    return r
+
+
+@app.route('/fb_embed/', methods = ['GET'])
+def get_fb_embed_link():
+    video_id = request.args.get("video_id")
+    result = requests.get("https://www.facebook.com/plugins/video/oembed.json/?url=https://www.facebook.com/ClubGlamrs/posts/"+video_id)
+    embeded_link = str(result.json()['html']).replace("\n", "")
+    
+    dict1 = {"embeded_link": embeded_link}
+    r = json.dumps(dict1)
     r = flask.Response(r)
     r.headers["Access-Control-Allow-Origin"] = "*"
     return r

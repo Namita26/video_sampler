@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			.lower-div {
+				
+				width: 40%;
+				height: 110px;
+				border: 1px groove;
+				margin-left: 190px;
+			}
+			.lower-label{
+				margin-left: 190px;
+			}
+			#facebook_videos {
+				margin-left: 30px;
+				margin-top: 5px;
+				width: 200px;
+				height: 40px;
+			}
+			#youtube_videos {
+				margin-left: 70px;
+				margin-top: 5px;
+				width: 200px;	
+				height: 40px;
+
+			}
+			.success-div {
+				margin-top: 20px;
+				margin-left: 180px;					
+				
+				
+			}
+			.clear {
+    			clear: both;
+			}
+		</style>
+		<title>Line Chart</title>
+		<h1>Facebook and Youtube Retention</h1>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://code.highcharts.com/highcharts.js"></script>
+		<!--script src="http://code.highcharts.com/modules/exporting.js"></script-->
+
+	</head>
+	<body>
+		
+		
+			<div>
+				
+				<select id="youtube-titles-menu">
+					<option value="">Select</option>
+				</select>
+				
+				<select id="facebook-titles-menu">
+					<option value="">Select</option>
+				</select>
+			</div>
+		<div>
+			<div>
+				<div id="youtube-embed" style="float:left; width:40%;"></div>
+				<div id="facebook-embed" style="width:40%;"></div>
+			</div>
+		</div>
+
+		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+
+	<script>
+		//var video_ids = [];
+		$(document).ready(function(){
+			$.ajax({
+				url: "http://localhost:5000/get_video_ids/",
+				type: "GET",
+				dataType: 'json',
+				cache: false,
+				success: function(data){
+					video_ids = data
+					console.log(video_ids)
+					$.each(data, function(i, obj){
+                    	$('#facebook_videos').append($('<option>').text(obj.video_title).attr('value', obj.video_id));
+            		});
+				}
+			});
+		});
+		
+		var fb_id;
+		var yt_id;
+		
+
+		function lineHightchart(facebook_values, youtube_values){
+			console.log(facebook_values);
+			
+			$('#container').highcharts({
+                title:{
+		        	text: "Retention Levels By Channel"
+		        },
+		        
+		        chart: {
+		        
+		            renderTo: 'container'
+		        },
+		        xAxis:[
+		        	{
+		        		type: 'linear'
+		        	}
+		        ],
+		        series: [{
+		        	data: youtube_values,
+		        	pointStart: 1,
+            		pointInterval: 1,
+		            name: 'YouTube',
+		            color: 'rgb(255,0,0)'
+		        },{
+		        	data: facebook_values,
+		        	pointStart: 0,
+            		pointInterval: 100 / facebook_values.length,
+		            name: 'Faceook'
+		        }]
+            });   
+		}
+
+		$(document).ready(function(){
+			$.ajax({
+				url: "http://localhost:5000/fb_yt_titles/",
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("In video_title success");
+					
+
+					fill1_dropdown(data);
+				}
+			});
+		})
+		 
+		function fill1_dropdown(data){
+			console.log("In fill fill1_dropdown");
+			
+			xxdata = JSON.parse(data);
+			console.log(xxdata);
+
+			$(xxdata.facebook).each(function(){
+				console.log(this.video_title);
+				var option = $('<option />');
+ 				option.attr('value', this.video_id).text(this.video_title);
+ 				$("#facebook-titles-menu").append(option);
+			})	
+
+			$(xxdata.youtube).each(function(){
+				console.log(this.video_title);
+				var option = $('<option />');
+				option.attr('value', this.video_id).text(this.video_title);
+ 				$("#youtube-titles-menu").append(option);
+			})
+			
+			/*$(xxdata.faceook).each(function()
+			{
+				console.log("In each");
+				console.log(this.video_title);
+				console.log(this.video_id);
+
+				var option = $('<option />');
+ 				option.attr('value', this.video_id).text(this.video_title);
+ 				$("#facebook-titles-menu").append(option);
+			});*/
+			
+			/*$($.parseJSON(data.youtube)).map(function () {
+			    return $('<option>').val(this.video_id).text(this.video_title);
+			}).appendTo('#youtube-titles-menu');*/
+		}
+		var facebook_values;
+		var youtube_values;
+		var fb_yt_map = {
+			"-7MV-cspVXM": "319863888091100_871392976271519",
+			"4pNKgsvyEdw": "319863888091100_935940949816721",
+			"DRoNTDRJNuU": "319863888091100_925173684226781",
+			"J5xNIJlfBAw": "319863888091100_929871233757026",
+			"NlDWRmDCa_o": "319863888091100_947482865329196",
+			"pEn0H-R-YnU": "319863888091100_898908596853290",
+			"ubePCsGXcUE": "319863888091100_851685721575578"
+		}
+
+		$('#facebook-titles-menu').on('change', function() {
+  			faceook_id_with_account = this.value; 
+  			var facebook_video_id = faceook_id_with_account.split("_")[1];
+
+  			$.ajax({
+				url: "http://localhost:5000/fb_embed/?video_id=" + facebook_video_id,
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("Facebook Embed");
+					data = JSON.parse(data);
+					var $div = $("<div />").html(data.embeded_link);
+					$("#facebook-embed").append($div);		
+				}
+			});
+
+  			/*$.ajax({
+				url: "http://localhost:5000/graph_fb/" + this.value,
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("Faceook Retention values");
+					data = JSON.parse(data);
+					facebook_values = data.fb_retention_values;
+
+				}
+			});*/
+		});
+
+		$('#youtube-titles-menu').on('change', function() {
+			var youtube_video_id = this.value;
+			$('#youtube-embed').html('');
+			$('#facebook-titles-menu').val(fb_yt_map[youtube_video_id])
+			$('#facebook-titles-menu').change();
+			var youtube_url = "https://www.youtube.com/watch?v="+this.value;
+			$.ajax({
+				url: "http://localhost:5000/yt_embed/?link=" + youtube_url,
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("Youtube Embed");
+					data = JSON.parse(data);
+					$("#youtube-embed").append(data.embeded_link);
+
+					fb_video_id = fb_yt_map[youtube_video_id]
+
+					$.ajax({
+						url: "http://localhost:5000/graph_fb/" + fb_video_id,
+						type: "GET",
+						cache: false,
+						success: function(data){
+							console.log("Faceook Retention values");
+							data = JSON.parse(data);
+							facebook_values = data.fb_retention_values;
+							lineHightchart(facebook_values, youtube_values);
+						}
+					});
+				}
+			});
+  			
+  			$.ajax({
+				url: "http://localhost:5000/graph_yt/" + this.value,
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("In youtube_values success")
+					data = JSON.parse(data);
+					youtube_values = data.yt_retention_values;
+
+				}
+			});
+		});
+
+		//lineHightchart(facebook_values, youtube_values)
+
+
+		function xxxx(){
+			fb_id = $("#facebook_videos").val();
+			yt_id = $("#youtube_videos").val();
+			$.ajax({
+				url: "http://localhost:5000/graph_fb/" + fb_id,
+				type: "GET",
+				cache: false,
+				success: function(data){
+					console.log("Faceook Retention values");
+					data = JSON.parse(data);
+					
+					facebook_values = data.fb_retention_values;		
+					console.log(facebook_values)
+					$.ajax({
+						url: "http://localhost:5000/graph_yt/" + yt_id,
+						type: "GET",
+						cache: false,
+						success: function(data){
+							console.log("In youtube_values success")
+							data = JSON.parse(data);
+							youtube_values = data.yt_retention_values;
+							
+							lineHightchart(facebook_values, youtube_values)
+						}
+					});
+				}
+			});
+		}
+
+	</script>
+  </body>
+</html>

@@ -7,7 +7,7 @@ import os
 from social_handles_data.fbstories import get_facebook_stories, get_grand_facebook_stories
 from social_handles_data.ytstories import get_youtube_stories, get_grand_youtube_stories, get_youtube_title, get_youtube_uniques, get_youtube_created_time
 from social_handles_data.utils.fb_fetch_all_links import get_combined_insights
-
+from social_handles_data.utils.fetch_yt_analytics import glamrs_youtube_views
 
 
 start_date = '2011-01-01'
@@ -69,7 +69,7 @@ def fetch_data(video_ids, brand_name):
                 'total_comments': all_fb[i][3] + all_yb[i][3],
                 'total_unique_views': all_fb[i][10] + get_youtube_uniques(uniques, all_yb[i][0]),
                 'total_engagement': all_fb[i][11] + get_youtube_uniques(uniques, all_yb[i][0]),
-                'total_total_impressions': get_youtube_uniques(uniques, all_yb[i][0]) + all_fb[i][9] + get_combined_insights(all_fb[i][0])
+                'total_total_impressions': get_youtube_uniques(uniques, all_yb[i][0]) + all_fb[i][9] + get_combined_insights(all_fb[i][0] + glamrs_youtube_views(all_yb[i][0]))
             }
 
         final.append(each_video)
@@ -79,8 +79,8 @@ def fetch_data(video_ids, brand_name):
         sum_total_comments.append(all_fb[i][3] + all_yb[i][3])
         sum_total_uniques.append(all_fb[i][10] + get_youtube_uniques(uniques, all_yb[i][0]))
         sum_total_engagement.append(all_fb[i][11] + get_youtube_uniques(uniques, all_yb[i][0]))
-        print "Kechit", get_youtube_uniques(uniques, all_yb[i][0]), all_fb[i][9], get_combined_insights(all_fb[i][0])
-        sum_total_impressions.append(get_youtube_uniques(uniques, all_yb[i][0]) + all_fb[i][9]  + get_combined_insights(all_fb[i][0]))
+        print "-----------", get_youtube_uniques(uniques, all_yb[i][0]), all_fb[i][9], get_combined_insights(all_fb[i][0])
+        sum_total_impressions.append(get_youtube_uniques(uniques, all_yb[i][0]) + all_fb[i][9]  + get_combined_insights(all_fb[i][0]) + glamrs_youtube_views(all_yb[i][0]))
 
         # i = i + 1
     facebook_grand = get_grand_facebook_stories(all_fb)

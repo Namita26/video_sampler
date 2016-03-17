@@ -65,9 +65,35 @@ def make_analytics_api_request(youtube_video_ids, google_token):
 
 
 def make_data_api_request(youtube_video_ids):
-
     response = requests.get('https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtube_video_ids+'&key=AIzaSyCwMECGvrwK-WNC3zaHWEpOwPtCtRgT11I')
     return response
+
+
+def make_analytics_api_request_for_uniques(youtube_video_ids, google_token):
+    print google_token, "----------------------"
+    end_date = datetime.datetime.today().strftime('%Y-%m-%d')
+    uniques_values = []
+    unique_views_per_video = []
+    for video_id in youtube_video_ids.split(","):
+        print "\n------------------------\n"
+        print video_id
+        print "\n------------------------\n"
+        response = requests.get("https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DMINE&start-date=2011-01-01&end-date=2016-04-01&metrics=uniques&dimensions=month%2Cvideo&filters=video%3D%3D"+ video_id, headers={'Authorization': "Bearer " + google_token})
+        xx = response.json()
+        print "\n------------------------\n"
+        print xx
+        print "\n------------------------\n"
+
+        for row in xx['rows']:
+            uniques_values.append(row[2])
+        unique_views_per_video.append({"id": video_id, "uniques": sum(uniques_values)})
+    return unique_views_per_video
+
+
+    response = requests.get(
+        'https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DMINE&start-date=' + start_date +'&end-date=' + end_date + '&metrics=uniques&dimensions=month%2Cvideo&filters=video%3D%3D' + youtube_video_ids + '&key={AIzaSyDT2HJjNdzVRVbxZKWh4PN_AuCxWeqVPsE}&dimensions=video', headers={'Authorization': "Bearer " + google_token}
+    )
+
 
 def post_insights_object_combined(video_ids, brand_name):
     end_date = datetime.datetime.today().strftime('%Y-%m-%d')
@@ -79,8 +105,11 @@ def post_insights_object_combined(video_ids, brand_name):
     if not ('rows' in insights.json().keys()):
         google_token = refresh_access_token()
         insights = make_analytics_api_request(youtube_video_ids, google_token)
+        unique_views = make_analytics_api_request_for_uniques(youtube_video_ids, google_token)
 
     snippet_data = make_data_api_request(youtube_video_ids)
+
+    # unique_views = make_analytics_api_request_for_uniques(youtube_video_ids, google_token)
 
     youtubedata = insights.json()
     snippet = snippet_data.json()['items']
@@ -89,17 +118,18 @@ def post_insights_object_combined(video_ids, brand_name):
         titles = {}
         titles['id'] = title['id']
         titles['title'] = title['snippet']['title']
+        titles['created_time'] = title['snippet']['publishedAt']
         title_info.append(titles)
-
 
     all_yb = []
     for video_id in video_ids.split(","):
         for yt_data in youtubedata['rows']:
             if video_id == yt_data[0]:
                 all_yb.append(yt_data)
+
     with open("social_handles_data/"+ brand_name + '/' + end_date  +"yt_stats.json", "w") as f:
-        json.dump({"youtube": all_yb, 'title_info': title_info}, f, indent=4)
-    return [all_yb, title_info]
+        json.dump({"youtube": all_yb, 'title_info': title_info, 'unique_views': unique_views}, f, indent=4)
+    return [all_yb, title_info, unique_views]
 
 
 def get_insights(ids, brand_name):

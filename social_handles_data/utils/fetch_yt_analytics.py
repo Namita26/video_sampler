@@ -20,7 +20,7 @@ def glamrs_youtube_views(video_id):
     } 
     video = vmap[video_id]
     res = requests.get("https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A67237418&start-date=7daysAgo&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&filters=ga%3ApagePath%3D%40" + video, headers={"Authorization": "Bearer ya29.qAKeZqB9J-8xCd_GpAv5-g5_WtgRoFeF497oquT6kmvWA4akGRmh0mfOipOcVT9xNA"})
-    return int(res.json()['rows'][0][1])
+    return sum([int(row[1]) for row in res.json()['rows']])
 
 if __name__ == "__main__":
     print refresh_access_token()

@@ -68,7 +68,8 @@ def fetch_data(video_ids, brand_name):
                 'total_likes': all_fb[i][2] + all_yb[i][2],
                 'total_comments': all_fb[i][3] + all_yb[i][3],
                 'total_unique_views': all_fb[i][10] + get_youtube_uniques(uniques, all_yb[i][0]),
-                'total_engagement': all_fb[i][11] + get_youtube_uniques(uniques, all_yb[i][0])
+                'total_engagement': all_fb[i][11] + get_youtube_uniques(uniques, all_yb[i][0]),
+                'total_total_impressions': get_youtube_uniques(uniques, all_yb[i][0]) + all_fb[i][9] + get_combined_insights(all_fb[i][0])
             }
 
         final.append(each_video)
@@ -88,6 +89,15 @@ def fetch_data(video_ids, brand_name):
     final.append(facebook_grand['facebook_grand_views'])
     final.append(youtube_grand['youtube_grand_views'])
     final.append(sum(sum_total_views))
+    final.append(sum(sum_total_impressions))
+
+    final.append(facebook_grand['facebook_grand_unique_views'])
+    final.append(youtube_grand['youtube_grand_uniques'])
+    final.append(sum(sum_total_uniques))
+
+    # final.append(facebook_grand['facebook_grand_engaged_users'])
+    final.append(sum(sum_total_engagement))
+
     final.append(facebook_grand['facebook_grand_likes'])
     final.append(youtube_grand['youtube_grand_likes'])
     final.append(sum(sum_total_likes))
@@ -95,15 +105,7 @@ def fetch_data(video_ids, brand_name):
     final.append(youtube_grand['youtube_grand_comments'])
     final.append(sum(sum_total_comments))
     final.append(facebook_grand['facebook_grand_shares'])
-    final.append(facebook_grand['facebook_grand_unique_impressions'])
-    final.append(facebook_grand['facebook_grand_engaged_users'])
-    final.append(facebook_grand['facebook_grand_total_impressions'])
-    final.append(facebook_grand['facebook_grand_unique_views'])
-    final.append(youtube_grand['youtube_grand_uniques'])
-    final.append(sum(sum_total_uniques))
 
-    final.append(sum(sum_total_engagement))
-    final.append(sum(sum_total_impressions))
 
     with open("social_handles_data/" + brand_name +'/' + end_date + "_fb_yt_final.json", "w") as f:
         json.dump(final, f, indent=4)

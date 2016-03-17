@@ -23,10 +23,11 @@
             "video_title": "How To Pick The Right Type Of Foundation"
         }, 
         "fb_yt": {
-            "total_engagement": 307942.0, 
             "total_views": 774119.0, 
-            "total_likes": 10715.0, 
             "total_comments": 169.0, 
+            "total_engagement": 307942.0, 
+            "total_likes": 10715.0, 
+            "total_total_impressions": 3351955.0, 
             "total_unique_views": 282844.0
         }
     }, 
@@ -54,29 +55,27 @@
             "video_title": "Lipstick Tricks for Bold Colour & Perfect Application"
         }, 
         "fb_yt": {
-            "total_engagement": 407576.0, 
             "total_views": 483189.0, 
-            "total_likes": 4344.0, 
             "total_comments": 233.0, 
+            "total_engagement": 407576.0, 
+            "total_likes": 4344.0, 
+            "total_total_impressions": 2646204.0, 
             "total_unique_views": 403690.0
         }
     }, 
     279679, 
     977629.0, 
     1257308.0, 
+    5998159.0, 
+    246640, 
+    439894.0, 
+    686534.0, 
+    715518.0, 
     7944, 
     7115.0, 
     15059.0, 
     178, 
     224.0, 
     402.0, 
-    593, 
-    982552, 
-    153572, 
-    1662015, 
-    246640, 
-    439894.0, 
-    686534.0, 
-    715518.0, 
-    5998159.0
+    593
 ]

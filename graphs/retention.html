@@ -19,7 +19,7 @@
 			}
 			.second-div{
 				margin-top: 10px;
-				height: 45%;
+				height: 36%;
 				width: 90%;
 				
 				margin-left: 30px;
@@ -51,7 +51,7 @@
 			
 			.youtube-dropdown {
 				margin: 50px;
-			    border: 1px solid #111;
+			    
 			    background: transparent;
 			    width: 200px;
 			    padding: 5px;
@@ -69,7 +69,7 @@
 			.facebook-dropdown {
 				float: right;
 				margin: 50px;
-			    border: 1px solid #111;
+			    
 			    background: transparent;
 			    width: 200px;
 			    padding: 5px;
@@ -118,8 +118,39 @@
 				display: inline-block;
 				background: transparent;
 				font-size: 20px;
-				font-size: 
 				font-family: calibri;
+			}
+			.video-title-div{
+				margin-top: 10px;
+				height: 10%;
+				width: 90%;
+				
+				margin-left: 30px;
+				display: inline-flex;
+			}
+			.fb-title {
+				color:#333333;
+				font-size:18px;
+				fill:#333333;
+				height: 60%;
+				width: 45%;
+			    -webkit-appearance: none;
+				margin-top: 2px;
+				float: left;
+				margin-left: 60px;
+		
+			}
+			.yt-title {
+				color:#333333;
+				font-size:18px;
+				fill:#333333;
+				height: 60%;
+				width: 45%;
+			    -webkit-appearance: none;
+				margin-top: 2px;
+				float: left;
+				margin-left: 10px;
+		
 			}
 
 		</style>
@@ -150,20 +181,25 @@
 			</div>
 			<div class="second-div" style="important">
 				<div>
+
 					<div id="youtube-embed" style="important"></div>
+					
 					<div id="facebook-embed" style="important">
 						<div id="fb-root"></div>
-
-
 
 						<script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 
 						<div class="fb-video" data-href="https://www.facebook.com/ClubGlamrs/videos/871392976271519/">
 							 
 						</div>
-
+						
 					</div>
 				</div>
+				
+			</div>
+			<div class="video-title-div">
+				<div class="yt-title">  </div>
+				<div class="fb-title">  </div>
 			</div>
 			<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
 			
@@ -287,6 +323,10 @@
 
 		$('#facebook-titles-menu').on('change', function() {
   			faceook_id_with_account = this.value; 
+  			
+  		
+  			$(".fb-title").text($('#facebook-titles-menu option:selected').text());
+
   			var facebook_video_id = faceook_id_with_account.split("_")[1];
 
   			//$(".fb-video").attr("data-href","https://www.facebook.com/ClubGlamrs/videos/" + facebook_video_id +"/")
@@ -325,6 +365,9 @@
 
 		$('#youtube-titles-menu').on('change', function() {
 			var youtube_video_id = this.value;
+
+			$(".yt-title").text($('#youtube-titles-menu option:selected').text());
+
 			$('#youtube-embed').html('');
 			$('#facebook-titles-menu').val(fb_yt_map[youtube_video_id])
 			$('#facebook-titles-menu').change();

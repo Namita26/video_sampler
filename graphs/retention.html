@@ -2,12 +2,28 @@
 <html>
 	<head>
 		<style type="text/css">
-			.lower-div {
+			.outer-div {
+				width: 90%;
+				margin-left: 60px;
 				
-				width: 40%;
-				height: 110px;
-				border: 1px groove;
+				height: 800px;
+				display: inline-block;
+			}
+			.first-div {				
+				margin-top: 10px;
+				height: 20%;
+				width: 60%;
+				
 				margin-left: 190px;
+				display: inline-flex;
+			}
+			.second-div{
+				margin-top: 10px;
+				height: 45%;
+				width: 90%;
+				
+				margin-left: 30px;
+				display: inline-flex;
 			}
 			.lower-label{
 				margin-left: 190px;
@@ -28,15 +44,88 @@
 			.success-div {
 				margin-top: 20px;
 				margin-left: 180px;					
-				
-				
 			}
 			.clear {
     			clear: both;
 			}
+			
+			.youtube-dropdown {
+				margin: 50px;
+			    border: 1px solid #111;
+			    background: transparent;
+			    width: 200px;
+			    padding: 5px;
+			    font-size: 16px;
+			    
+			    height: 34px;
+			    -webkit-appearance: none;
+				margin-top: 10px;
+				float: left;
+				margin-left: 10px;
+				-moz-appearance: none;
+			    appearance: none;
+
+			}
+			.facebook-dropdown {
+				float: right;
+				margin: 50px;
+			    border: 1px solid #111;
+			    background: transparent;
+			    width: 200px;
+			    padding: 5px;
+			    font-size: 16px;
+			    
+			    height: 34px;
+			    -webkit-appearance: none;
+				margin-top: 10px;
+
+				margin-left: 220px;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			    appearance: none;
+			}
+			#youtube-titles-menu option {
+				width: 100px;
+			}
+			#facebook-titles-menu option {
+				width: 100px;
+			}
+			#youtube-embed {
+				margin-top: 10px;
+				width: 200px;
+				height: 100px;
+				float:left;
+				width:40%;
+				margin-left: 10px;
+			}
+
+			#facebook-embed {
+				margin-top: 10px;
+				float: right;
+				margin-left: 185px;
+				width: 200px;
+				height: 100px;
+				width:40%;
+			}
+			.title-div {
+				margin-top: 20px;
+				font-stretch: bold;
+				height: 30px;
+				width: 50%;
+				align:center;
+				
+				margin: 20px;
+				margin-left: 26%;
+				display: inline-block;
+				background: transparent;
+				font-size: 20px;
+				font-size: 
+				font-family: calibri;
+			}
+
 		</style>
 		<title>Line Chart</title>
-		<h1>Facebook and Youtube Retention</h1>
+		<div class="title-div" align="center"><b>Video Retention</b></div>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
   		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -49,26 +138,27 @@
 	</head>
 	<body>
 		
-		
-			<div>
+		<div class="outer-div">
+			<div class="first-div">
 				
-				<select id="youtube-titles-menu">
-					<option value="">Select</option>
+				<select id="youtube-titles-menu" class="youtube-dropdown">
+					<option value="">Select the youtube video</option>
 				</select>
-				
-				<select id="facebook-titles-menu">
-					<option value="">Select</option>
+				<div></div>
+				<select id="facebook-titles-menu" class="facebook-dropdown">
+					<option value="">Select the facebook video</option>
 				</select>
 			</div>
-		<div>
-			<div>
-				<div id="youtube-embed" style="float:left; width:40%;"></div>
-				<div id="facebook-embed" style="width:40%;"></div>
+			<div class="second-div" style="important">
+				<div>
+					<div id="youtube-embed" style="important"></div>
+					<div id="facebook-embed" style="important"></div>
+				</div>
 			</div>
+			<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+			
 		</div>
-
-		<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
-
+		
 
 	<script>
 		//var video_ids = [];
@@ -80,7 +170,7 @@
 				cache: false,
 				success: function(data){
 					video_ids = data
-					console.log(video_ids)
+					
 					$.each(data, function(i, obj){
                     	$('#facebook_videos').append($('<option>').text(obj.video_title).attr('value', obj.video_id));
             		});
@@ -93,7 +183,7 @@
 		
 
 		function lineHightchart(facebook_values, youtube_values){
-			console.log(facebook_values);
+			
 			
 			$('#container').highcharts({
                 title:{
@@ -138,21 +228,21 @@
 			});
 		})
 		 
-		function fill1_dropdown(data){
-			console.log("In fill fill1_dropdown");
-			
+		function fill1_dropdown(data)
+		{	
 			xxdata = JSON.parse(data);
-			console.log(xxdata);
-
-			$(xxdata.facebook).each(function(){
-				console.log(this.video_title);
+		
+			$(xxdata.facebook).each(function()
+			{
+				
 				var option = $('<option />');
  				option.attr('value', this.video_id).text(this.video_title);
  				$("#facebook-titles-menu").append(option);
 			})	
 
-			$(xxdata.youtube).each(function(){
-				console.log(this.video_title);
+			$(xxdata.youtube).each(function()
+			{
+	
 				var option = $('<option />');
 				option.attr('value', this.video_id).text(this.video_title);
  				$("#youtube-titles-menu").append(option);
@@ -273,7 +363,7 @@
 					data = JSON.parse(data);
 					
 					facebook_values = data.fb_retention_values;		
-					console.log(facebook_values)
+					
 					$.ajax({
 						url: "http://localhost:5000/graph_yt/" + yt_id,
 						type: "GET",

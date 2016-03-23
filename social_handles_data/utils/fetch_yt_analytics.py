@@ -19,7 +19,7 @@ def glamrs_youtube_views(video_id):
         "-7MV-cspVXM": "lipstick-hacks-every-girl-needs-to-know"
     }
     video = vmap[video_id]
-    res = requests.get("https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A67237418&start-date=2015-01-01&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&filters=ga%3ApagePath%3D%40" + video, headers={"Authorization": "Bearer ya29.rQL_S5ADNlAyEueCoO2xnFANUGwCbS2VKhtE7Q0Di5GE-u5_7AsB-Hyif-6VoeD9mg"})
+    res = requests.get("https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A67237418&start-date=2015-01-01&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&filters=ga%3ApagePath%3D%40" + video, headers={"Authorization": "Bearer ya29.rgLNcBciM3vi56WkuaKfNmYyi-GlIFXUlYsec2ENUAVr7RGqdxWRw24-IAEiMIQZ4g"})
     return sum([int(row[1]) for row in res.json()['rows']])
 
 if __name__ == "__main__":

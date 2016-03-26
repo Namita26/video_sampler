@@ -11,9 +11,9 @@ from flask.ext.cors import CORS
 
 app = flask.Flask(__name__)
 CORS(app)
-app.config['DEBUG'] = True
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/glamrscms'
-db = flask.ext.sqlalchemy.SQLAlchemy(app)
+# app.config['DEBUG'] = True
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost/glamrscms'
+# db = flask.ext.sqlalchemy.SQLAlchemy(app)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

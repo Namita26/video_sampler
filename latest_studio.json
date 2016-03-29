@@ -1,8 +1,8 @@
 [
     {
         "youtube": {
-            "unique_views": 61343.0, 
-            "views": 143435.0, 
+            "unique_views": 61480.0, 
+            "views": 143892.0, 
             "video_id": "kxB-fIFTcG0", 
             "comments": 37.0, 
             "likes": 1227.0, 
@@ -11,30 +11,30 @@
         }, 
         "facebook": {
             "unique_views": 189437, 
-            "views": 241010, 
+            "views": 241021, 
             "video_engaged_users": 92744, 
-            "likes": 4889, 
+            "likes": 4890, 
             "created_time": "2015-07-31T14:30:00+0000", 
             "video_id": 863863537024463, 
             "comments": 97, 
             "shares": 1040, 
-            "video_impressions_total": 1678137, 
+            "video_impressions_total": 1678140, 
             "video_impressions_unique": 862362, 
             "video_title": "Natural Makeup Look | No Brushes Required"
         }, 
         "fb_yt": {
-            "total_views": 384445.0, 
+            "total_views": 384913.0, 
             "total_comments": 134.0, 
-            "total_engagement": 280535.0, 
-            "total_likes": 6116.0, 
-            "total_total_impressions": 1739480.0, 
-            "total_unique_views": 250780.0
+            "total_engagement": 280672.0, 
+            "total_likes": 6117.0, 
+            "total_total_impressions": 1739620.0, 
+            "total_unique_views": 250917.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 99101.0, 
-            "views": 158346.0, 
+            "unique_views": 99274.0, 
+            "views": 158421.0, 
             "video_id": "kl_KhEJslN4", 
             "comments": 34.0, 
             "likes": 932.0, 
@@ -43,30 +43,30 @@
         }, 
         "facebook": {
             "unique_views": 49852, 
-            "views": 53788, 
+            "views": 53792, 
             "video_engaged_users": 23081, 
             "likes": 1404, 
             "created_time": "2015-07-29T14:30:00+0000", 
             "video_id": 864289866981830, 
             "comments": 64, 
             "shares": 528, 
-            "video_impressions_total": 520419, 
+            "video_impressions_total": 520420, 
             "video_impressions_unique": 364937, 
             "video_title": "6 Easy Makeup Looks Perfect For Any Occasion"
         }, 
         "fb_yt": {
-            "total_views": 212134.0, 
+            "total_views": 212213.0, 
             "total_comments": 98.0, 
-            "total_engagement": 157224.0, 
+            "total_engagement": 157397.0, 
             "total_likes": 2336.0, 
-            "total_total_impressions": 619520.0, 
-            "total_unique_views": 148953.0
+            "total_total_impressions": 619694.0, 
+            "total_unique_views": 149126.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 111010.0, 
-            "views": 30146.0, 
+            "unique_views": 111191.0, 
+            "views": 30174.0, 
             "video_id": "dv-LHg9X4-0", 
             "comments": 22.0, 
             "likes": 483.0, 
@@ -75,30 +75,30 @@
         }, 
         "facebook": {
             "unique_views": 224540, 
-            "views": 259858, 
+            "views": 259896, 
             "video_engaged_users": 86100, 
             "likes": 8520, 
             "created_time": "2015-07-30T14:30:00+0000", 
             "video_id": 863813073696176, 
             "comments": 303, 
-            "shares": 1403, 
-            "video_impressions_total": 1471098, 
+            "shares": 1404, 
+            "video_impressions_total": 1471141, 
             "video_impressions_unique": 885944, 
             "video_title": "Quick And Easy Cat Eye Makeup Tutorial | Eye Makeup Tips Glamr..."
         }, 
         "fb_yt": {
-            "total_views": 290004.0, 
+            "total_views": 290070.0, 
             "total_comments": 325.0, 
-            "total_engagement": 358853.0, 
+            "total_engagement": 359034.0, 
             "total_likes": 9003.0, 
-            "total_total_impressions": 1589763.0, 
-            "total_unique_views": 335550.0
+            "total_total_impressions": 1589989.0, 
+            "total_unique_views": 335731.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 122226.0, 
-            "views": 20749.0, 
+            "unique_views": 122410.0, 
+            "views": 20759.0, 
             "video_id": "77VY8q2m0gk", 
             "comments": 13.0, 
             "likes": 243.0, 
@@ -107,7 +107,7 @@
         }, 
         "facebook": {
             "unique_views": 22352, 
-            "views": 144874, 
+            "views": 144879, 
             "video_engaged_users": 16136, 
             "likes": 1147, 
             "created_time": "2015-06-10T14:30:00+0000", 
@@ -119,18 +119,18 @@
             "video_title": "The Perfect Makeup For Indian Skin Tones"
         }, 
         "fb_yt": {
-            "total_views": 165623.0, 
+            "total_views": 165638.0, 
             "total_comments": 62.0, 
-            "total_engagement": 147706.0, 
+            "total_engagement": 147890.0, 
             "total_likes": 1390.0, 
-            "total_total_impressions": 432234.0, 
-            "total_unique_views": 144578.0
+            "total_total_impressions": 432418.0, 
+            "total_unique_views": 144762.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 133933.0, 
-            "views": 17256.0, 
+            "unique_views": 134118.0, 
+            "views": 17259.0, 
             "video_id": "sTlPQLXbX0g", 
             "comments": 10.0, 
             "likes": 95.0, 
@@ -151,18 +151,18 @@
             "video_title": "The Emerald Smokey Eye That Has Stolen Our Hearts"
         }, 
         "fb_yt": {
-            "total_views": 43755.0, 
+            "total_views": 43758.0, 
             "total_comments": 64.0, 
-            "total_engagement": 162312.0, 
+            "total_engagement": 162497.0, 
             "total_likes": 985.0, 
-            "total_total_impressions": 447852.0, 
-            "total_unique_views": 158632.0
+            "total_total_impressions": 448037.0, 
+            "total_unique_views": 158817.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 154086.0, 
-            "views": 31324.0, 
+            "unique_views": 154278.0, 
+            "views": 31351.0, 
             "video_id": "yOcJUJgEsIg", 
             "comments": 17.0, 
             "likes": 306.0, 
@@ -183,18 +183,18 @@
             "video_title": "A Gorgeous Smokey Eye in 6 Easy Steps"
         }, 
         "fb_yt": {
-            "total_views": 63448.0, 
+            "total_views": 63475.0, 
             "total_comments": 105.0, 
-            "total_engagement": 185753.0, 
+            "total_engagement": 185945.0, 
             "total_likes": 2261.0, 
-            "total_total_impressions": 2236136.0, 
-            "total_unique_views": 180753.0
+            "total_total_impressions": 2236331.0, 
+            "total_unique_views": 180945.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 161859.0, 
-            "views": 13667.0, 
+            "unique_views": 162051.0, 
+            "views": 13670.0, 
             "video_id": "ZMkDQGGPjDo", 
             "comments": 23.0, 
             "likes": 220.0, 
@@ -215,18 +215,18 @@
             "video_title": "Work The Trend: Marsala Monochrome Makeup"
         }, 
         "fb_yt": {
-            "total_views": 46932.0, 
+            "total_views": 46935.0, 
             "total_comments": 77.0, 
-            "total_engagement": 192433.0, 
+            "total_engagement": 192625.0, 
             "total_likes": 2238.0, 
-            "total_total_impressions": 589297.0, 
-            "total_unique_views": 188457.0
+            "total_total_impressions": 589489.0, 
+            "total_unique_views": 188649.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 170960.0, 
-            "views": 22872.0, 
+            "unique_views": 171162.0, 
+            "views": 22899.0, 
             "video_id": "mn8yeT6Y-tQ", 
             "comments": 17.0, 
             "likes": 348.0, 
@@ -234,31 +234,31 @@
             "video_title": "A Quick And Easy Daytime Smokey Eye Makeup Look"
         }, 
         "facebook": {
-            "unique_views": 100535, 
-            "views": 116502, 
+            "unique_views": 100613, 
+            "views": 116508, 
             "video_engaged_users": 34937, 
             "likes": 1795, 
             "created_time": "2015-10-08T12:30:01+0000", 
             "video_id": 899305756813574, 
             "comments": 33, 
             "shares": 405, 
-            "video_impressions_total": 1245394, 
+            "video_impressions_total": 1245397, 
             "video_impressions_unique": 666236, 
             "video_title": "A Quick And Easy Daytime Smokey Eye Look"
         }, 
         "fb_yt": {
-            "total_views": 139374.0, 
+            "total_views": 139407.0, 
             "total_comments": 50.0, 
-            "total_engagement": 287155.0, 
+            "total_engagement": 287435.0, 
             "total_likes": 2143.0, 
-            "total_total_impressions": 1537651.0, 
-            "total_unique_views": 271495.0
+            "total_total_impressions": 1537856.0, 
+            "total_unique_views": 271775.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 193173.0, 
-            "views": 42026.0, 
+            "unique_views": 193384.0, 
+            "views": 42050.0, 
             "video_id": "5qwgEoy4GoQ", 
             "comments": 26.0, 
             "likes": 328.0, 
@@ -267,30 +267,30 @@
         }, 
         "facebook": {
             "unique_views": 203277, 
-            "views": 274290, 
+            "views": 274314, 
             "video_engaged_users": 91363, 
             "likes": 3942, 
             "created_time": "2015-10-01T14:05:59+0000", 
             "video_id": 896394667104683, 
             "comments": 120, 
             "shares": 1116, 
-            "video_impressions_total": 1949893, 
+            "video_impressions_total": 1949895, 
             "video_impressions_unique": 795640, 
             "video_title": "New Ways To Use A Foundation | Makeup Tricks"
         }, 
         "fb_yt": {
-            "total_views": 316316.0, 
+            "total_views": 316364.0, 
             "total_comments": 146.0, 
-            "total_engagement": 436784.0, 
+            "total_engagement": 436972.0, 
             "total_likes": 4270.0, 
-            "total_total_impressions": 2154242.0, 
-            "total_unique_views": 396450.0
+            "total_total_impressions": 2154457.0, 
+            "total_unique_views": 396661.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 199893.0, 
-            "views": 16169.0, 
+            "unique_views": 200109.0, 
+            "views": 16186.0, 
             "video_id": "LS-KIUdobXc", 
             "comments": 23.0, 
             "likes": 262.0, 
@@ -298,8 +298,8 @@
             "video_title": "How To: Gun Metal Smokey Eye Makeup Look Tutorial"
         }, 
         "facebook": {
-            "unique_views": 149627, 
-            "views": 170510, 
+            "unique_views": 149743, 
+            "views": 170526, 
             "video_engaged_users": 64978, 
             "likes": 4790, 
             "created_time": "2015-10-03T12:30:00+0000", 
@@ -311,21 +311,21 @@
             "video_title": "How To: Gun Metal Smokey Eye Makeup Look Tutorial"
         }, 
         "fb_yt": {
-            "total_views": 186679.0, 
+            "total_views": 186712.0, 
             "total_comments": 200.0, 
-            "total_engagement": 368918.0, 
+            "total_engagement": 369250.0, 
             "total_likes": 5052.0, 
-            "total_total_impressions": 1364224.0, 
-            "total_unique_views": 349520.0
+            "total_total_impressions": 1364440.0, 
+            "total_unique_views": 349852.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 252472.0, 
-            "views": 114938.0, 
+            "unique_views": 252752.0, 
+            "views": 115144.0, 
             "video_id": "lxrVZInm0vI", 
             "comments": 38.0, 
-            "likes": 1226.0, 
+            "likes": 1228.0, 
             "created_time": "2015-02-18T11:47:22.000Z", 
             "video_title": "5 Minute Day Look That Will Take You Everywhere | Makeup Basics"
         }, 
@@ -343,18 +343,18 @@
             "video_title": "Master The Natural Look In Just 7 Steps"
         }, 
         "fb_yt": {
-            "total_views": 203189.0, 
+            "total_views": 203395.0, 
             "total_comments": 186.0, 
-            "total_engagement": 325898.0, 
-            "total_likes": 6327.0, 
-            "total_total_impressions": 1002477.0, 
-            "total_unique_views": 316602.0
+            "total_engagement": 326178.0, 
+            "total_likes": 6329.0, 
+            "total_total_impressions": 1002759.0, 
+            "total_unique_views": 316882.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 268704.0, 
-            "views": 50321.0, 
+            "unique_views": 269007.0, 
+            "views": 50391.0, 
             "video_id": "pFrUnz-NO7A", 
             "comments": 43.0, 
             "likes": 883.0, 
@@ -363,39 +363,39 @@
         }, 
         "facebook": {
             "unique_views": 229425, 
-            "views": 273219, 
-            "video_engaged_users": 51768, 
+            "views": 273254, 
+            "video_engaged_users": 51788, 
             "likes": 4431, 
             "created_time": "2015-12-30T08:30:01+0000", 
             "video_id": 932669140143902, 
             "comments": 80, 
-            "shares": 752, 
-            "video_impressions_total": 1743282, 
+            "shares": 754, 
+            "video_impressions_total": 1743301, 
             "video_impressions_unique": 1034732, 
             "video_title": "Quick And Easy Indian Bridal Makeup Tutorial | Wedding Makeup ..."
         }, 
         "fb_yt": {
-            "total_views": 323540.0, 
+            "total_views": 323645.0, 
             "total_comments": 123.0, 
-            "total_engagement": 510335.0, 
+            "total_engagement": 510645.0, 
             "total_likes": 5314.0, 
-            "total_total_impressions": 2020451.0, 
-            "total_unique_views": 498129.0
+            "total_total_impressions": 2020777.0, 
+            "total_unique_views": 498432.0
         }
     }, 
-    1714190, 
-    661249.0, 
-    2375439.0, 
-    15733327.0, 
-    1311139, 
-    1928760.0, 
-    3239899.0, 
-    3413906.0, 
-    40882, 
-    6553.0, 
-    47435.0, 
+    1714329, 
+    662196.0, 
+    2376525.0, 
+    15735867.0, 
+    1311333, 
+    1931216.0, 
+    3242549.0, 
+    3416540.0, 
+    40883, 
+    6555.0, 
+    47438.0, 
     1267, 
     303.0, 
     1570.0, 
-    8429
+    8432
 ]

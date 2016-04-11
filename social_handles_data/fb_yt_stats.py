@@ -130,4 +130,8 @@ def check_already_fetched(brand_name):
 
 
 if __name__ == "__main__":
-    print fetch_data(video_ids)
+    video_ids = [
+        {u'fb': 851685721575578, u'yt': u'ubePCsGXcUE'},
+        {u'fb': 871392976271519, u'yt': u'-7MV-cspVXM'}
+    ]
+    print fetch_data(video_ids, 'maybelline')

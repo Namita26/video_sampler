@@ -72,20 +72,17 @@ def make_data_api_request(youtube_video_ids):
 def make_analytics_api_request_for_uniques(youtube_video_ids, google_token):
     print google_token, "----------------------"
     end_date = datetime.datetime.today().strftime('%Y-%m-%d')
-    uniques_values = []
     unique_views_per_video = []
     for video_id in youtube_video_ids.split(","):
-        print "\n------------------------\n"
-        print video_id
-        print "\n------------------------\n"
+        uniques_values = []
         response = requests.get("https://www.googleapis.com/youtube/analytics/v1/reports?ids=channel%3D%3DMINE&start-date=2011-01-01&end-date=2016-04-01&metrics=uniques&dimensions=month%2Cvideo&filters=video%3D%3D"+ video_id, headers={'Authorization': "Bearer " + google_token})
         xx = response.json()
-        print "\n------------------------\n"
-        print xx
-        print "\n------------------------\n"
 
         for row in xx['rows']:
             uniques_values.append(row[2])
+        print "\n"
+        print uniques_values
+        print "\n"
         unique_views_per_video.append({"id": video_id, "uniques": sum(uniques_values)})
     return unique_views_per_video
 
@@ -137,4 +134,4 @@ def get_insights(ids, brand_name):
 
 
 if __name__ == "__main__":
-    get_insights('kxB-fIFTcG0,kl_KhEJslN4,dv-LHg9X4-0,77VY8q2m0gk,sTlPQLXbX0g,yOcJUJgEsIg,ZMkDQGGPjDo,mn8yeT6Y-tQ,5qwgEoy4GoQ,LS-KIUdobXc,lxrVZInm0vI,pFrUnz-NO7A')
+    get_insights('ubePCsGXcUE,-7MV-cspVXM', 'maybelline')

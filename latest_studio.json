@@ -1,8 +1,8 @@
 [
     {
         "youtube": {
-            "unique_views": 63192.0, 
-            "views": 149776.0, 
+            "unique_views": 63193.0, 
+            "views": 149775.0, 
             "video_id": "kxB-fIFTcG0", 
             "comments": 38.0, 
             "likes": 1270.0, 
@@ -11,7 +11,7 @@
         }, 
         "facebook": {
             "unique_views": 189797, 
-            "views": 241135, 
+            "views": 241136, 
             "video_engaged_users": 92830, 
             "likes": 4894, 
             "created_time": "2015-07-31T14:30:00+0000", 
@@ -25,10 +25,10 @@
         "fb_yt": {
             "total_views": 390911.0, 
             "total_comments": 135.0, 
-            "total_engagement": 282749.0, 
+            "total_engagement": 282750.0, 
             "total_likes": 6164.0, 
-            "total_total_impressions": 1741380.0, 
-            "total_unique_views": 252989.0
+            "total_total_impressions": 1741381.0, 
+            "total_unique_views": 252990.0
         }
     }, 
     {
@@ -50,7 +50,7 @@
             "video_id": 864289866981830, 
             "comments": 65, 
             "shares": 528, 
-            "video_impressions_total": 520433, 
+            "video_impressions_total": 520436, 
             "video_impressions_unique": 364937, 
             "video_title": "6 Easy Makeup Looks Perfect For Any Occasion"
         }, 
@@ -59,7 +59,7 @@
             "total_comments": 99.0, 
             "total_engagement": 96477.0, 
             "total_likes": 2347.0, 
-            "total_total_impressions": 558718.0, 
+            "total_total_impressions": 558721.0, 
             "total_unique_views": 88208.0
         }
     }, 
@@ -75,23 +75,23 @@
         }, 
         "facebook": {
             "unique_views": 225030, 
-            "views": 260304, 
+            "views": 260312, 
             "video_engaged_users": 86488, 
             "likes": 8528, 
             "created_time": "2015-07-30T14:30:00+0000", 
             "video_id": 863813073696176, 
             "comments": 304, 
             "shares": 1409, 
-            "video_impressions_total": 1471943, 
+            "video_impressions_total": 1471949, 
             "video_impressions_unique": 886959, 
             "video_title": "Quick And Easy Cat Eye Makeup Tutorial | Eye Makeup Tips Glamr..."
         }, 
         "fb_yt": {
-            "total_views": 290874.0, 
+            "total_views": 290882.0, 
             "total_comments": 326.0, 
             "total_engagement": 260543.0, 
             "total_likes": 9015.0, 
-            "total_total_impressions": 1491648.0, 
+            "total_total_impressions": 1491654.0, 
             "total_unique_views": 237078.0
         }
     }, 
@@ -107,7 +107,7 @@
         }, 
         "facebook": {
             "unique_views": 22352, 
-            "views": 144998, 
+            "views": 145004, 
             "video_engaged_users": 16136, 
             "likes": 1147, 
             "created_time": "2015-06-10T14:30:00+0000", 
@@ -119,7 +119,7 @@
             "video_title": "The Perfect Makeup For Indian Skin Tones"
         }, 
         "fb_yt": {
-            "total_views": 165940.0, 
+            "total_views": 165946.0, 
             "total_comments": 62.0, 
             "total_engagement": 36761.0, 
             "total_likes": 1390.0, 
@@ -235,23 +235,23 @@
         }, 
         "facebook": {
             "unique_views": 100613, 
-            "views": 116579, 
+            "views": 116580, 
             "video_engaged_users": 34975, 
             "likes": 1795, 
             "created_time": "2015-10-08T12:30:01+0000", 
             "video_id": 899305756813574, 
             "comments": 33, 
             "shares": 405, 
-            "video_impressions_total": 1245946, 
+            "video_impressions_total": 1245956, 
             "video_impressions_unique": 667026, 
             "video_title": "A Quick And Easy Daytime Smokey Eye Look"
         }, 
         "fb_yt": {
-            "total_views": 139693.0, 
+            "total_views": 139694.0, 
             "total_comments": 50.0, 
             "total_engagement": 125460.0, 
             "total_likes": 2143.0, 
-            "total_total_impressions": 1376424.0, 
+            "total_total_impressions": 1376434.0, 
             "total_unique_views": 109789.0
         }
     }, 
@@ -267,30 +267,30 @@
         }, 
         "facebook": {
             "unique_views": 203434, 
-            "views": 274522, 
-            "video_engaged_users": 91538, 
+            "views": 274528, 
+            "video_engaged_users": 91708, 
             "likes": 3946, 
             "created_time": "2015-10-01T14:05:59+0000", 
             "video_id": 896394667104683, 
             "comments": 120, 
             "shares": 1117, 
-            "video_impressions_total": 1950071, 
+            "video_impressions_total": 1950076, 
             "video_impressions_unique": 795640, 
             "video_title": "New Ways To Use A Foundation | Makeup Tricks"
         }, 
         "fb_yt": {
-            "total_views": 316876.0, 
+            "total_views": 316882.0, 
             "total_comments": 146.0, 
-            "total_engagement": 266190.0, 
+            "total_engagement": 266307.0, 
             "total_likes": 4279.0, 
-            "total_total_impressions": 1983590.0, 
+            "total_total_impressions": 1983597.0, 
             "total_unique_views": 225767.0
         }
     }, 
     {
         "youtube": {
             "unique_views": 6778.0, 
-            "views": 16336.0, 
+            "views": 16335.0, 
             "video_id": "LS-KIUdobXc", 
             "comments": 23.0, 
             "likes": 262.0, 
@@ -299,7 +299,7 @@
         }, 
         "facebook": {
             "unique_views": 150047, 
-            "views": 170690, 
+            "views": 170700, 
             "video_engaged_users": 65079, 
             "likes": 4794, 
             "created_time": "2015-10-03T12:30:00+0000", 
@@ -311,7 +311,7 @@
             "video_title": "How To: Gun Metal Smokey Eye Makeup Look Tutorial"
         }, 
         "fb_yt": {
-            "total_views": 187026.0, 
+            "total_views": 187035.0, 
             "total_comments": 200.0, 
             "total_engagement": 176253.0, 
             "total_likes": 5056.0, 
@@ -322,7 +322,7 @@
     {
         "youtube": {
             "unique_views": 53549.0, 
-            "views": 117980.0, 
+            "views": 117978.0, 
             "video_id": "lxrVZInm0vI", 
             "comments": 39.0, 
             "likes": 1254.0, 
@@ -343,7 +343,7 @@
             "video_title": "Master The Natural Look In Just 7 Steps"
         }, 
         "fb_yt": {
-            "total_views": 206231.0, 
+            "total_views": 206229.0, 
             "total_comments": 187.0, 
             "total_engagement": 126975.0, 
             "total_likes": 6355.0, 
@@ -363,37 +363,37 @@
         }, 
         "facebook": {
             "unique_views": 268173, 
-            "views": 325062, 
+            "views": 325106, 
             "video_engaged_users": 64512, 
-            "likes": 5117, 
+            "likes": 5119, 
             "created_time": "2015-12-30T08:30:01+0000", 
             "video_id": 932669140143902, 
             "comments": 102, 
             "shares": 933, 
-            "video_impressions_total": 2141793, 
+            "video_impressions_total": 2141986, 
             "video_impressions_unique": 1185446, 
             "video_title": "Quick And Easy Indian Bridal Makeup Tutorial | Wedding Makeup ..."
         }, 
         "fb_yt": {
-            "total_views": 376586.0, 
+            "total_views": 376630.0, 
             "total_comments": 147.0, 
             "total_engagement": 304124.0, 
-            "total_likes": 6007.0, 
-            "total_total_impressions": 2166823.0, 
+            "total_likes": 6009.0, 
+            "total_total_impressions": 2167017.0, 
             "total_unique_views": 284717.0
         }
     }, 
-    1767255, 
-    674944.0, 
-    2442199.0, 
-    14477743.0, 
+    1767331, 
+    674940.0, 
+    2442271.0, 
+    14477964.0, 
     1351463, 
-    272918.0, 
-    1624381.0, 
-    1805884.0, 
-    41591, 
+    272919.0, 
+    1624382.0, 
+    1806002.0, 
+    41593, 
     6651.0, 
-    48242.0, 
+    48244.0, 
     1291, 
     307.0, 
     1598.0, 

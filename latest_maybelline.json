@@ -1,8 +1,8 @@
 [
     {
         "youtube": {
-            "unique_views": 174680.0, 
-            "views": 753671.0, 
+            "unique_views": 174678.0, 
+            "views": 753669.0, 
             "video_id": "ubePCsGXcUE", 
             "comments": 134.0, 
             "likes": 6514.0, 
@@ -11,24 +11,24 @@
         }, 
         "facebook": {
             "unique_views": 135948, 
-            "views": 160652, 
+            "views": 160664, 
             "video_engaged_users": 68004, 
             "likes": 5485, 
             "created_time": "2015-06-25T14:30:23+0000", 
             "video_id": 851685721575578, 
             "comments": 50, 
             "shares": 324, 
-            "video_impressions_total": 1049008, 
+            "video_impressions_total": 1049010, 
             "video_impressions_unique": 491845, 
             "video_title": "How To Pick The Right Type Of Foundation"
         }, 
         "fb_yt": {
-            "total_views": 914323.0, 
+            "total_views": 914333.0, 
             "total_comments": 184.0, 
-            "total_engagement": 337276.0, 
+            "total_engagement": 337270.0, 
             "total_likes": 11999.0, 
-            "total_total_impressions": 2952631.0, 
-            "total_unique_views": 310628.0
+            "total_total_impressions": 2952662.0, 
+            "total_unique_views": 310626.0
         }
     }, 
     {
@@ -43,7 +43,7 @@
         }, 
         "facebook": {
             "unique_views": 120577, 
-            "views": 135171, 
+            "views": 135174, 
             "video_engaged_users": 88948, 
             "likes": 2844, 
             "created_time": "2015-08-07T16:41:22+0000", 
@@ -55,7 +55,7 @@
             "video_title": "Lipstick Tricks for Bold Colour & Perfect Application"
         }, 
         "fb_yt": {
-            "total_views": 511453.0, 
+            "total_views": 511456.0, 
             "total_comments": 233.0, 
             "total_engagement": 258253.0, 
             "total_likes": 4471.0, 
@@ -63,14 +63,14 @@
             "total_unique_views": 254216.0
         }
     }, 
-    295823, 
-    1129953.0, 
-    1425776.0, 
-    6163001.0, 
+    295838, 
+    1129951.0, 
+    1425789.0, 
+    6163032.0, 
     256525, 
-    308319.0, 
-    564844.0, 
-    595529.0, 
+    308317.0, 
+    564842.0, 
+    595523.0, 
     8329, 
     8141.0, 
     16470.0, 

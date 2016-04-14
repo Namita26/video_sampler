@@ -1,81 +1,81 @@
 [
     {
         "youtube": {
-            "unique_views": 175211.0, 
-            "views": 757583.0, 
+            "unique_views": 176387.0, 
+            "views": 767590.0, 
             "video_id": "ubePCsGXcUE", 
             "comments": 134.0, 
-            "likes": 6543.0, 
+            "likes": 6633.0, 
             "created_time": "2015-06-16T15:00:03.000Z", 
             "video_title": "How To Apply Foundation For Full Coverage | Foundation Routine And Makeup Tips"
         }, 
         "facebook": {
-            "unique_views": 137512, 
-            "views": 164528, 
-            "video_engaged_users": 69175, 
-            "likes": 5593, 
+            "unique_views": 139243, 
+            "views": 166910, 
+            "video_engaged_users": 69490, 
+            "likes": 5659, 
             "created_time": "2015-06-25T14:30:23+0000", 
             "video_id": 851685721575578, 
             "comments": 50, 
             "shares": 324, 
-            "video_impressions_total": 1076338, 
-            "video_impressions_unique": 496038, 
+            "video_impressions_total": 1090969, 
+            "video_impressions_unique": 498474, 
             "video_title": "How To Apply Foundation for Full Coverage"
         }, 
         "fb_yt": {
-            "total_views": 922111.0, 
+            "total_views": 934500.0, 
             "total_comments": 184.0, 
-            "total_engagement": 340315.0, 
-            "total_likes": 12136.0, 
-            "total_total_impressions": 2980538.0, 
-            "total_unique_views": 312723.0
+            "total_engagement": 343265.0, 
+            "total_likes": 12292.0, 
+            "total_total_impressions": 2996356.0, 
+            "total_unique_views": 315630.0
         }
     }, 
     {
         "youtube": {
-            "unique_views": 133875.0, 
-            "views": 377237.0, 
+            "unique_views": 134363.0, 
+            "views": 379297.0, 
             "video_id": "-7MV-cspVXM", 
             "comments": 105.0, 
-            "likes": 1630.0, 
+            "likes": 1631.0, 
             "created_time": "2015-08-11T09:15:09.000Z", 
             "video_title": "Lipstick Hacks Every Girl Needs To Know"
         }, 
         "facebook": {
-            "unique_views": 120577, 
-            "views": 135176, 
-            "video_engaged_users": 88948, 
-            "likes": 2844, 
+            "unique_views": 129827, 
+            "views": 146725, 
+            "video_engaged_users": 92574, 
+            "likes": 3000, 
             "created_time": "2015-08-07T16:41:22+0000", 
             "video_id": 871392976271519, 
             "comments": 128, 
-            "shares": 270, 
-            "video_impressions_total": 716029, 
-            "video_impressions_unique": 510997, 
-            "video_title": "Lipstick Tricks for Bold Colour & Perfect Application"
+            "shares": 298, 
+            "video_impressions_total": 793380, 
+            "video_impressions_unique": 550516, 
+            "video_title": "Lipstick Tricks & Tips for Perfect Application"
         }, 
         "fb_yt": {
-            "total_views": 512413.0, 
+            "total_views": 526022.0, 
             "total_comments": 233.0, 
-            "total_engagement": 258489.0, 
-            "total_likes": 4474.0, 
-            "total_total_impressions": 3210639.0, 
-            "total_unique_views": 254452.0
+            "total_engagement": 270474.0, 
+            "total_likes": 4631.0, 
+            "total_total_impressions": 3288480.0, 
+            "total_unique_views": 264190.0
         }
     }, 
-    299704, 
-    1134820.0, 
-    1434524.0, 
-    6191177.0, 
-    258089, 
-    309086.0, 
-    567175.0, 
-    598804.0, 
-    8437, 
-    8173.0, 
-    16610.0, 
+    313635, 
+    1146887.0, 
+    1460522.0, 
+    6284836.0, 
+    269070, 
+    310750.0, 
+    579820.0, 
+    613739.0, 
+    8659, 
+    8264.0, 
+    16923.0, 
     178, 
     239.0, 
     417.0, 
-    594
+    622
 ]

@@ -1,3 +1,10 @@
+rm /home/namita/work/video_sampler/social_handles_data/maybelline/latest.json
+rm /home/namita/work/video_sampler/social_handles_data/craftsvilla/latest.json
+rm /home/namita/work/video_sampler/social_handles_data/loreal/latest.json
+rm /home/namita/work/video_sampler/social_handles_data/godrej/latest.json
+rm /home/namita/work/video_sampler/social_handles_data/studiowest/latest.json
+
+
 curl http://localhost:5000/facebook_insights/\?ids\='video_ids=%5B%7B%22video_ids%22%3A+%5B898908596853290%5D%7D%2C+%7B%22brandname%22%3A+%22loreal%22%7D%5D'
 curl http://localhost:5000/youtube_insights/\?ids\='video_ids=%5B%7B%22video_ids%22%3A+%5B%22pEn0H-R-YnU%22%5D%7D%2C+%7B%22brandname%22%3A+%22loreal%22%7D%5D'
 curl http://localhost:5000/fb_yt/\?ids\='video_ids=%5B%7B%22fb%22%3A+898908596853290%2C+%22yt%22%3A+%22pEn0H-R-YnU%22%7D%2C+%7B%22brand%22%3A+%22loreal%22%7D%5D'
